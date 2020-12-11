@@ -9,12 +9,12 @@ import (
 	"github.com/spf13/viper"
 	"github.com/tendermint/tendermint/crypto/multisig"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/auth/client/utils"
-	"github.com/cosmos/cosmos-sdk/x/auth/types"
+	"github.com/evdatsion/cosmos-sdk/client/context"
+	"github.com/evdatsion/cosmos-sdk/client/flags"
+	"github.com/evdatsion/cosmos-sdk/codec"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/x/auth/client/utils"
+	"github.com/evdatsion/cosmos-sdk/x/auth/types"
 )
 
 const (

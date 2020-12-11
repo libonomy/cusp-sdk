@@ -11,9 +11,9 @@ import (
 	"github.com/tendermint/tendermint/crypto/multisig"
 	"github.com/tendermint/tendermint/crypto/secp256k1"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/auth/types"
+	"github.com/evdatsion/cosmos-sdk/codec"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/x/auth/types"
 )
 
 var (

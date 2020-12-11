@@ -9,8 +9,8 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/codec"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
 )
 
 func TestGetSetProposal(t *testing.T) {

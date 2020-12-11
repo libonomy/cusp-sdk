@@ -5,9 +5,9 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/supply/internal/types"
+	"github.com/evdatsion/cosmos-sdk/client"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/x/supply/internal/types"
 )
 
 // NewQuerier creates a querier for supply REST endpoints

@@ -3,8 +3,8 @@ package params
 import (
 	"fmt"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	govtypes "github.com/evdatsion/cosmos-sdk/x/gov/types"
 )
 
 func NewParamChangeProposalHandler(k Keeper) govtypes.Handler {

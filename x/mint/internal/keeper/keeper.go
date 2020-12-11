@@ -5,10 +5,10 @@ import (
 
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/mint/internal/types"
-	"github.com/cosmos/cosmos-sdk/x/params"
+	"github.com/evdatsion/cosmos-sdk/codec"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/x/mint/internal/types"
+	"github.com/evdatsion/cosmos-sdk/x/params"
 )
 
 // Keeper of the mint store

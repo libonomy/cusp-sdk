@@ -68,7 +68,7 @@ $(GOIMPORTS):
 runsim: $(RUNSIM)
 $(RUNSIM):
 	@echo "Get runsim"
-	@go get github.com/cosmos/tools/cmd/runsim
+	@go get github.com/evdatsion/tools/cmd/runsim
 
 tools-clean:
 	rm -f $(STATIK) $(GOIMPORTS) $(GOLANGCI_LINT) $(RUNSIM)

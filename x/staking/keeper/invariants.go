@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"fmt"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/staking/exported"
-	"github.com/cosmos/cosmos-sdk/x/staking/types"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/x/staking/exported"
+	"github.com/evdatsion/cosmos-sdk/x/staking/types"
 )
 
 // RegisterInvariants registers all staking invariants

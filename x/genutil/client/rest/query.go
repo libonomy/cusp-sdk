@@ -3,10 +3,10 @@ package rest
 import (
 	"net/http"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/rest"
-	"github.com/cosmos/cosmos-sdk/x/genutil/types"
+	"github.com/evdatsion/cosmos-sdk/client/context"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/types/rest"
+	"github.com/evdatsion/cosmos-sdk/x/genutil/types"
 )
 
 // QueryGenesisTxs writes the genesis transactions to the response if no error

@@ -11,14 +11,14 @@ import (
 	cfg "github.com/tendermint/tendermint/config"
 	"github.com/tendermint/tendermint/crypto"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/module"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/cosmos/cosmos-sdk/x/staking/client/cli"
-	"github.com/cosmos/cosmos-sdk/x/staking/client/rest"
-	"github.com/cosmos/cosmos-sdk/x/staking/types"
+	"github.com/evdatsion/cosmos-sdk/client/context"
+	"github.com/evdatsion/cosmos-sdk/codec"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/types/module"
+	authtypes "github.com/evdatsion/cosmos-sdk/x/auth/types"
+	"github.com/evdatsion/cosmos-sdk/x/staking/client/cli"
+	"github.com/evdatsion/cosmos-sdk/x/staking/client/rest"
+	"github.com/evdatsion/cosmos-sdk/x/staking/types"
 )
 
 var (

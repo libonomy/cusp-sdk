@@ -6,13 +6,13 @@ import (
 	"github.com/stretchr/testify/require"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/auth"
-	"github.com/cosmos/cosmos-sdk/x/bank"
-	"github.com/cosmos/cosmos-sdk/x/bank/internal/keeper"
-	"github.com/cosmos/cosmos-sdk/x/bank/internal/types"
-	"github.com/cosmos/cosmos-sdk/x/mock"
-	"github.com/cosmos/cosmos-sdk/x/supply"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/x/auth"
+	"github.com/evdatsion/cosmos-sdk/x/bank"
+	"github.com/evdatsion/cosmos-sdk/x/bank/internal/keeper"
+	"github.com/evdatsion/cosmos-sdk/x/bank/internal/types"
+	"github.com/evdatsion/cosmos-sdk/x/mock"
+	"github.com/evdatsion/cosmos-sdk/x/supply"
 )
 
 var moduleAccAddr = sdk.AccAddress([]byte("moduleAcc"))

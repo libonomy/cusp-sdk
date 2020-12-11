@@ -6,9 +6,9 @@ import (
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/codec"
+	"github.com/evdatsion/cosmos-sdk/client/context"
+	"github.com/evdatsion/cosmos-sdk/client/flags"
+	"github.com/evdatsion/cosmos-sdk/codec"
 )
 
 func TestQueryDelegationRewardsAddrValidation(t *testing.T) {

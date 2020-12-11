@@ -10,10 +10,10 @@ import (
 
 	"github.com/tendermint/tendermint/libs/cli"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/crypto/keys"
-	"github.com/cosmos/cosmos-sdk/tests"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/client/flags"
+	"github.com/evdatsion/cosmos-sdk/crypto/keys"
+	"github.com/evdatsion/cosmos-sdk/tests"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
 )
 
 func Test_runAddCmdLedgerWithCustomCoinType(t *testing.T) {

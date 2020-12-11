@@ -8,8 +8,8 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/cosmos/cosmos-sdk/baseapp"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/baseapp"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
 )
 
 // assertAll asserts the all invariants against application state

@@ -7,15 +7,15 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/client/input"
-	"github.com/cosmos/cosmos-sdk/crypto/keys"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/client/flags"
+	"github.com/evdatsion/cosmos-sdk/client/input"
+	"github.com/evdatsion/cosmos-sdk/crypto/keys"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/cosmos/go-bip39"
+	"github.com/evdatsion/go-bip39"
 
 	"github.com/tendermint/tendermint/crypto"
 	"github.com/tendermint/tendermint/crypto/multisig"

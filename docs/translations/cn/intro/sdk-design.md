@@ -13,7 +13,7 @@ Cosmos SDK是一个方便开发者开发基于Tendermint的安全可靠状态机
 
 ## `baseapp`
 
-`baseApp` 是Cosmos SDK的ABCI的实现样板。里面的 `router` 用来把交易路由到对应的模块。我们应用程序的主体文件`app.go` 将自定义`app`类型，它将嵌入`baseapp`。这样，自定义的`app`类型将自动继承`baseapp`的所有方法。阅览[SDK应用教程](https://github.com/cosmos/sdk-application-tutorial/blob/master/app.go#L27)代码示例。
+`baseApp` 是Cosmos SDK的ABCI的实现样板。里面的 `router` 用来把交易路由到对应的模块。我们应用程序的主体文件`app.go` 将自定义`app`类型，它将嵌入`baseapp`。这样，自定义的`app`类型将自动继承`baseapp`的所有方法。阅览[SDK应用教程](https://github.com/evdatsion/sdk-application-tutorial/blob/master/app.go#L27)代码示例。
 
 `baseapp`的目的是在存储和可扩展状态机的之间提供安全接口，同时尽可能少地定义该状态机（保持对ABCI的真实性）。
 

@@ -14,14 +14,14 @@ import (
 	"github.com/tendermint/tendermint/libs/cli"
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/server"
-	"github.com/cosmos/cosmos-sdk/server/mock"
-	"github.com/cosmos/cosmos-sdk/tests"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/cosmos/cosmos-sdk/x/genutil"
+	"github.com/evdatsion/cosmos-sdk/client"
+	"github.com/evdatsion/cosmos-sdk/codec"
+	"github.com/evdatsion/cosmos-sdk/server"
+	"github.com/evdatsion/cosmos-sdk/server/mock"
+	"github.com/evdatsion/cosmos-sdk/tests"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/types/module"
+	"github.com/evdatsion/cosmos-sdk/x/genutil"
 )
 
 var testMbm = module.NewBasicManager(genutil.AppModuleBasic{})

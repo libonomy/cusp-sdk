@@ -9,8 +9,8 @@ import (
 	tmtypes "github.com/tendermint/tendermint/types"
 	"gopkg.in/yaml.v2"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/codec"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
 )
 
 func TestValidatorTestEquivalent(t *testing.T) {

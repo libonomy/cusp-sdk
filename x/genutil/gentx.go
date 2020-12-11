@@ -8,12 +8,12 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authexported "github.com/cosmos/cosmos-sdk/x/auth/exported"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/cosmos/cosmos-sdk/x/genutil/types"
-	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	"github.com/evdatsion/cosmos-sdk/codec"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	authexported "github.com/evdatsion/cosmos-sdk/x/auth/exported"
+	authtypes "github.com/evdatsion/cosmos-sdk/x/auth/types"
+	"github.com/evdatsion/cosmos-sdk/x/genutil/types"
+	stakingtypes "github.com/evdatsion/cosmos-sdk/x/staking/types"
 )
 
 // SetGenTxsInAppGenesisState - sets the genesis transactions in the app genesis state

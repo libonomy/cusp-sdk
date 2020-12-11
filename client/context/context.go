@@ -17,11 +17,11 @@ import (
 	tmliteProxy "github.com/tendermint/tendermint/lite/proxy"
 	rpcclient "github.com/tendermint/tendermint/rpc/client"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/client/keys"
-	"github.com/cosmos/cosmos-sdk/codec"
-	cryptokeys "github.com/cosmos/cosmos-sdk/crypto/keys"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/client/flags"
+	"github.com/evdatsion/cosmos-sdk/client/keys"
+	"github.com/evdatsion/cosmos-sdk/codec"
+	cryptokeys "github.com/evdatsion/cosmos-sdk/crypto/keys"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
 )
 
 var (

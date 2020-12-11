@@ -33,13 +33,13 @@ In Cosmos SDK applications, events are managed by an abstraction called the `Eve
 Internally, the `EventManager` tracks a list of `Events` for the entire execution flow of a
 transaction or `BeginBlock`/`EndBlock`.
 
-+++ https://github.com/cosmos/cosmos-sdk/blob/7d7821b9af132b0f6131640195326aa02b6751db/types/events.go#L16-L20
++++ https://github.com/evdatsion/cosmos-sdk/blob/7d7821b9af132b0f6131640195326aa02b6751db/types/events.go#L16-L20
 
 The `EventManager` comes with a set of useful methods to manage events. Among them, the one that is
 used the most by module and application developers is the `EmitEvent` method, which tracks
 an `event` in the `EventManager`.
 
-+++ https://github.com/cosmos/cosmos-sdk/blob/7d7821b9af132b0f6131640195326aa02b6751db/types/events.go#L29-L31
++++ https://github.com/evdatsion/cosmos-sdk/blob/7d7821b9af132b0f6131640195326aa02b6751db/types/events.go#L29-L31
 
 Module developers should handle event emission via the `EventManager#EmitEvent` in each message
 `Handler` and in each `BeginBlock`/`EndBlock` handler. The `EventManager` is accessed via
@@ -79,7 +79,7 @@ The main `eventCategory` you can subscribe to are:
 These events are triggered from the `state` package after a block is committed. You can get the
 full list of `event` categories [here](https://godoc.org/github.com/tendermint/tendermint/types#pkg-constants).
 
-The `type` and `attribute` value of the `query` allow you to filter the specific `event` you are looking for. For example, a `transfer` transaction triggers an `event` of type `Transfer` and has `Recipient` and `Sender` as `attributes` (as defined in the [`events` file of the `bank` module](https://github.com/cosmos/cosmos-sdk/blob/master/x/bank/internal/types/events.go)). Subscribing to this `event` would be done like so:
+The `type` and `attribute` value of the `query` allow you to filter the specific `event` you are looking for. For example, a `transfer` transaction triggers an `event` of type `Transfer` and has `Recipient` and `Sender` as `attributes` (as defined in the [`events` file of the `bank` module](https://github.com/evdatsion/cosmos-sdk/blob/master/x/bank/internal/types/events.go)). Subscribing to this `event` would be done like so:
 
 ```json
 {

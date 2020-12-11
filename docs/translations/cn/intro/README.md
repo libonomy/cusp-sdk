@@ -2,7 +2,7 @@
 
 ## 什么是Cosmos SDK?
 
-[Cosmos-SDK](https://github.com/cosmos/cosmos-sdk) 是一个架构，用于构建多资产股权证明(PoS)的区块链，比如Cosmos Hub，以及权益证明(PoA)的区块链。使用Cosmos SDK构建的区块链通常称为**特定应用区块链**。
+[Cosmos-SDK](https://github.com/evdatsion/cosmos-sdk) 是一个架构，用于构建多资产股权证明(PoS)的区块链，比如Cosmos Hub，以及权益证明(PoA)的区块链。使用Cosmos SDK构建的区块链通常称为**特定应用区块链**。
 
 Cosmos SDK的目标是允许开发者从头开始轻松创建原生就能同其他区块链相互操作的自定义区块链。我们设想SDK类似于Ruby-on-Rails框架之上构建应用一样，可以很方便在[Tendermint](https://github.com/tendermint/tendermint)之上构建安全的区块链应用。 基于SDK的区块链通过可组合的模块构建出来的，大部分模块是开源的，并且可供任何开发人员使用。 任何人都可以为Cosmos-SDK 创建一个模块，集成已经构建的模块就像将它们导入到区块链应用程序一样简单。 更重要的是，Cosmos SDK是一个基于**能力**（capabilities）的系统，开发人员可以更好地了解模块之间交互的安全性。 要深入了解能力，请跳到[OCAP](./ocap.md)。
 

@@ -9,13 +9,13 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/cosmos/cosmos-sdk/crypto"
-	"github.com/cosmos/cosmos-sdk/crypto/keys/hd"
-	"github.com/cosmos/cosmos-sdk/crypto/keys/keyerror"
-	"github.com/cosmos/cosmos-sdk/crypto/keys/mintkey"
-	"github.com/cosmos/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/crypto"
+	"github.com/evdatsion/cosmos-sdk/crypto/keys/hd"
+	"github.com/evdatsion/cosmos-sdk/crypto/keys/keyerror"
+	"github.com/evdatsion/cosmos-sdk/crypto/keys/mintkey"
+	"github.com/evdatsion/cosmos-sdk/types"
 
-	bip39 "github.com/cosmos/go-bip39"
+	bip39 "github.com/evdatsion/go-bip39"
 
 	tmcrypto "github.com/tendermint/tendermint/crypto"
 	cryptoAmino "github.com/tendermint/tendermint/crypto/encoding/amino"

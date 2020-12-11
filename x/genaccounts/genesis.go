@@ -1,10 +1,10 @@
 package genaccounts
 
 import (
-	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authexported "github.com/cosmos/cosmos-sdk/x/auth/exported"
-	"github.com/cosmos/cosmos-sdk/x/genaccounts/internal/types"
+	"github.com/evdatsion/cosmos-sdk/codec"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	authexported "github.com/evdatsion/cosmos-sdk/x/auth/exported"
+	"github.com/evdatsion/cosmos-sdk/x/genaccounts/internal/types"
 )
 
 // InitGenesis initializes accounts and deliver genesis transactions

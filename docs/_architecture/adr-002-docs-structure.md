@@ -40,7 +40,7 @@ docs/
 The files in each sub-folders do not matter and will likely change. What matters is the sectioning:
 
 - `README`: Landing page of the docs.
-- `into`: Introductory material. Goal is to have a short explainer of the SDK and then channel people to the resource they need. The [sdk-tutorial](https://github.com/cosmos/sdk-application-tutorial/) will be highlighted, as well as the `godocs`.
+- `into`: Introductory material. Goal is to have a short explainer of the SDK and then channel people to the resource they need. The [sdk-tutorial](https://github.com/evdatsion/sdk-application-tutorial/) will be highlighted, as well as the `godocs`.
 - `concepts`: Contains high-level explanations of the abstractions of the SDK. It does not contain specific code implementation and does not need to be updated often. **It is not an API specification of the interfaces**. API spec is the `godoc`.
 - `clients`: Contains specs and info about the various SDK clients.
 - `spec`: Contains specs of modules, and others.
@@ -70,7 +70,7 @@ Accepted
 - Developers only have to update `/docs` folder when they open a PR (and not `/examples` for example).
 - Easier for developers to find what they need to update in the docs thanks to reworked architecture.
 - Cleaner vuepress build for website docs.
-- Will help build an executable doc (cf https://github.com/cosmos/cosmos-sdk/issues/2611)
+- Will help build an executable doc (cf https://github.com/evdatsion/cosmos-sdk/issues/2611)
 
 ### Neutral
 
@@ -81,6 +81,6 @@ Accepted
 
 ## References
 
-- https://github.com/cosmos/cosmos-sdk/issues/1460
-- https://github.com/cosmos/cosmos-sdk/pull/2695
-- https://github.com/cosmos/cosmos-sdk/issues/2611
+- https://github.com/evdatsion/cosmos-sdk/issues/1460
+- https://github.com/evdatsion/cosmos-sdk/pull/2695
+- https://github.com/evdatsion/cosmos-sdk/issues/2611

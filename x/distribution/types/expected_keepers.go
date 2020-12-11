@@ -1,10 +1,10 @@
 package types
 
 import (
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/staking"
-	stakingexported "github.com/cosmos/cosmos-sdk/x/staking/exported"
-	supplyexported "github.com/cosmos/cosmos-sdk/x/supply/exported"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/x/staking"
+	stakingexported "github.com/evdatsion/cosmos-sdk/x/staking/exported"
+	supplyexported "github.com/evdatsion/cosmos-sdk/x/supply/exported"
 )
 
 // StakingKeeper expected staking keeper (noalias)
@@ -61,7 +61,7 @@ type SupplyKeeper interface {
 	GetModuleAddress(name string) sdk.AccAddress
 	GetModuleAccount(ctx sdk.Context, name string) supplyexported.ModuleAccountI
 
-	// TODO remove with genesis 2-phases refactor https://github.com/cosmos/cosmos-sdk/issues/2862
+	// TODO remove with genesis 2-phases refactor https://github.com/evdatsion/cosmos-sdk/issues/2862
 	SetModuleAccount(sdk.Context, supplyexported.ModuleAccountI)
 
 	SendCoinsFromModuleToModule(ctx sdk.Context, senderModule string, recipientModule string, amt sdk.Coins) sdk.Error

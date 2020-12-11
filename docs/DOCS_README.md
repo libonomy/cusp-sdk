@@ -1,6 +1,6 @@
 # Updating the docs
 
-If you want to open a PR on the Cosmos SDK to update the documentation, please follow the guidelines in the [`CONTRIBUTING.md`](https://github.com/cosmos/cosmos-sdk/tree/master/CONTRIBUTING.md)
+If you want to open a PR on the Cosmos SDK to update the documentation, please follow the guidelines in the [`CONTRIBUTING.md`](https://github.com/evdatsion/cosmos-sdk/tree/master/CONTRIBUTING.md)
 
 ## Docs Build Workflow
 
@@ -10,7 +10,7 @@ The documentation for the Cosmos SDK is hosted at:
 - https://cosmos-staging.interblock.io/docs/
 
 built from the files in this (`/docs`) directory for
-[master](https://github.com/cosmos/cosmos-sdk/tree/master/docs).
+[master](https://github.com/evdatsion/cosmos-sdk/tree/master/docs).
 
 ### How It Works
 
@@ -95,7 +95,7 @@ then navigate to localhost:8080 in your browser.
 
 First, run `make tools` from the root of repo, to install the swagger-ui tool.
 
-Then, edit the `swagger.yaml` manually; it is found [here](https://github.com/cosmos/cosmos-sdk/blob/master/client/lcd/swagger-ui/swagger.yaml)
+Then, edit the `swagger.yaml` manually; it is found [here](https://github.com/evdatsion/cosmos-sdk/blob/master/client/lcd/swagger-ui/swagger.yaml)
 
 Finally, run `make update_gaia_lite_docs` from the root of the repo.
 

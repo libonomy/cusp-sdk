@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/cosmos/cosmos-sdk/baseapp"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/x/auth"
-	"github.com/cosmos/cosmos-sdk/x/simulation"
-	"github.com/cosmos/cosmos-sdk/x/staking"
-	"github.com/cosmos/cosmos-sdk/x/staking/keeper"
+	"github.com/evdatsion/cosmos-sdk/baseapp"
+	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/x/auth"
+	"github.com/evdatsion/cosmos-sdk/x/simulation"
+	"github.com/evdatsion/cosmos-sdk/x/staking"
+	"github.com/evdatsion/cosmos-sdk/x/staking/keeper"
 )
 
 // SimulateMsgCreateValidator generates a MsgCreateValidator with random values

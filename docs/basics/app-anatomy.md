@@ -56,7 +56,7 @@ The blockchain full-node presents itself as a binary, generally suffixed by `-d`
 
 To learn more about the `main.go` function, [click here](./node.md#main-function).
 
-Once the main binary is built, the node can be started by running the `start` command. The core logic behind the `start` command is implemented in the SDK itself in the [`/server/start.go`](https://github.com/cosmos/cosmos-sdk/blob/master/server/start.go) file. The main [`start` command function](https://github.com/cosmos/cosmos-sdk/blob/master/server/start.go#L31) takes a [`context`](https://godoc.org/github.com/cosmos/cosmos-sdk/client/context) and [`appCreator`](#constructor-function-(`appCreator`)) as arguments. The `appCreator` is a constructor function for the SDK application, and is used in the starting process of the full-node. 
+Once the main binary is built, the node can be started by running the `start` command. The core logic behind the `start` command is implemented in the SDK itself in the [`/server/start.go`](https://github.com/evdatsion/cosmos-sdk/blob/master/server/start.go) file. The main [`start` command function](https://github.com/evdatsion/cosmos-sdk/blob/master/server/start.go#L31) takes a [`context`](https://godoc.org/github.com/evdatsion/cosmos-sdk/client/context) and [`appCreator`](#constructor-function-(`appCreator`)) as arguments. The `appCreator` is a constructor function for the SDK application, and is used in the starting process of the full-node. 
 
 The `start` command function primarily does three things:
 
@@ -80,11 +80,11 @@ The first thing defined in `app.go` is the `type` of the application. It is gene
 - **A reference to a `codec`.** The Cosmos SDK gives developers the freedom to choose the encoding framework for their application. The application's `codec` is used to serialize and deserialize data structures in order to store them, as stores can only persist `[]bytes`. The `codec` must be deterministic. The default codec is [amino](./amino.md).
 - **A reference to a [module manager](./modules.md#module-manager)**. The module manager is an object that contains a list of the application's module. It facilitates operations related to these modules, like registering [`routes`](./baseapp.md#routing), [query routes](#./baseapp.md#query-routing) or setting the order of execution between modules for various functions like [`InitChainer`](#initchainer), [`BeginBlocker` and `EndBlocker`](#beginblocker-and-endblocker).
 
-You can see an example of application type definition [here](https://github.com/cosmos/gaia/blob/master/app/app.go#L73-L107).
+You can see an example of application type definition [here](https://github.com/evdatsion/gaia/blob/master/app/app.go#L73-L107).
 
 ### Constructor Function
 
-This function constructs a new application of the type defined above. It is called every time the full-node is started with the [`start`](https://github.com/cosmos/cosmos-sdk/blob/master/server/start.go#L117) command. Here are the main actions performed by this function:
+This function constructs a new application of the type defined above. It is called every time the full-node is started with the [`start`](https://github.com/evdatsion/cosmos-sdk/blob/master/server/start.go#L117) command. Here are the main actions performed by this function:
 
 - Instantiate a new application with a reference to a `baseapp` instance, a codec and all the appropriate store keys.
 - Instantiate all the [`keeper`s](#keeper) defined in the application's `type` using the `NewKeeper` function of each of the application's modules. Note that `keepers` must be instantiated in the correct order, as the `NewKeeper` of one module might require a reference to another module's `keeper`. 
@@ -101,25 +101,25 @@ This function constructs a new application of the type defined above. It is call
 
 Note that this function only creates an instance of the app, while the actual state is either carried over from the `~/.appd/data` folder if the node is restarted, or generated from the genesis file if the node is started for the first time. 
 
-You can see an example of application constructor [here](https://github.com/cosmos/gaia/blob/master/app/app.go#L110-L222).
+You can see an example of application constructor [here](https://github.com/evdatsion/gaia/blob/master/app/app.go#L110-L222).
 
 ### InitChainer
 
-The `InitChainer` is a function that initializes the state of the application from a [genesis file](./genesis.md) (i.e. token balances of genesis accounts). It is called when the application receives the `InitChain` message from the Tendermint engine, which happens when the node is started at `appBlockHeight == 0` (i.e. on genesis). The application must set the `InitChainer` in its constructor via the [`SetInitChainer`](https://godoc.org/github.com/cosmos/cosmos-sdk/baseapp#BaseApp.SetInitChainer) method. 
+The `InitChainer` is a function that initializes the state of the application from a [genesis file](./genesis.md) (i.e. token balances of genesis accounts). It is called when the application receives the `InitChain` message from the Tendermint engine, which happens when the node is started at `appBlockHeight == 0` (i.e. on genesis). The application must set the `InitChainer` in its constructor via the [`SetInitChainer`](https://godoc.org/github.com/evdatsion/cosmos-sdk/baseapp#BaseApp.SetInitChainer) method. 
 
 In general, the `InitChainer` is mostly composed of the `InitGenesis` function of each of the application's modules. This is done by calling the `InitGenesis` function of the module manager, which in turn will call the `InitGenesis` function of each of the modules it contains. Note that the order in which the modules' `InitGenesis` functions must be called has to be set in the module manager using the `SetOrderInitGenesis` method. This is done in the [application's constructor](#application-constructor), and the `SetOrderInitGenesis` has to be called before the `SetInitChainer`. 
 
-You can see an example of an `InitChainer` [here](https://github.com/cosmos/gaia/blob/master/app/app.go#L235-L239).
+You can see an example of an `InitChainer` [here](https://github.com/evdatsion/gaia/blob/master/app/app.go#L235-L239).
 
 ### BeginBlocker and EndBlocker
 
-The SDK offers developers the possibility to implement automatic execution of code as part of their application. This is implemented through two function called `BeginBlocker` and `EndBlocker`. They are called when the application receives respectively the `BeginBlock` and `EndBlock` messages from the Tendermint engine, which happens at the beginning and at the end of each block. The application must set the `BeginBlocker` and `EndBlocker` in its constructor via the [`SetBeginBlocker`](https://godoc.org/github.com/cosmos/cosmos-sdk/baseapp#BaseApp.SetBeginBlocker) and [`SetEndBlocker`](https://godoc.org/github.com/cosmos/cosmos-sdk/baseapp#BaseApp.SetEndBlocker) methods. 
+The SDK offers developers the possibility to implement automatic execution of code as part of their application. This is implemented through two function called `BeginBlocker` and `EndBlocker`. They are called when the application receives respectively the `BeginBlock` and `EndBlock` messages from the Tendermint engine, which happens at the beginning and at the end of each block. The application must set the `BeginBlocker` and `EndBlocker` in its constructor via the [`SetBeginBlocker`](https://godoc.org/github.com/evdatsion/cosmos-sdk/baseapp#BaseApp.SetBeginBlocker) and [`SetEndBlocker`](https://godoc.org/github.com/evdatsion/cosmos-sdk/baseapp#BaseApp.SetEndBlocker) methods. 
 
 In general, the `BeginBlocker` and `EndBlocker` functions are mostly composed of the `BeginBlock` and `EndBlock` functions of each of the application's modules. This is done by calling the `BeginBlock` and `EndBlock` functions of the module manager, which in turn will call the `BeginBLock` and `EndBlock` functions of each of the modules it contains. Note that the order in which the modules' `BegingBlock` and `EndBlock` functions must be called has to be set in the module manager using the `SetOrderBeginBlock` and `SetOrderEndBlock` methods respectively. This is done in the [application's constructor](#application-constructor), and the `SetOrderBeginBlock` and `SetOrderEndBlock` methods have to be called before the `SetBeginBlocker` and `SetEndBlocker` functions.
 
 As a sidenote, it is important to remember that application-specific blockchains are deterministic. Developers must be careful not to introduce non-determinism in `BeginBlocker` or `EndBlocker`, and must also be careful not to make them too computationally expensive, as [gas](./accounts-fees-gas.md/gas) does not constrain the cost of `BeginBlocker` and `EndBlocker` execution. 
 
-You can see an example of `BeginBlocker` and `EndBlocker` functions [here](https://github.com/cosmos/gaia/blob/master/app/app.go#L224-L232).
+You can see an example of `BeginBlocker` and `EndBlocker` functions [here](https://github.com/evdatsion/gaia/blob/master/app/app.go#L224-L232).
 
 ### Register Codec
 
@@ -127,7 +127,7 @@ The `MakeCodec` function is the last important function of the `app.go` file. Th
 
 To register the application's modules, the `MakeCodec` function calls `RegisterCodec` on `ModuleBasics`. `ModuleBasics` is a [basic manager](./modules.md#basic-manager) which lists all of the application's modules. It is instanciated in the `init()` function, and only serves to easily register non-dependant elements of application's modules (such as codec). To learn more about the basic module manager, click [here](./modules.md#basic-manager).
 
-You can see an example of a `MakeCodec` [here](https://github.com/cosmos/gaia/blob/master/app/app.go#L64-L70)
+You can see an example of a `MakeCodec` [here](https://github.com/evdatsion/gaia/blob/master/app/app.go#L64-L70)
 
 ## Modules
 
@@ -137,7 +137,7 @@ To learn more about modules, [click here](./modules.md)
 
 ### Application Module Interface
 
-Modules implement two interfaces defined in the Cosmos SDK, [`AppModuleBasic`](https://github.com/cosmos/cosmos-sdk/blob/master/types/module/module.go#L44-L57) and [`AppModule`](https://github.com/cosmos/cosmos-sdk/blob/master/types/module/module.go#L44-L57). The former implements basic non-dependant elements of the module, such as the `codec`, while the latter handles the bulk of the module methods (including methods that require references to other modules' `keeper`s). Both the `AppModule` and `AppModuleBasic` types are defined in a file called `./module.go`. 
+Modules implement two interfaces defined in the Cosmos SDK, [`AppModuleBasic`](https://github.com/evdatsion/cosmos-sdk/blob/master/types/module/module.go#L44-L57) and [`AppModule`](https://github.com/evdatsion/cosmos-sdk/blob/master/types/module/module.go#L44-L57). The former implements basic non-dependant elements of the module, such as the `codec`, while the latter handles the bulk of the module methods (including methods that require references to other modules' `keeper`s). Both the `AppModule` and `AppModuleBasic` types are defined in a file called `./module.go`. 
 
 `AppModule` exposes a collection of useful methods on the module that facilitates the composition of modules into a coherent application. Important methods include:
 
@@ -152,16 +152,16 @@ To learn more about the application module interface, [click here](./modules.md#
 
 ### Message Types
 
-A message is a custom type defined by each module that implements the [`message`](https://github.com/cosmos/cosmos-sdk/blob/master/types/tx_msg.go#L8-L29) interface. Each `transaction` contains one or multiple `messages`. When a valid block of transactions is received by the full-node, Tendermint relays each one to the application via [`DeliverTx`](https://tendermint.com/docs/app-dev/abci-spec.html#delivertx). Then, the application handles the transaction:
+A message is a custom type defined by each module that implements the [`message`](https://github.com/evdatsion/cosmos-sdk/blob/master/types/tx_msg.go#L8-L29) interface. Each `transaction` contains one or multiple `messages`. When a valid block of transactions is received by the full-node, Tendermint relays each one to the application via [`DeliverTx`](https://tendermint.com/docs/app-dev/abci-spec.html#delivertx). Then, the application handles the transaction:
 
 1. Upon receiving the transaction, the application first unmarshalls it from `[]bytes`.
 2. Then, it verifies a few things about the transaction like [fee payment and signatures](#accounts-fees-gas.md) before extracting the message(s) contained in the transaction. 
-3. With the [`Type()`](https://github.com/cosmos/cosmos-sdk/blob/master/types/tx_msg.go#L16) method, `baseapp` is able to know which modules defines the message. It is then able to route it to the appropriate module's [handler](#handler) in order for the message to be processed. 
+3. With the [`Type()`](https://github.com/evdatsion/cosmos-sdk/blob/master/types/tx_msg.go#L16) method, `baseapp` is able to know which modules defines the message. It is then able to route it to the appropriate module's [handler](#handler) in order for the message to be processed. 
 4. If the message is successfully processed, the state is updated. 
 
 For a more detailed look at a transaction lifecycle, click [here](./tx-lifecycle.md).
 
-Module developers create custom message types when they build their own module. The general practice is to prefix the type declaration of the message with `Msg`. For example, the message type [`MsgSend`](https://github.com/cosmos/cosmos-sdk/blob/master/x/bank/types/msgs.go#L10-L15) allows users to transfer tokens. It is processed by the handler of the `bank` module, which ultimately calls the `keeper` of the `auth` module in order to update the state.
+Module developers create custom message types when they build their own module. The general practice is to prefix the type declaration of the message with `Msg`. For example, the message type [`MsgSend`](https://github.com/evdatsion/cosmos-sdk/blob/master/x/bank/types/msgs.go#L10-L15) allows users to transfer tokens. It is processed by the handler of the `bank` module, which ultimately calls the `keeper` of the `auth` module in order to update the state.
 
 To learn more about messages, [click here](./tx-msgs.md).
 
@@ -171,10 +171,10 @@ The `handler` refers to the part of the module responsible for processing the me
 
 The handler of a module is generally defined in a file called `handler.go` and consists of:
 
-- A **switch function** `NewHandler` to route the message to the appropriate handler function. This function returns a `handler` function, and is registered in the [`AppModule`](#application-module-interface) to be used in the application's module manager to initialize the [application's router](./baseapp.md#routing). See an example of such a switch [here](https://github.com/cosmos/sdk-application-tutorial/blob/master/x/nameservice/handler.go#L10-L22).
+- A **switch function** `NewHandler` to route the message to the appropriate handler function. This function returns a `handler` function, and is registered in the [`AppModule`](#application-module-interface) to be used in the application's module manager to initialize the [application's router](./baseapp.md#routing). See an example of such a switch [here](https://github.com/evdatsion/sdk-application-tutorial/blob/master/x/nameservice/handler.go#L10-L22).
 - **One handler function for each message type defined by the module**. Developers write the message processing logic in these functions. This generally involves doing stateful checks to ensure the message is valid and calling [`keeper`](#keeper)'s methods to update the state. 
 
-Handler functions return a result of type [`sdk.Result`](https://github.com/cosmos/cosmos-sdk/blob/master/types/result.go#L14-L37), which informs the application on whether the message was successfully processed.
+Handler functions return a result of type [`sdk.Result`](https://github.com/evdatsion/cosmos-sdk/blob/master/types/result.go#L14-L37), which informs the application on whether the message was successfully processed.
 
 To learn more about handlers, [click here](./handler.md).
 
@@ -192,18 +192,18 @@ The `keeper` type definition generally consists of:
 
 Along with the type definition, the next important component of the `keeper.go` file is the `keeper`'s constructor function, `NewKeeper`. This function instantiates a new `keeper` of the type defined above, with a `codec`, store `keys` and potentially references to other modules' `keeper`s as parameters. The `NewKeeper` function is called from the [application's constructor](#constructor-function). 
 
-The rest of the file defines the `keeper`'s methods, primarily getters and setters. You can check an example of a `keeper` implementation [here](https://github.com/cosmos/sdk-application-tutorial/blob/master/x/nameservice/keeper.go).
+The rest of the file defines the `keeper`'s methods, primarily getters and setters. You can check an example of a `keeper` implementation [here](https://github.com/evdatsion/sdk-application-tutorial/blob/master/x/nameservice/keeper.go).
 
 To learn more about `keepers`, [click here](./keeper.md).
 
 ### Querier 
 
-`Queriers` are very similar to `handlers`, except they serve user queries to the state as opposed to processing transactions. A query is initiated from an [interface](#intefaces) by an end-user who provides a `queryRoute` and some `data`. The query is then routed to the correct application's `querier` by `baseapp`'s [`handleQueryCustom`](https://github.com/cosmos/cosmos-sdk/blob/master/baseapp/baseapp.go#L519-L556) method using `queryRoute`. 
+`Queriers` are very similar to `handlers`, except they serve user queries to the state as opposed to processing transactions. A query is initiated from an [interface](#intefaces) by an end-user who provides a `queryRoute` and some `data`. The query is then routed to the correct application's `querier` by `baseapp`'s [`handleQueryCustom`](https://github.com/evdatsion/cosmos-sdk/blob/master/baseapp/baseapp.go#L519-L556) method using `queryRoute`. 
 
 The `Querier` of a module is defined in a file called `querier.go`, and consists of:
 
-- A **switch function** `NewQuerier` to route the query to the appropriate `querier` function. This function returns a `querier` function, and is is registered in the [`AppModule`](#application-module-interface) to be used in the application's module manager to initialize the [application's query router](./baseapp.md#query-routing). See an example of such a switch [here](https://github.com/cosmos/sdk-application-tutorial/blob/master/x/nameservice/querier.go#L21-L34).
-- - **One querier function for each data type defined by the module that needs to be queryable**. Developers write the query processing logic in these functions. This generally involves calling [`keeper`](#keeper)'s methods to query the state and marshalling it to JSON. See an example of `querier` functions [here](https://github.com/cosmos/sdk-application-tutorial/blob/master/x/nameservice/querier.go#L37-L101).
+- A **switch function** `NewQuerier` to route the query to the appropriate `querier` function. This function returns a `querier` function, and is is registered in the [`AppModule`](#application-module-interface) to be used in the application's module manager to initialize the [application's query router](./baseapp.md#query-routing). See an example of such a switch [here](https://github.com/evdatsion/sdk-application-tutorial/blob/master/x/nameservice/querier.go#L21-L34).
+- - **One querier function for each data type defined by the module that needs to be queryable**. Developers write the query processing logic in these functions. This generally involves calling [`keeper`](#keeper)'s methods to query the state and marshalling it to JSON. See an example of `querier` functions [here](https://github.com/evdatsion/sdk-application-tutorial/blob/master/x/nameservice/querier.go#L37-L101).
 
 To learn more about `queriers`, [click here](./querier.md).
 
@@ -215,8 +215,8 @@ Each module defines command-line commands and REST routes to be exposed to end-u
 
 Generally, the commands related to a module are defined in a folder called `client/cli` in the module's folder. The CLI divides commands in two category, transactions and queries, defined in `client/cli/tx.go` and `client/cli/query.go` respectively. Both commands are built on top of the [Cobra Library](https://github.com/spf13/cobra):
 
-- Transactions commands let users generate new transactions so that they can be included in a block and eventually update the state. One command should be created for each [message type](#message-types) defined in the module. The command calls the constructor of the message with the parameters provided by the end-user, and wraps it into a transaction. The SDK handles signing and the addition of other transaction metadata. See examples of transactions commands [here](https://github.com/cosmos/sdk-application-tutorial/blob/master/x/nameservice/client/cli/tx.go).
-- Queries let users query the subset of the state defined by the module. Query commands forward queries to the [application's query router](./baseapp.md#query-routing), which routes them to the appropriate [querier](#querier) the `queryRoute` parameter supplied. See examples of query commands [here](https://github.com/cosmos/sdk-application-tutorial/blob/master/x/nameservice/client/cli/query.go).
+- Transactions commands let users generate new transactions so that they can be included in a block and eventually update the state. One command should be created for each [message type](#message-types) defined in the module. The command calls the constructor of the message with the parameters provided by the end-user, and wraps it into a transaction. The SDK handles signing and the addition of other transaction metadata. See examples of transactions commands [here](https://github.com/evdatsion/sdk-application-tutorial/blob/master/x/nameservice/client/cli/tx.go).
+- Queries let users query the subset of the state defined by the module. Query commands forward queries to the [application's query router](./baseapp.md#query-routing), which routes them to the appropriate [querier](#querier) the `queryRoute` parameter supplied. See examples of query commands [here](https://github.com/evdatsion/sdk-application-tutorial/blob/master/x/nameservice/client/cli/query.go).
 
 To learn more about modules CLI, [click here](./module-interfaces.md#cli).
 
@@ -225,10 +225,10 @@ To learn more about modules CLI, [click here](./module-interfaces.md#cli).
 The module's REST interface lets users generate transactions and query the state through REST calls to the application's [light client daemon](./node.md#lcd) (LCD). REST routes are defined in a file `client/rest/rest.go`, which is composed of:
 
 - A `RegisterRoutes` function, which registers each route defined in the file. This function is called from the [main application's interface](#application-interfaces) for each module used within the application. The router used in the SDK is [Gorilla's mux](https://github.com/gorilla/mux).
-- Custom request type definitions for each query or transaction creation function that needs to be exposed. These custom request types build on the [base `request` type](https://github.com/cosmos/cosmos-sdk/blob/master/types/rest/rest.go#L32-L43) of the Cosmos SDK. 
+- Custom request type definitions for each query or transaction creation function that needs to be exposed. These custom request types build on the [base `request` type](https://github.com/evdatsion/cosmos-sdk/blob/master/types/rest/rest.go#L32-L43) of the Cosmos SDK. 
 - One handler function for each request that can be routed to the given module. These functions implement the core logic necessary to serve the request.
 
-See an example of a module's `rest.go` file [here](https://github.com/cosmos/sdk-application-tutorial/blob/master/x/nameservice/client/rest/rest.go).
+See an example of a module's `rest.go` file [here](https://github.com/evdatsion/sdk-application-tutorial/blob/master/x/nameservice/client/rest/rest.go).
 
 To learn more about modules REST interface, [click here](./module-interfaces.md#rest).
 
@@ -243,15 +243,15 @@ The main interface is the [Command-Line Interface](./interfaces.md#cli). The CLI
 - **Transaction commands** are added by calling the `txCmd` function. Similar to `queryCmd`, the function  returns a Cobra command that contains the tx commands defined in each of the application's modules, as well as lower level tx commands like transaction signing or broadcasting. Tx commands are called by using the command `appcli tx [tx]` of the CLI.
 - **A `registerRoutes` function**, which is called from the `main()` function when initializing the [application's light-client daemon (LCD)](./node.md#lcd) (i.e. `rest-server`). `registerRoutes` calls the `RegisterRoutes` function of each of the application's module, thereby registering the routes of the module to the lcd's router. The LCD can be started by running the following command `appcli rest-server`. 
 
-See an example of an application's main command-line file [here](https://github.com/cosmos/sdk-application-tutorial/blob/master/cmd/nscli/main.go).
+See an example of an application's main command-line file [here](https://github.com/evdatsion/sdk-application-tutorial/blob/master/cmd/nscli/main.go).
 
 To learn more about interfaces, [click here](./interfaces.md).
 
 ## Dependencies and Makefile
 
-This section is optional, as developers are free to choose their depencency manager and project building method. That said, the current most used framework for versioning control is [`go.mod`](https://github.com/golang/go/wiki/Modules). It ensures each of the libraries used throughout the application are imported with the correct version. An example can be found [here](https://github.com/cosmos/sdk-application-tutorial/blob/master/go.mod).
+This section is optional, as developers are free to choose their depencency manager and project building method. That said, the current most used framework for versioning control is [`go.mod`](https://github.com/golang/go/wiki/Modules). It ensures each of the libraries used throughout the application are imported with the correct version. An example can be found [here](https://github.com/evdatsion/sdk-application-tutorial/blob/master/go.mod).
 
-For building the application, a [Makefile](https://en.wikipedia.org/wiki/Makefile) is generally used. The Makefile primarily ensures that the `go.mod` is run before building the two entrypoints to the application, [`appd`](#node-client) and [`appcli`](#application-interface). An example of Makefile can be found [here](https://github.com/cosmos/sdk-application-tutorial/blob/master/Makefile).
+For building the application, a [Makefile](https://en.wikipedia.org/wiki/Makefile) is generally used. The Makefile primarily ensures that the `go.mod` is run before building the two entrypoints to the application, [`appd`](#node-client) and [`appcli`](#application-interface). An example of Makefile can be found [here](https://github.com/evdatsion/sdk-application-tutorial/blob/master/Makefile).
 
 ## Next
 

@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/cosmos/cosmos-sdk/types"
+	"github.com/evdatsion/cosmos-sdk/types"
 
-	bip39 "github.com/cosmos/go-bip39"
+	bip39 "github.com/evdatsion/go-bip39"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -9,11 +9,11 @@ import (
 
 	ctypes "github.com/tendermint/tendermint/rpc/core/types"
 
-	"github.com/cosmos/cosmos-sdk/client/context"
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/types/rest"
-	"github.com/cosmos/cosmos-sdk/version"
+	"github.com/evdatsion/cosmos-sdk/client/context"
+	"github.com/evdatsion/cosmos-sdk/client/flags"
+	"github.com/evdatsion/cosmos-sdk/codec"
+	"github.com/evdatsion/cosmos-sdk/types/rest"
+	"github.com/evdatsion/cosmos-sdk/version"
 
 	"github.com/tendermint/tendermint/p2p"
 )
