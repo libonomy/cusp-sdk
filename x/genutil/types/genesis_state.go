@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tendermint/tendermint/libs/common"
-	tmtypes "github.com/tendermint/tendermint/types"
+	"github.com/evdatsion/tendermint/libs/common"
+	tmtypes "github.com/evdatsion/tendermint/types"
 
 	"github.com/evdatsion/cosmos-sdk/codec"
 	authtypes "github.com/evdatsion/cosmos-sdk/x/auth/types"

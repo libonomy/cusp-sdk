@@ -13,10 +13,10 @@ import (
 	flag "github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/libs/common"
-	tmtypes "github.com/tendermint/tendermint/types"
+	cfg "github.com/evdatsion/tendermint/config"
+	"github.com/evdatsion/tendermint/crypto"
+	"github.com/evdatsion/tendermint/libs/common"
+	tmtypes "github.com/evdatsion/tendermint/types"
 
 	"github.com/evdatsion/cosmos-sdk/client"
 	"github.com/evdatsion/cosmos-sdk/client/context"

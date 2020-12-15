@@ -4,10 +4,10 @@ import (
 	"io"
 	"os"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	cmn "github.com/tendermint/tendermint/libs/common"
-	"github.com/tendermint/tendermint/libs/log"
-	dbm "github.com/tendermint/tm-db"
+	abci "github.com/evdatsion/tendermint/abci/types"
+	cmn "github.com/evdatsion/tendermint/libs/common"
+	"github.com/evdatsion/tendermint/libs/log"
+	dbm "github.com/evdatsion/tm-db"
 
 	bam "github.com/evdatsion/cosmos-sdk/baseapp"
 	"github.com/evdatsion/cosmos-sdk/codec"

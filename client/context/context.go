@@ -11,11 +11,11 @@ import (
 	"github.com/spf13/viper"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/tendermint/tendermint/libs/cli"
-	"github.com/tendermint/tendermint/libs/log"
-	tmlite "github.com/tendermint/tendermint/lite"
-	tmliteProxy "github.com/tendermint/tendermint/lite/proxy"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
+	"github.com/evdatsion/tendermint/libs/cli"
+	"github.com/evdatsion/tendermint/libs/log"
+	tmlite "github.com/evdatsion/tendermint/lite"
+	tmliteProxy "github.com/evdatsion/tendermint/lite/proxy"
+	rpcclient "github.com/evdatsion/tendermint/rpc/client"
 
 	"github.com/evdatsion/cosmos-sdk/client/flags"
 	"github.com/evdatsion/cosmos-sdk/client/keys"

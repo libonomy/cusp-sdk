@@ -3,7 +3,7 @@ package gov
 import (
 	"fmt"
 
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/evdatsion/tendermint/abci/types"
 
 	"github.com/evdatsion/cosmos-sdk/codec"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

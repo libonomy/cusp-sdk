@@ -1,8 +1,8 @@
 package crypto
 
 import (
-	amino "github.com/tendermint/go-amino"
-	cryptoAmino "github.com/tendermint/tendermint/crypto/encoding/amino"
+	amino "github.com/evdatsion/go-amino"
+	cryptoAmino "github.com/evdatsion/tendermint/crypto/encoding/amino"
 )
 
 var cdc = amino.NewCodec()

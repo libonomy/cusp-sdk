@@ -14,7 +14,7 @@ import (
 	"github.com/evdatsion/cosmos-sdk/codec"
 	"github.com/evdatsion/cosmos-sdk/types/rest"
 
-	tmliteProxy "github.com/tendermint/tendermint/lite/proxy"
+	tmliteProxy "github.com/evdatsion/tendermint/lite/proxy"
 )
 
 //BlockCommand returns the verified block data for a given heights

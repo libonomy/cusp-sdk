@@ -5,12 +5,12 @@ import (
 	"path/filepath"
 	"time"
 
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/libs/common"
-	"github.com/tendermint/tendermint/p2p"
-	"github.com/tendermint/tendermint/privval"
-	tmtypes "github.com/tendermint/tendermint/types"
+	cfg "github.com/evdatsion/tendermint/config"
+	"github.com/evdatsion/tendermint/crypto"
+	"github.com/evdatsion/tendermint/libs/common"
+	"github.com/evdatsion/tendermint/p2p"
+	"github.com/evdatsion/tendermint/privval"
+	tmtypes "github.com/evdatsion/tendermint/types"
 
 	"github.com/evdatsion/cosmos-sdk/server"
 )

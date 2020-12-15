@@ -12,9 +12,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/log"
-	dbm "github.com/tendermint/tm-db"
+	abci "github.com/evdatsion/tendermint/abci/types"
+	"github.com/evdatsion/tendermint/libs/log"
+	dbm "github.com/evdatsion/tm-db"
 
 	"github.com/evdatsion/cosmos-sdk/codec"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

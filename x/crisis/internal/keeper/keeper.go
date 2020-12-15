@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/evdatsion/tendermint/libs/log"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 	"github.com/evdatsion/cosmos-sdk/x/crisis/internal/types"

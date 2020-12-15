@@ -9,10 +9,10 @@ import (
 
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
-	abciServer "github.com/tendermint/tendermint/abci/server"
-	tcmd "github.com/tendermint/tendermint/cmd/tendermint/commands"
-	"github.com/tendermint/tendermint/libs/cli"
-	"github.com/tendermint/tendermint/libs/log"
+	abciServer "github.com/evdatsion/tendermint/abci/server"
+	tcmd "github.com/evdatsion/tendermint/cmd/tendermint/commands"
+	"github.com/evdatsion/tendermint/libs/cli"
+	"github.com/evdatsion/tendermint/libs/log"
 
 	"github.com/evdatsion/cosmos-sdk/client"
 	"github.com/evdatsion/cosmos-sdk/codec"

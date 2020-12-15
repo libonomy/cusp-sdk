@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	dbm "github.com/tendermint/tm-db"
+	dbm "github.com/evdatsion/tm-db"
 
 	"github.com/evdatsion/cosmos-sdk/store/dbadapter"
 	"github.com/evdatsion/cosmos-sdk/store/prefix"

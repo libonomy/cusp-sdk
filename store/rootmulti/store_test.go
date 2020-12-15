@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/merkle"
-	dbm "github.com/tendermint/tm-db"
+	abci "github.com/evdatsion/tendermint/abci/types"
+	"github.com/evdatsion/tendermint/crypto/merkle"
+	dbm "github.com/evdatsion/tm-db"
 
 	"github.com/evdatsion/cosmos-sdk/store/errors"
 	"github.com/evdatsion/cosmos-sdk/store/types"

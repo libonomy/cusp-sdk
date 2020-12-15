@@ -9,8 +9,8 @@ import (
 	flag "github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
+	cfg "github.com/evdatsion/tendermint/config"
+	"github.com/evdatsion/tendermint/crypto"
 
 	"github.com/evdatsion/cosmos-sdk/client"
 	"github.com/evdatsion/cosmos-sdk/client/context"

@@ -21,11 +21,11 @@ require (
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.6.1
 	github.com/stretchr/testify v1.4.0
-	github.com/tendermint/btcd v0.1.1
-	github.com/tendermint/crypto v0.0.0-20180820045704-3764759f34a5
-	github.com/tendermint/go-amino v0.15.0
-	github.com/tendermint/iavl v0.12.4
-	github.com/tendermint/tendermint v0.32.14
-	github.com/tendermint/tm-db v0.2.0
+	github.com/evdatsion/btcd v0.1.1
+	github.com/evdatsion/crypto v0.0.0-20180820045704-3764759f34a5
+	github.com/evdatsion/go-amino v0.15.0
+	github.com/evdatsion/iavl v0.12.4
+	github.com/evdatsion/tendermint v0.32.14
+	github.com/evdatsion/tm-db v0.2.0
 	gopkg.in/yaml.v2 v2.2.7
 )

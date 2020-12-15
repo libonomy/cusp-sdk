@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/yaml.v2"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
+	"github.com/evdatsion/tendermint/crypto/ed25519"
+	"github.com/evdatsion/tendermint/crypto/secp256k1"
 
 	"github.com/evdatsion/cosmos-sdk/types"
 )

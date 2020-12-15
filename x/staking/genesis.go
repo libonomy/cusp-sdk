@@ -3,8 +3,8 @@ package staking
 import (
 	"fmt"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmtypes "github.com/tendermint/tendermint/types"
+	abci "github.com/evdatsion/tendermint/abci/types"
+	tmtypes "github.com/evdatsion/tendermint/types"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 	"github.com/evdatsion/cosmos-sdk/x/staking/exported"

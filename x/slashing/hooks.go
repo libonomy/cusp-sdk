@@ -4,7 +4,7 @@ package slashing
 import (
 	"time"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/evdatsion/tendermint/crypto"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 	"github.com/evdatsion/cosmos-sdk/x/slashing/types"

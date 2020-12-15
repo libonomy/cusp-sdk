@@ -3,8 +3,8 @@ package auth
 import (
 	"fmt"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/evdatsion/tendermint/crypto"
+	"github.com/evdatsion/tendermint/libs/log"
 
 	"github.com/evdatsion/cosmos-sdk/codec"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

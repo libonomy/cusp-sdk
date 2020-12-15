@@ -12,8 +12,8 @@ import (
 	"sort"
 	"strings"
 
-	cfg "github.com/tendermint/tendermint/config"
-	tmtypes "github.com/tendermint/tendermint/types"
+	cfg "github.com/evdatsion/tendermint/config"
+	tmtypes "github.com/evdatsion/tendermint/types"
 
 	"github.com/evdatsion/cosmos-sdk/codec"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

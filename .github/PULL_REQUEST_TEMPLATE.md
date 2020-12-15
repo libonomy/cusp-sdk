@@ -17,4 +17,4 @@ ______
 For Admin Use:
 - Added appropriate labels to PR (ex. wip, ready-for-review, docs)
 - Reviewers Assigned
-- Squashed all commits, uses message "Merge pull request #XYZ: [title]" ([coding standards](https://github.com/tendermint/coding/blob/master/README.md#merging-a-pr))
+- Squashed all commits, uses message "Merge pull request #XYZ: [title]" ([coding standards](https://github.com/evdatsion/coding/blob/master/README.md#merging-a-pr))

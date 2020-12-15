@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/iavl"
-	abci "github.com/tendermint/tendermint/abci/types"
-	cmn "github.com/tendermint/tendermint/libs/common"
-	dbm "github.com/tendermint/tm-db"
+	"github.com/evdatsion/iavl"
+	abci "github.com/evdatsion/tendermint/abci/types"
+	cmn "github.com/evdatsion/tendermint/libs/common"
+	dbm "github.com/evdatsion/tm-db"
 
 	"github.com/evdatsion/cosmos-sdk/store/errors"
 	"github.com/evdatsion/cosmos-sdk/store/types"

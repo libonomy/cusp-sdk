@@ -6,7 +6,7 @@ import (
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 	"github.com/evdatsion/cosmos-sdk/x/auth"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/ed25519"
+	"github.com/evdatsion/tendermint/crypto/ed25519"
 )
 
 func TestSanitize(t *testing.T) {

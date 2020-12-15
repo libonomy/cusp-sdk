@@ -1,7 +1,7 @@
 package distribution
 
 import (
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/evdatsion/tendermint/abci/types"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 	"github.com/evdatsion/cosmos-sdk/x/distribution/keeper"

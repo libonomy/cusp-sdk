@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	cmn "github.com/tendermint/tendermint/libs/common"
-	dbm "github.com/tendermint/tm-db"
+	cmn "github.com/evdatsion/tendermint/libs/common"
+	dbm "github.com/evdatsion/tm-db"
 
 	"github.com/evdatsion/cosmos-sdk/store/cachekv"
 	"github.com/evdatsion/cosmos-sdk/store/dbadapter"

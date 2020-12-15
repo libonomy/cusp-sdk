@@ -7,7 +7,7 @@ import (
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/tendermint/tendermint/crypto/multisig"
+	"github.com/evdatsion/tendermint/crypto/multisig"
 
 	"github.com/evdatsion/cosmos-sdk/client/context"
 	"github.com/evdatsion/cosmos-sdk/client/flags"

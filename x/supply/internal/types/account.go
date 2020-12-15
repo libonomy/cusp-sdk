@@ -5,7 +5,7 @@ import (
 
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/evdatsion/tendermint/crypto"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 	authtypes "github.com/evdatsion/cosmos-sdk/x/auth/types"

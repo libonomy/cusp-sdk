@@ -8,9 +8,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
-	tcmd "github.com/tendermint/tendermint/cmd/tendermint/commands"
-	"github.com/tendermint/tendermint/libs/cli"
-	"github.com/tendermint/tendermint/libs/log"
+	tcmd "github.com/evdatsion/tendermint/cmd/tendermint/commands"
+	"github.com/evdatsion/tendermint/libs/cli"
+	"github.com/evdatsion/tendermint/libs/log"
 
 	"github.com/evdatsion/cosmos-sdk/client"
 	"github.com/evdatsion/cosmos-sdk/server"

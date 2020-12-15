@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/evdatsion/tendermint/crypto"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 )

@@ -1,7 +1,7 @@
 package types
 
 import (
-	cmn "github.com/tendermint/tendermint/libs/common"
+	cmn "github.com/evdatsion/tendermint/libs/common"
 
 	"github.com/evdatsion/cosmos-sdk/store/types"
 )

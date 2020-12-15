@@ -7,9 +7,9 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
-	abci "github.com/tendermint/tendermint/abci/types"
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
+	abci "github.com/evdatsion/tendermint/abci/types"
+	cfg "github.com/evdatsion/tendermint/config"
+	"github.com/evdatsion/tendermint/crypto"
 
 	"github.com/evdatsion/cosmos-sdk/client/context"
 	"github.com/evdatsion/cosmos-sdk/codec"

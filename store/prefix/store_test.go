@@ -12,8 +12,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	tiavl "github.com/tendermint/iavl"
-	dbm "github.com/tendermint/tm-db"
+	tiavl "github.com/evdatsion/iavl"
+	dbm "github.com/evdatsion/tm-db"
 )
 
 // copied from iavl/store_test.go
@@ -234,7 +234,7 @@ func TestPrefixStoreReverseIteratorEdgeCase(t *testing.T) {
 	iter.Close()
 }
 
-// Tests below are ported from https://github.com/tendermint/tendermint/blob/master/libs/db/prefix_db_test.go
+// Tests below are ported from https://github.com/evdatsion/tendermint/blob/master/libs/db/prefix_db_test.go
 
 func mockStoreWithStuff() types.KVStore {
 	db := dbm.NewMemDB()

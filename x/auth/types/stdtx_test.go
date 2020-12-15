@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/libs/log"
+	abci "github.com/evdatsion/tendermint/abci/types"
+	"github.com/evdatsion/tendermint/crypto"
+	"github.com/evdatsion/tendermint/crypto/ed25519"
+	"github.com/evdatsion/tendermint/libs/log"
 	yaml "gopkg.in/yaml.v2"
 
 	"github.com/evdatsion/cosmos-sdk/codec"

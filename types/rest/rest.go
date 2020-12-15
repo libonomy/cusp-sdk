@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/tendermint/tendermint/types"
+	"github.com/evdatsion/tendermint/types"
 
 	"github.com/evdatsion/cosmos-sdk/client/context"
 	"github.com/evdatsion/cosmos-sdk/codec"

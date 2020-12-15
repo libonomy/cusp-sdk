@@ -10,8 +10,8 @@ import (
 	"github.com/spf13/viper"
 	"gopkg.in/yaml.v2"
 
-	"github.com/tendermint/tendermint/libs/bech32"
-	"github.com/tendermint/tendermint/libs/cli"
+	"github.com/evdatsion/tendermint/libs/bech32"
+	"github.com/evdatsion/tendermint/libs/cli"
 
 	"github.com/evdatsion/cosmos-sdk/client/flags"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

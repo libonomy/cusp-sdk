@@ -10,10 +10,10 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/tendermint/tendermint/crypto"
-	cryptoAmino "github.com/tendermint/tendermint/crypto/encoding/amino"
+	"github.com/evdatsion/tendermint/crypto"
+	cryptoAmino "github.com/evdatsion/tendermint/crypto/encoding/amino"
 
-	"github.com/tendermint/tendermint/libs/bech32"
+	"github.com/evdatsion/tendermint/libs/bech32"
 )
 
 const (

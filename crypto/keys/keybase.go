@@ -17,10 +17,10 @@ import (
 
 	bip39 "github.com/evdatsion/go-bip39"
 
-	tmcrypto "github.com/tendermint/tendermint/crypto"
-	cryptoAmino "github.com/tendermint/tendermint/crypto/encoding/amino"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
-	dbm "github.com/tendermint/tm-db"
+	tmcrypto "github.com/evdatsion/tendermint/crypto"
+	cryptoAmino "github.com/evdatsion/tendermint/crypto/encoding/amino"
+	"github.com/evdatsion/tendermint/crypto/secp256k1"
+	dbm "github.com/evdatsion/tm-db"
 )
 
 var _ Keybase = dbKeybase{}

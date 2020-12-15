@@ -6,7 +6,7 @@ import (
 	"math/rand"
 	"testing"
 
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/evdatsion/tendermint/abci/types"
 
 	"github.com/evdatsion/cosmos-sdk/baseapp"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

@@ -6,9 +6,9 @@ import (
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/multisig"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
+	"github.com/evdatsion/tendermint/crypto"
+	"github.com/evdatsion/tendermint/crypto/multisig"
+	"github.com/evdatsion/tendermint/crypto/secp256k1"
 
 	"github.com/evdatsion/cosmos-sdk/client/flags"
 	"github.com/evdatsion/cosmos-sdk/crypto/keys"

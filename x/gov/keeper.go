@@ -10,7 +10,7 @@ import (
 	"github.com/evdatsion/cosmos-sdk/x/params"
 	"github.com/evdatsion/cosmos-sdk/x/supply/exported"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/evdatsion/tendermint/libs/log"
 )
 
 // Governance Keeper

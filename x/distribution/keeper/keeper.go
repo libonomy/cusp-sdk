@@ -8,7 +8,7 @@ import (
 	"github.com/evdatsion/cosmos-sdk/x/distribution/types"
 	"github.com/evdatsion/cosmos-sdk/x/params"
 
-	"github.com/tendermint/tendermint/libs/log"
+	"github.com/evdatsion/tendermint/libs/log"
 )
 
 // Keeper of the distribution store

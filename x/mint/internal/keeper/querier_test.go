@@ -8,7 +8,7 @@ import (
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 	"github.com/evdatsion/cosmos-sdk/x/mint/internal/types"
 
-	abci "github.com/tendermint/tendermint/abci/types"
+	abci "github.com/evdatsion/tendermint/abci/types"
 )
 
 func TestNewQuerier(t *testing.T) {

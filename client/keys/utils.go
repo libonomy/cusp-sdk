@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 
 	"github.com/spf13/viper"
-	"github.com/tendermint/tendermint/libs/cli"
+	"github.com/evdatsion/tendermint/libs/cli"
 	"gopkg.in/yaml.v2"
 
 	"github.com/evdatsion/cosmos-sdk/client/flags"

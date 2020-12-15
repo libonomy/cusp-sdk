@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/evdatsion/tendermint/crypto"
 	"gopkg.in/yaml.v2"
 
 	"github.com/stretchr/testify/require"

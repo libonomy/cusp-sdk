@@ -17,9 +17,9 @@ import (
 
 	"github.com/evdatsion/go-bip39"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/multisig"
-	"github.com/tendermint/tendermint/libs/cli"
+	"github.com/evdatsion/tendermint/crypto"
+	"github.com/evdatsion/tendermint/crypto/multisig"
+	"github.com/evdatsion/tendermint/libs/cli"
 )
 
 const (

@@ -5,9 +5,9 @@ import (
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/multisig"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
+	"github.com/evdatsion/tendermint/crypto"
+	"github.com/evdatsion/tendermint/crypto/multisig"
+	"github.com/evdatsion/tendermint/crypto/secp256k1"
 )
 
 func TestBech32KeysOutput(t *testing.T) {

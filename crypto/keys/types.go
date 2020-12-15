@@ -3,8 +3,8 @@ package keys
 import (
 	"fmt"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/multisig"
+	"github.com/evdatsion/tendermint/crypto"
+	"github.com/evdatsion/tendermint/crypto/multisig"
 
 	"github.com/evdatsion/cosmos-sdk/crypto/keys/hd"
 	"github.com/evdatsion/cosmos-sdk/types"

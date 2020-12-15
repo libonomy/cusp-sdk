@@ -1,7 +1,7 @@
 package store
 
 import (
-	dbm "github.com/tendermint/tm-db"
+	dbm "github.com/evdatsion/tm-db"
 
 	"github.com/evdatsion/cosmos-sdk/store/rootmulti"
 	"github.com/evdatsion/cosmos-sdk/store/types"

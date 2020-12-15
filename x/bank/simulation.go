@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/tendermint/tendermint/crypto"
+	"github.com/evdatsion/tendermint/crypto"
 
 	"github.com/evdatsion/cosmos-sdk/baseapp"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

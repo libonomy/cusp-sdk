@@ -17,7 +17,7 @@ import (
 	"github.com/evdatsion/cosmos-sdk/x/auth/client/utils"
 	"github.com/evdatsion/cosmos-sdk/x/auth/types"
 
-	tmtypes "github.com/tendermint/tendermint/types"
+	tmtypes "github.com/evdatsion/tendermint/types"
 )
 
 const (

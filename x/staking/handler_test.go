@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
-	tmtypes "github.com/tendermint/tendermint/types"
+	abci "github.com/evdatsion/tendermint/abci/types"
+	"github.com/evdatsion/tendermint/crypto/secp256k1"
+	tmtypes "github.com/evdatsion/tendermint/types"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 	keep "github.com/evdatsion/cosmos-sdk/x/staking/keeper"

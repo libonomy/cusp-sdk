@@ -39,26 +39,26 @@ Ref: https://keepachangelog.com/en/1.0.0/
 
 ### Improvements
 
-* (tendermint) Bump Tendermint version to [v0.32.14](https://github.com/tendermint/tendermint/releases/tag/v0.32.14).
+* (tendermint) Bump Tendermint version to [v0.32.14](https://github.com/evdatsion/tendermint/releases/tag/v0.32.14).
 
 ## [v0.37.14] - **
 
 ### Improvements
 
-* (tendermint) Bump Tendermint version to [v0.32.13](https://github.com/tendermint/tendermint/releases/tag/v0.32.13).
+* (tendermint) Bump Tendermint version to [v0.32.13](https://github.com/evdatsion/tendermint/releases/tag/v0.32.13).
 
 ## [v0.37.13] - 2020-06-03
 
 ### Improvements
 
-* (tendermint) Bump Tendermint version to [v0.32.12](https://github.com/tendermint/tendermint/releases/tag/v0.32.12).
+* (tendermint) Bump Tendermint version to [v0.32.12](https://github.com/evdatsion/tendermint/releases/tag/v0.32.12).
 * (cosmos-ledger-go) Bump Cosmos Ledger Wallet library version to [v0.11.1](https://github.com/evdatsion/ledger-cosmos-go/releases/tag/v0.11.1).
 
 ## [v0.37.12] - 2020-05-05
 
 ### Improvements
 
-* (tendermint) Bump Tendermint version to [v0.32.11](https://github.com/tendermint/tendermint/releases/tag/v0.32.11).
+* (tendermint) Bump Tendermint version to [v0.32.11](https://github.com/evdatsion/tendermint/releases/tag/v0.32.11).
 
 ## [v0.37.11] - 2020-04-22
 
@@ -76,7 +76,7 @@ Ref: https://keepachangelog.com/en/1.0.0/
 
 ### Improvements
 
-* (tendermint) Bump Tendermint version to [v0.32.10](https://github.com/tendermint/tendermint/releases/tag/v0.32.10).
+* (tendermint) Bump Tendermint version to [v0.32.10](https://github.com/evdatsion/tendermint/releases/tag/v0.32.10).
 
 ## [v0.37.8] - 2020-03-11
 
@@ -110,7 +110,7 @@ respectively.
 
 ### Improvements
 
-* (tendermint) Bump Tendermint version to [v0.32.9](https://github.com/tendermint/tendermint/releases/tag/v0.32.9)
+* (tendermint) Bump Tendermint version to [v0.32.9](https://github.com/evdatsion/tendermint/releases/tag/v0.32.9)
 
 ## [v0.37.5] - 2020-01-07
 
@@ -121,7 +121,7 @@ respectively.
 
 ### Improvements
 
-* (tendermint) Bump Tendermint version to [v0.32.8](https://github.com/tendermint/tendermint/releases/tag/v0.32.8)
+* (tendermint) Bump Tendermint version to [v0.32.8](https://github.com/evdatsion/tendermint/releases/tag/v0.32.8)
 * (cli) [\#5482](https://github.com/evdatsion/cosmos-sdk/pull/5482) Remove old "tags" nomenclature from the `q txs` command in
   favor of the new events system. Functionality remains unchanged except that `=` is used instead of `:` to be
   consistent with the API's use of event queries.
@@ -138,7 +138,7 @@ respectively.
 
 ### Improvements
 
-* (tendermint) Bump Tendermint version to [v0.32.7](https://github.com/tendermint/tendermint/releases/tag/v0.32.7)
+* (tendermint) Bump Tendermint version to [v0.32.7](https://github.com/evdatsion/tendermint/releases/tag/v0.32.7)
 * (ledger) [\#4716](https://github.com/evdatsion/cosmos-sdk/pull/4716) Fix ledger custom coin type support bug.
 
 ### Bug Fixes
@@ -154,7 +154,7 @@ v0.36/v0.37 not converting validator consensus pubkey to bech32 format.
 
 ### Improvements
 
-* (tendermint) Bump Tendermint version to [v0.32.6](https://github.com/tendermint/tendermint/releases/tag/v0.32.6)
+* (tendermint) Bump Tendermint version to [v0.32.6](https://github.com/evdatsion/tendermint/releases/tag/v0.32.6)
 
 ## [v0.37.1] - 2019-09-19
 
@@ -1107,8 +1107,8 @@ IMPROVEMENTS
 
 * CI
   * [\#2498](https://github.com/evdatsion/cosmos-sdk/issues/2498) Added macos CI job to CircleCI
-  * [#142](https://github.com/tendermint/devops/issues/142) Increased the number of blocks to be tested during multi-sim
-  * [#147](https://github.com/tendermint/devops/issues/142) Added docker image build to CI
+  * [#142](https://github.com/evdatsion/devops/issues/142) Increased the number of blocks to be tested during multi-sim
+  * [#147](https://github.com/evdatsion/devops/issues/142) Added docker image build to CI
 
 BUG FIXES
 
@@ -1190,10 +1190,10 @@ BREAKING CHANGES
   * [cli] [\#2734](https://github.com/evdatsion/cosmos-sdk/issues/2734) Rewrite `gaiacli config`. It is now a non-interactive config utility.
 
 * Gaia
-  * [#128](https://github.com/tendermint/devops/issues/128) Updated CircleCI job to trigger website build on every push to master/develop.
+  * [#128](https://github.com/evdatsion/devops/issues/128) Updated CircleCI job to trigger website build on every push to master/develop.
   * [\#2994](https://github.com/evdatsion/cosmos-sdk/pull/2994) Change wrong-password error message.
   * [\#3009](https://github.com/evdatsion/cosmos-sdk/issues/3009) Added missing Gaia genesis verification
-  * [#128](https://github.com/tendermint/devops/issues/128) Updated CircleCI job to trigger website build on every push to master/develop.
+  * [#128](https://github.com/evdatsion/devops/issues/128) Updated CircleCI job to trigger website build on every push to master/develop.
   * [\#2994](https://github.com/evdatsion/cosmos-sdk/pull/2994) Change wrong-password error message.
   * [\#3009](https://github.com/evdatsion/cosmos-sdk/issues/3009) Added missing Gaia genesis verification
   * [gas] [\#3052](https://github.com/evdatsion/cosmos-sdk/issues/3052) Updated gas costs to more reasonable numbers
@@ -1304,7 +1304,7 @@ IMPROVEMENTS
   * [\#2773](https://github.com/evdatsion/cosmos-sdk/issues/2773) Require moniker to be provided on `gaiad init`.
   * [\#2672](https://github.com/evdatsion/cosmos-sdk/issues/2672) [Makefile] Updated for better Windows compatibility and ledger support logic, get_tools was rewritten as a cross-compatible Makefile.
   * [\#2766](https://github.com/evdatsion/cosmos-sdk/issues/2766) [Makefile] Added goimports tool to get_tools. Get_tools now only builds new versions if binaries are missing.
-  * [#110](https://github.com/tendermint/devops/issues/110) Updated CircleCI job to trigger website build when cosmos docs are updated.
+  * [#110](https://github.com/evdatsion/devops/issues/110) Updated CircleCI job to trigger website build when cosmos docs are updated.
 
 * SDK
  & [x/mock/simulation] [\#2720] major cleanup, introduction of helper objects, reorganization
@@ -1339,7 +1339,7 @@ BUG FIXES
   * [\#2884](https://github.com/evdatsion/cosmos-sdk/issues/2884) [docs/examples] Fix `basecli version` panic
 
 * Tendermint
-  * [\#2797](https://github.com/tendermint/tendermint/pull/2797) AddressBook requires addresses to have IDs; Do not crap out immediately after sending pex addrs in seed mode
+  * [\#2797](https://github.com/evdatsion/tendermint/pull/2797) AddressBook requires addresses to have IDs; Do not crap out immediately after sending pex addrs in seed mode
 
 ## 0.26.0
 
@@ -1520,7 +1520,7 @@ BREAKING CHANGES
     * BFT time is implemented
     * Secp256k1 signature format has changed
     * There is now a threshold multisig format
-    * See the [tendermint changelog](https://github.com/tendermint/tendermint/blob/master/CHANGELOG.md) for other changes.
+    * See the [tendermint changelog](https://github.com/evdatsion/tendermint/blob/master/CHANGELOG.md) for other changes.
 
 FEATURES
 
@@ -1590,9 +1590,9 @@ IMPROVEMENTS
 
 * Gaia
     * [x/stake] [#2023](https://github.com/evdatsion/cosmos-sdk/pull/2023) Terminate iteration loop in `UpdateBondedValidators` and `UpdateBondedValidatorsFull` when the first revoked validator is encountered and perform a sanity check.
-    * [x/auth] Signature verification's gas cost now accounts for pubkey type. [#2046](https://github.com/tendermint/tendermint/pull/2046)
+    * [x/auth] Signature verification's gas cost now accounts for pubkey type. [#2046](https://github.com/evdatsion/tendermint/pull/2046)
     * [x/stake] [x/slashing] Ensure delegation invariants to jailed validators [#1883](https://github.com/evdatsion/cosmos-sdk/issues/1883).
-    * [x/stake] Improve speed of GetValidator, which was shown to be a performance bottleneck. [#2046](https://github.com/tendermint/tendermint/pull/2200)
+    * [x/stake] Improve speed of GetValidator, which was shown to be a performance bottleneck. [#2046](https://github.com/evdatsion/tendermint/pull/2200)
     * [x/stake] [\#2435](https://github.com/evdatsion/cosmos-sdk/issues/2435) Improve memory efficiency of getting the various store keys
     * [genesis] [\#2229](https://github.com/evdatsion/cosmos-sdk/issues/2229) Ensure that there are no duplicate accounts or validators in the genesis state.
     * [genesis] [\#2450](https://github.com/evdatsion/cosmos-sdk/issues/2450) Validate staking genesis parameters.
@@ -1704,10 +1704,10 @@ BREAKING CHANGES
         structure `TxContext` in `x/auth/client/context`
 
 * Tendermint
-    - v0.22.5 -> See [Tendermint PR](https://github.com/tendermint/tendermint/pull/1966)
+    - v0.22.5 -> See [Tendermint PR](https://github.com/evdatsion/tendermint/pull/1966)
         - change all the cryptography imports.
     - v0.23.0 -> See
-      [Changelog](https://github.com/tendermint/tendermint/blob/v0.23.0/CHANGELOG.md#0230)
+      [Changelog](https://github.com/evdatsion/tendermint/blob/v0.23.0/CHANGELOG.md#0230)
       and [SDK PR](https://github.com/evdatsion/cosmos-sdk/pull/1927)
         - BeginBlock no longer includes crypto.Pubkey
         - use time.Time instead of int64 for time.
@@ -2222,10 +2222,10 @@ IMPROVEMENTS:
 ## 0.15.0 (April 29, 2018)
 
 NOTE: v0.15.0 is a large breaking change that updates the encoding scheme to use
-[Amino](github.com/tendermint/go-amino).
+[Amino](github.com/evdatsion/go-amino).
 
 For details on how this changes encoding for public keys and addresses,
-see the [docs](https://github.com/tendermint/tendermint/blob/v0.19.1/docs/specification/new-spec/encoding.md#public-key-cryptography).
+see the [docs](https://github.com/evdatsion/tendermint/blob/v0.19.1/docs/specification/new-spec/encoding.md#public-key-cryptography).
 
 BREAKING CHANGES
 
@@ -2545,10 +2545,10 @@ IMPROVEMENTS:
 * genesis file
   * you can define accounts with either address or pub_key
   * sorts coins for you, so no silent errors if not in alphabetical order
-* [light-client](https://github.com/tendermint/light-client) integration
+* [light-client](https://github.com/evdatsion/light-client) integration
   * no longer must you trust the node you connect to, prove everything!
   * new [basecli command](./cmd/basecli/README.md)
-  * integrated [key management](https://github.com/tendermint/go-crypto/blob/master/cmd/README.md), stored encrypted locally
+  * integrated [key management](https://github.com/evdatsion/go-crypto/blob/master/cmd/README.md), stored encrypted locally
   * tracks validator set changes and proves everything from one initial validator seed
   * `basecli proof state` gets complete proofs for any abci state
   * `basecli proof tx` gets complete proof where a tx was stored in the chain
