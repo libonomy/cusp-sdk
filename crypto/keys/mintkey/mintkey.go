@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/evdatsion/crypto/bcrypt"
+	"github.com/tendermint/crypto/bcrypt"
 
 	"github.com/evdatsion/tendermint/crypto"
 	"github.com/evdatsion/tendermint/crypto/armor"

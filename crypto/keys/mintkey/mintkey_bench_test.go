@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/evdatsion/crypto/bcrypt"
+	"github.com/tendermint/crypto/bcrypt"
 
 	"github.com/evdatsion/tendermint/crypto"
 )

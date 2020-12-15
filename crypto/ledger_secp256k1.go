@@ -7,7 +7,7 @@ import (
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/pkg/errors"
 
-	tmbtcec "github.com/evdatsion/btcd/btcec"
+	tmbtcec "github.com/tendermint/btcd/btcec"
 	tmcrypto "github.com/evdatsion/tendermint/crypto"
 	tmsecp256k1 "github.com/evdatsion/tendermint/crypto/secp256k1"
 
