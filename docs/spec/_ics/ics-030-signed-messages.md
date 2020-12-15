@@ -97,7 +97,7 @@ the [JSON schema](http://json-schema.org/) specification as such:
 ```json
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "$id": "evdatsion/signing/typeData/schema",
+  "$id": "cosmos/signing/typeData/schema",
   "title": "The Cosmos signed message typed data schema.",
   "type": "object",
   "properties": {
