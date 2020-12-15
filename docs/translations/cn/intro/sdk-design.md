@@ -81,6 +81,6 @@ SDK模块在SDK的`x/`目录下定义。一些核心模块包括：
 + `x/bank`: 用于实现token和token转账.
 + `x/staking` + `x/slashing`: 用于构建POS区块链.
 
-除了`x/`中已有的模块，任何人都可以在他们的应用程序中使用它们自己定义的模块。你可以查看[示例教程](https://learnblockchain.cn/docs/cosmos/tutorial/04-keeper.html)。
+除了`x/`中已有的模块，任何人都可以在他们的应用程序中使用它们自己定义的模块。你可以查看[示例教程](https://learnblockchain.cn/docs/evdatsion/tutorial/04-keeper.html)。
 
 ### 接下来 学习 Cosmos SDK 安全模型，[ocap](./ocap.md)

@@ -1,12 +1,12 @@
 # Cosmos SDK
 ![banner](docs/cosmos-sdk-image.jpg)
 
-[![version](https://img.shields.io/github/tag/cosmos/cosmos-sdk.svg)](https://github.com/evdatsion/cosmos-sdk/releases/latest)
-[![CircleCI](https://circleci.com/gh/cosmos/cosmos-sdk/tree/master.svg?style=shield)](https://circleci.com/gh/cosmos/cosmos-sdk/tree/master)
-[![codecov](https://codecov.io/gh/cosmos/cosmos-sdk/branch/master/graph/badge.svg)](https://codecov.io/gh/cosmos/cosmos-sdk)
+[![version](https://img.shields.io/github/tag/evdatsion/cosmos-sdk.svg)](https://github.com/evdatsion/cosmos-sdk/releases/latest)
+[![CircleCI](https://circleci.com/gh/evdatsion/cosmos-sdk/tree/master.svg?style=shield)](https://circleci.com/gh/evdatsion/cosmos-sdk/tree/master)
+[![codecov](https://codecov.io/gh/evdatsion/cosmos-sdk/branch/master/graph/badge.svg)](https://codecov.io/gh/evdatsion/cosmos-sdk)
 [![Go Report Card](https://goreportcard.com/badge/github.com/evdatsion/cosmos-sdk)](https://goreportcard.com/report/github.com/evdatsion/cosmos-sdk)
-[![license](https://img.shields.io/github/license/cosmos/cosmos-sdk.svg)](https://github.com/evdatsion/cosmos-sdk/blob/master/LICENSE)
-[![LoC](https://tokei.rs/b1/github/cosmos/cosmos-sdk)](https://github.com/evdatsion/cosmos-sdk)
+[![license](https://img.shields.io/github/license/evdatsion/cosmos-sdk.svg)](https://github.com/evdatsion/cosmos-sdk/blob/master/LICENSE)
+[![LoC](https://tokei.rs/b1/github/evdatsion/cosmos-sdk)](https://github.com/evdatsion/cosmos-sdk)
 [![API Reference](https://godoc.org/github.com/evdatsion/cosmos-sdk?status.svg
 )](https://godoc.org/github.com/evdatsion/cosmos-sdk)
 [![riot.im](https://img.shields.io/badge/riot.im-JOIN%20CHAT-green.svg)](https://riot.im/app/#/room/#cosmos-sdk:matrix.org)
@@ -33,4 +33,4 @@ The Cosmos Hub application, `gaia`, has moved to its [own repository](https://gi
 
 ## Disambiguation
 
-This Cosmos-SDK project is not related to the [React-Cosmos](https://github.com/react-cosmos/react-cosmos) project (yet). Many thanks to Evan Coury and Ovidiu (@skidding) for this Github organization name. As per our agreement, this disambiguation notice will stay here.
+This Cosmos-SDK project is not related to the [React-Cosmos](https://github.com/react-evdatsion/react-cosmos) project (yet). Many thanks to Evan Coury and Ovidiu (@skidding) for this Github organization name. As per our agreement, this disambiguation notice will stay here.
