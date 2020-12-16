@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/evdatsion/cosmos-sdk/store/cachekv"
-	"github.com/evdatsion/cosmos-sdk/store/tracekv"
-	"github.com/evdatsion/cosmos-sdk/store/types"
+	"github.com/evdatsion/cusp-sdk/store/cachekv"
+	"github.com/evdatsion/cusp-sdk/store/tracekv"
+	"github.com/evdatsion/cusp-sdk/store/types"
 )
 
 var _ types.KVStore = Store{}

@@ -8,9 +8,9 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/common"
 	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/staking/keeper"
-	"github.com/evdatsion/cosmos-sdk/x/staking/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/staking/keeper"
+	"github.com/evdatsion/cusp-sdk/x/staking/types"
 )
 
 func NewHandler(k keeper.Keeper) sdk.Handler {

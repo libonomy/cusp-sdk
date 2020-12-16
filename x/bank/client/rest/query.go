@@ -5,10 +5,10 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/evdatsion/cosmos-sdk/client/context"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/types/rest"
-	"github.com/evdatsion/cosmos-sdk/x/bank/internal/types"
+	"github.com/evdatsion/cusp-sdk/client/context"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/types/rest"
+	"github.com/evdatsion/cusp-sdk/x/bank/internal/types"
 )
 
 // query accountREST Handler

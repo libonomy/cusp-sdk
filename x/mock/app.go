@@ -14,11 +14,11 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 	dbm "github.com/evdatsion/tm-db"
 
-	bam "github.com/evdatsion/cosmos-sdk/baseapp"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/auth"
-	"github.com/evdatsion/cosmos-sdk/x/params"
+	bam "github.com/evdatsion/cusp-sdk/baseapp"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/auth"
+	"github.com/evdatsion/cusp-sdk/x/params"
 )
 
 const chainID = ""

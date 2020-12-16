@@ -11,7 +11,7 @@ import (
 	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 	dbm "github.com/evdatsion/tm-db"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 type (

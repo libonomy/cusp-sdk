@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/evdatsion/cosmos-sdk/x/params"
+	"github.com/evdatsion/cusp-sdk/x/params"
 )
 
 const (

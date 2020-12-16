@@ -3,10 +3,10 @@ package distribution
 import (
 	"fmt"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/distribution/keeper"
-	"github.com/evdatsion/cosmos-sdk/x/distribution/types"
-	govtypes "github.com/evdatsion/cosmos-sdk/x/gov/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/distribution/keeper"
+	"github.com/evdatsion/cusp-sdk/x/distribution/types"
+	govtypes "github.com/evdatsion/cusp-sdk/x/gov/types"
 )
 
 func NewHandler(k keeper.Keeper) sdk.Handler {

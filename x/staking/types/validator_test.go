@@ -9,8 +9,8 @@ import (
 	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 	"gopkg.in/yaml.v2"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 func TestValidatorTestEquivalent(t *testing.T) {

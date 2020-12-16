@@ -12,7 +12,7 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/privval"
 	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 
-	"github.com/evdatsion/cosmos-sdk/server"
+	"github.com/evdatsion/cusp-sdk/server"
 )
 
 // ExportGenesisFile creates and writes the genesis configuration to disk. An

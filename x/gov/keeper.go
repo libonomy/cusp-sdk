@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/gov/types"
-	"github.com/evdatsion/cosmos-sdk/x/params"
-	"github.com/evdatsion/cosmos-sdk/x/supply/exported"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/gov/types"
+	"github.com/evdatsion/cusp-sdk/x/params"
+	"github.com/evdatsion/cusp-sdk/x/supply/exported"
 
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 )

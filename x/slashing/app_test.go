@@ -7,14 +7,14 @@ import (
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/auth"
-	"github.com/evdatsion/cosmos-sdk/x/bank"
-	"github.com/evdatsion/cosmos-sdk/x/mock"
-	"github.com/evdatsion/cosmos-sdk/x/staking"
-	"github.com/evdatsion/cosmos-sdk/x/staking/types"
-	"github.com/evdatsion/cosmos-sdk/x/supply"
-	supplyexported "github.com/evdatsion/cosmos-sdk/x/supply/exported"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/auth"
+	"github.com/evdatsion/cusp-sdk/x/bank"
+	"github.com/evdatsion/cusp-sdk/x/mock"
+	"github.com/evdatsion/cusp-sdk/x/staking"
+	"github.com/evdatsion/cusp-sdk/x/staking/types"
+	"github.com/evdatsion/cusp-sdk/x/supply"
+	supplyexported "github.com/evdatsion/cusp-sdk/x/supply/exported"
 )
 
 var (

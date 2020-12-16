@@ -1,8 +1,8 @@
 package types
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/params"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/params"
 )
 
 // Default parameter namespace

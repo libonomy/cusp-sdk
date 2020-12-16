@@ -11,10 +11,10 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/multisig"
 	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/crypto"
-	"github.com/evdatsion/cosmos-sdk/crypto/keys"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/crypto"
+	"github.com/evdatsion/cusp-sdk/crypto/keys"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 const (

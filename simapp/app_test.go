@@ -8,7 +8,7 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/codec"
 
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 )

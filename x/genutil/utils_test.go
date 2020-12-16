@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/evdatsion/cosmos-sdk/tests"
+	"github.com/evdatsion/cusp-sdk/tests"
 
 	"github.com/stretchr/testify/require"
 )

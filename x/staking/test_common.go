@@ -4,9 +4,9 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/auth"
-	"github.com/evdatsion/cosmos-sdk/x/staking/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/auth"
+	"github.com/evdatsion/cusp-sdk/x/staking/types"
 )
 
 // nolint: deadcode unused

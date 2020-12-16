@@ -5,10 +5,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/evdatsion/cosmos-sdk/client/context"
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/x/auth/client/utils"
+	"github.com/evdatsion/cusp-sdk/client/context"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/x/auth/client/utils"
 )
 
 // txEncodeRespStr implements a simple Stringer wrapper for a encoded tx.

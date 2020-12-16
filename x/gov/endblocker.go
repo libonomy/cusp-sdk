@@ -3,8 +3,8 @@ package gov
 import (
 	"fmt"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/gov/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/gov/types"
 )
 
 // EndBlocker called every block, process inflation, update validator set.

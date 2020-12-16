@@ -15,8 +15,8 @@ import (
 	pvm "github.com/evdatsion/aphelion-dpos-bft/privval"
 	tversion "github.com/evdatsion/aphelion-dpos-bft/version"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // ShowNodeIDCmd - ported from Tendermint, dump node ID to stdout

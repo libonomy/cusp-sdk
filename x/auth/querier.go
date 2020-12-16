@@ -5,9 +5,9 @@ import (
 
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/auth/types"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/auth/types"
 )
 
 // creates a querier for auth REST endpoints

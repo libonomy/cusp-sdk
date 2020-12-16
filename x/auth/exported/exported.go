@@ -5,7 +5,7 @@ import (
 
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // Account is an interface used to store coins at a given address within state.

@@ -7,7 +7,7 @@ import (
 
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 var testQuerier = func(_ sdk.Context, _ []string, _ abci.RequestQuery) (res []byte, err sdk.Error) {

@@ -1,8 +1,8 @@
 package rest
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/types/rest"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/types/rest"
 )
 
 type (

@@ -10,9 +10,9 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 	"gopkg.in/yaml.v2"
 
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/client/input"
-	"github.com/evdatsion/cosmos-sdk/crypto/keys"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/client/input"
+	"github.com/evdatsion/cusp-sdk/crypto/keys"
 )
 
 // available output formats.

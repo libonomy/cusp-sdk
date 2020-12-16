@@ -6,11 +6,11 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/evdatsion/cosmos-sdk/baseapp"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/gov"
-	"github.com/evdatsion/cosmos-sdk/x/params"
-	"github.com/evdatsion/cosmos-sdk/x/simulation"
+	"github.com/evdatsion/cusp-sdk/baseapp"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/gov"
+	"github.com/evdatsion/cusp-sdk/x/params"
+	"github.com/evdatsion/cusp-sdk/x/simulation"
 )
 
 type simParamChange struct {

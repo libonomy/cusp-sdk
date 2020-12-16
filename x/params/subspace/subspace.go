@@ -4,10 +4,10 @@ import (
 	"errors"
 	"reflect"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 
-	"github.com/evdatsion/cosmos-sdk/store/prefix"
+	"github.com/evdatsion/cusp-sdk/store/prefix"
 )
 
 const (

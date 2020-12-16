@@ -1,7 +1,7 @@
 package crisis
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // check all registered invariants

@@ -10,9 +10,9 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
 
-	"github.com/evdatsion/cosmos-sdk/crypto/keys/hd"
-	"github.com/evdatsion/cosmos-sdk/crypto/keys/mintkey"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
+	"github.com/evdatsion/cusp-sdk/crypto/keys/mintkey"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 func init() {

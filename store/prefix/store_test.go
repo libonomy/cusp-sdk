@@ -4,11 +4,11 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"github.com/evdatsion/cosmos-sdk/store/dbadapter"
-	"github.com/evdatsion/cosmos-sdk/store/gaskv"
-	"github.com/evdatsion/cosmos-sdk/store/iavl"
-	"github.com/evdatsion/cosmos-sdk/store/types"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/store/dbadapter"
+	"github.com/evdatsion/cusp-sdk/store/gaskv"
+	"github.com/evdatsion/cusp-sdk/store/iavl"
+	"github.com/evdatsion/cusp-sdk/store/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 
 	"github.com/stretchr/testify/require"
 

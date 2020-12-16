@@ -1,10 +1,10 @@
 package types
 
 import (
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	authtypes "github.com/evdatsion/cosmos-sdk/x/auth/types"
-	stakingtypes "github.com/evdatsion/cosmos-sdk/x/staking/types"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	authtypes "github.com/evdatsion/cusp-sdk/x/auth/types"
+	stakingtypes "github.com/evdatsion/cusp-sdk/x/staking/types"
 )
 
 // ModuleCdc defines a generic sealed codec to be used throughout this module

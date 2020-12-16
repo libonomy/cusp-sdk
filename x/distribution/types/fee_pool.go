@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // global fee pool for distribution

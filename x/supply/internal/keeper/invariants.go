@@ -3,9 +3,9 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/auth/exported"
-	"github.com/evdatsion/cosmos-sdk/x/supply/internal/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/auth/exported"
+	"github.com/evdatsion/cusp-sdk/x/supply/internal/types"
 )
 
 // RegisterInvariants register all supply invariants

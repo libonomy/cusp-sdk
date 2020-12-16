@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
 	"github.com/stretchr/testify/require"

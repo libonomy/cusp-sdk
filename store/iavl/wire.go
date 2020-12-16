@@ -1,7 +1,7 @@
 package iavl
 
 import (
-	"github.com/evdatsion/cosmos-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/codec"
 )
 
 var cdc = codec.New()

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // Signing info for a validator

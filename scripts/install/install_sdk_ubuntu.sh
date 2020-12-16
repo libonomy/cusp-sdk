@@ -5,7 +5,7 @@
 
 # change this to a specific release or branch
 BRANCH=master
-REPO=github.com/evdatsion/cosmos-sdk
+REPO=github.com/evdatsion/cusp-sdk
 
 GO_VERSION=1.12.5
 

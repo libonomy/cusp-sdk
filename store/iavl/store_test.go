@@ -11,8 +11,8 @@ import (
 	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/store/errors"
-	"github.com/evdatsion/cosmos-sdk/store/types"
+	"github.com/evdatsion/cusp-sdk/store/errors"
+	"github.com/evdatsion/cusp-sdk/store/types"
 )
 
 var (

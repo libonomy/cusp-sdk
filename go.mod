@@ -1,4 +1,4 @@
-module github.com/evdatsion/cosmos-sdk
+module github.com/evdatsion/cusp-sdk
 
 go 1.13
 

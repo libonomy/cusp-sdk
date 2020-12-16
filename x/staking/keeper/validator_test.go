@@ -7,8 +7,8 @@ import (
 
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/staking/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/staking/types"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

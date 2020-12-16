@@ -1,7 +1,7 @@
 package types
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // starting info for a delegator reward period

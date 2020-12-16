@@ -7,7 +7,7 @@ import (
 	"os"
 	"testing"
 
-	store "github.com/evdatsion/cosmos-sdk/store/types"
+	store "github.com/evdatsion/cusp-sdk/store/types"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -16,8 +16,8 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 var (

@@ -1,9 +1,9 @@
 package supply
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	autypes "github.com/evdatsion/cosmos-sdk/x/auth"
-	"github.com/evdatsion/cosmos-sdk/x/supply/internal/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	autypes "github.com/evdatsion/cusp-sdk/x/auth"
+	"github.com/evdatsion/cusp-sdk/x/supply/internal/types"
 )
 
 // InitGenesis sets supply information for genesis.

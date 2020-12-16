@@ -9,9 +9,9 @@ import (
 	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
 	tmtime "github.com/evdatsion/aphelion-dpos-bft/types/time"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/auth"
-	"github.com/evdatsion/cosmos-sdk/x/bank/internal/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/auth"
+	"github.com/evdatsion/cusp-sdk/x/bank/internal/types"
 )
 
 func TestKeeper(t *testing.T) {

@@ -8,9 +8,9 @@ import (
 	"github.com/spf13/cobra"
 	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/server"
-	"github.com/evdatsion/cosmos-sdk/types/module"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/server"
+	"github.com/evdatsion/cusp-sdk/types/module"
 )
 
 // Validate genesis command takes

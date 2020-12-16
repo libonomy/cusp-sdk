@@ -3,9 +3,9 @@ package transient
 import (
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/store/types"
+	"github.com/evdatsion/cusp-sdk/store/types"
 
-	"github.com/evdatsion/cosmos-sdk/store/dbadapter"
+	"github.com/evdatsion/cusp-sdk/store/dbadapter"
 )
 
 var _ types.Committer = (*Store)(nil)

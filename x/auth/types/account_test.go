@@ -7,8 +7,8 @@ import (
 	"github.com/stretchr/testify/require"
 	tmtime "github.com/evdatsion/aphelion-dpos-bft/types/time"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 var (

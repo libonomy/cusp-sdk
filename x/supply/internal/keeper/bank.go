@@ -3,8 +3,8 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/supply/internal/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/supply/internal/types"
 )
 
 // SendCoinsFromModuleToAccount transfers coins from a ModuleAccount to an AccAddress

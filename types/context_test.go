@@ -13,8 +13,8 @@ import (
 
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
-	"github.com/evdatsion/cosmos-sdk/store"
-	"github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/store"
+	"github.com/evdatsion/cusp-sdk/types"
 )
 
 type MockLogger struct {

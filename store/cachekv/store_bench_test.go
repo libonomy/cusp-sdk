@@ -7,8 +7,8 @@ import (
 
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/store/cachekv"
-	"github.com/evdatsion/cosmos-sdk/store/dbadapter"
+	"github.com/evdatsion/cusp-sdk/store/cachekv"
+	"github.com/evdatsion/cusp-sdk/store/dbadapter"
 )
 
 func benchmarkCacheKVStoreIterator(numKVs int, b *testing.B) {

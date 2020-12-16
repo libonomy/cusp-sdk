@@ -1,8 +1,8 @@
 package types
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/auth/exported"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/auth/exported"
 )
 
 // AccountKeeper defines the account contract that must be fulfilled when

@@ -6,7 +6,7 @@ import (
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // slashing begin block functionality

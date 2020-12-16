@@ -19,9 +19,9 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/store"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/store"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // Key to store the consensus params in the main store.
@@ -839,7 +839,7 @@ func (app *BaseApp) cacheTxContext(ctx sdk.Context, txBytes []byte) (
 	sdk.Context, sdk.CacheMultiStore) {
 
 	ms := ctx.MultiStore()
-	// TODO: https://github.com/evdatsion/cosmos-sdk/issues/2824
+	// TODO: https://github.com/evdatsion/cusp-sdk/issues/2824
 	msCache := ms.CacheMultiStore()
 	if msCache.TracingEnabled() {
 		msCache = msCache.SetTracingContext(
@@ -925,7 +925,7 @@ func (app *BaseApp) runTx(mode runTxMode, txBytes []byte, tx sdk.Tx) (result sdk
 
 		// Cache wrap context before anteHandler call in case it aborts.
 		// This is required for both CheckTx and DeliverTx.
-		// Ref: https://github.com/evdatsion/cosmos-sdk/issues/2772
+		// Ref: https://github.com/evdatsion/cusp-sdk/issues/2772
 		//
 		// NOTE: Alternatively, we could require that anteHandler ensures that
 		// writes do not happen if aborted/failed.  This may have some

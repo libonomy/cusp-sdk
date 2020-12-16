@@ -14,14 +14,14 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 
-	"github.com/evdatsion/cosmos-sdk/client"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/server"
-	"github.com/evdatsion/cosmos-sdk/server/mock"
-	"github.com/evdatsion/cosmos-sdk/tests"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/types/module"
-	"github.com/evdatsion/cosmos-sdk/x/genutil"
+	"github.com/evdatsion/cusp-sdk/client"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/server"
+	"github.com/evdatsion/cusp-sdk/server/mock"
+	"github.com/evdatsion/cusp-sdk/tests"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/types/module"
+	"github.com/evdatsion/cusp-sdk/x/genutil"
 )
 
 var testMbm = module.NewBasicManager(genutil.AppModuleBasic{})

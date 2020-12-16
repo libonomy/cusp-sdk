@@ -3,8 +3,8 @@ package keys
 import (
 	cryptoAmino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/crypto/keys/hd"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
 )
 
 var cdc *codec.Codec

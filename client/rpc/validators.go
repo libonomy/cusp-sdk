@@ -13,11 +13,11 @@ import (
 
 	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 
-	"github.com/evdatsion/cosmos-sdk/client/context"
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/types/rest"
+	"github.com/evdatsion/cusp-sdk/client/context"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/types/rest"
 )
 
 // TODO these next two functions feel kinda hacky based on their placement

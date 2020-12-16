@@ -6,7 +6,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 
 	"github.com/stretchr/testify/require"
 )

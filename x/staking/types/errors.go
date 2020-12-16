@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 type CodeType = sdk.CodeType

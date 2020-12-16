@@ -8,8 +8,8 @@ import (
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 
-	"github.com/evdatsion/cosmos-sdk/store/gaskv"
-	stypes "github.com/evdatsion/cosmos-sdk/store/types"
+	"github.com/evdatsion/cusp-sdk/store/gaskv"
+	stypes "github.com/evdatsion/cusp-sdk/store/types"
 )
 
 /*

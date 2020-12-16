@@ -5,9 +5,9 @@ import (
 
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/store/cachekv"
-	"github.com/evdatsion/cosmos-sdk/store/tracekv"
-	"github.com/evdatsion/cosmos-sdk/store/types"
+	"github.com/evdatsion/cusp-sdk/store/cachekv"
+	"github.com/evdatsion/cusp-sdk/store/tracekv"
+	"github.com/evdatsion/cusp-sdk/store/types"
 )
 
 // Wrapper type for dbm.Db with implementation of KVStore

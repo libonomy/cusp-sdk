@@ -5,9 +5,9 @@ import (
 
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	authexported "github.com/evdatsion/cosmos-sdk/x/auth/exported"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	authexported "github.com/evdatsion/cusp-sdk/x/auth/exported"
 )
 
 // StakingKeeper defines the expected staking keeper (noalias)

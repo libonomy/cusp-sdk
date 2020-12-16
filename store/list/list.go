@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/codec"
 
-	"github.com/evdatsion/cosmos-sdk/store/types"
+	"github.com/evdatsion/cusp-sdk/store/types"
 )
 
 // Key for the length of the list

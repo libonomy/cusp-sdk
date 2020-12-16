@@ -7,12 +7,12 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/evdatsion/aphelion-dpos-bft/types"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/server"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/version"
-	extypes "github.com/evdatsion/cosmos-sdk/x/genutil"
-	v036 "github.com/evdatsion/cosmos-sdk/x/genutil/legacy/v036"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/server"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/version"
+	extypes "github.com/evdatsion/cusp-sdk/x/genutil"
+	v036 "github.com/evdatsion/cusp-sdk/x/genutil/legacy/v036"
 )
 
 var migrationMap = extypes.MigrationMap{

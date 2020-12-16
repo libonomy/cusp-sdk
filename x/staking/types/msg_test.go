@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 var (

@@ -9,20 +9,20 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/codec"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
 	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
 
-	"github.com/evdatsion/cosmos-sdk/x/auth"
-	"github.com/evdatsion/cosmos-sdk/x/distribution"
-	distr "github.com/evdatsion/cosmos-sdk/x/distribution"
-	"github.com/evdatsion/cosmos-sdk/x/gov"
-	"github.com/evdatsion/cosmos-sdk/x/mint"
-	"github.com/evdatsion/cosmos-sdk/x/slashing"
-	"github.com/evdatsion/cosmos-sdk/x/staking"
-	"github.com/evdatsion/cosmos-sdk/x/supply"
+	"github.com/evdatsion/cusp-sdk/x/auth"
+	"github.com/evdatsion/cusp-sdk/x/distribution"
+	distr "github.com/evdatsion/cusp-sdk/x/distribution"
+	"github.com/evdatsion/cusp-sdk/x/gov"
+	"github.com/evdatsion/cusp-sdk/x/mint"
+	"github.com/evdatsion/cusp-sdk/x/slashing"
+	"github.com/evdatsion/cusp-sdk/x/staking"
+	"github.com/evdatsion/cusp-sdk/x/supply"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 var (

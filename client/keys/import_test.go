@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/tests"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/tests"
 )
 
 func Test_runImportCmd(t *testing.T) {

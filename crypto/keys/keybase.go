@@ -9,11 +9,11 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/evdatsion/cosmos-sdk/crypto"
-	"github.com/evdatsion/cosmos-sdk/crypto/keys/hd"
-	"github.com/evdatsion/cosmos-sdk/crypto/keys/keyerror"
-	"github.com/evdatsion/cosmos-sdk/crypto/keys/mintkey"
-	"github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/crypto"
+	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
+	"github.com/evdatsion/cusp-sdk/crypto/keys/keyerror"
+	"github.com/evdatsion/cusp-sdk/crypto/keys/mintkey"
+	"github.com/evdatsion/cusp-sdk/types"
 
 	bip39 "github.com/evdatsion/go-bip39"
 

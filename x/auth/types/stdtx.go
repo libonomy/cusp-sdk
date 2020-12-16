@@ -8,8 +8,8 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/multisig"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 var (

@@ -3,8 +3,8 @@ package types
 import (
 	"testing"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/auth"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/auth"
 	"github.com/stretchr/testify/require"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
 )

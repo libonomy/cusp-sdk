@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/staking/exported"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/staking/exported"
 )
 
 // DVPair is struct that just has a delegator-validator pair with no other data.

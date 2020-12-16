@@ -8,8 +8,8 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/merkle"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/store/errors"
-	"github.com/evdatsion/cosmos-sdk/store/types"
+	"github.com/evdatsion/cusp-sdk/store/errors"
+	"github.com/evdatsion/cusp-sdk/store/types"
 )
 
 func TestStoreType(t *testing.T) {

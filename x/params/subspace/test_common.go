@@ -10,9 +10,9 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/store"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/store"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // Keys for parameter access

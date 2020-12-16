@@ -3,7 +3,7 @@ package client
 import (
 	"github.com/gorilla/mux"
 
-	"github.com/evdatsion/cosmos-sdk/client/context"
+	"github.com/evdatsion/cusp-sdk/client/context"
 )
 
 // Register routes

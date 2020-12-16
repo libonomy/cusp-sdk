@@ -9,10 +9,10 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/evdatsion/cosmos-sdk/client/context"
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/types/rest"
+	"github.com/evdatsion/cusp-sdk/client/context"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/types/rest"
 
 	tmliteProxy "github.com/evdatsion/aphelion-dpos-bft/lite/proxy"
 )

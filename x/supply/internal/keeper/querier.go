@@ -5,9 +5,9 @@ import (
 
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
-	"github.com/evdatsion/cosmos-sdk/client"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/supply/internal/types"
+	"github.com/evdatsion/cusp-sdk/client"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/supply/internal/types"
 )
 
 // NewQuerier creates a querier for supply REST endpoints

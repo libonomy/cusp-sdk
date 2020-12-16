@@ -8,8 +8,8 @@ import (
 
 	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/tests"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/tests"
 )
 
 func Test_runAddCmdBasic(t *testing.T) {

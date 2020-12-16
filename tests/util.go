@@ -15,7 +15,7 @@ import (
 	ctypes "github.com/evdatsion/aphelion-dpos-bft/rpc/core/types"
 	rpcclient "github.com/evdatsion/aphelion-dpos-bft/rpc/lib/client"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/codec"
 )
 
 // Wait for the next tendermint block from the Tendermint RPC

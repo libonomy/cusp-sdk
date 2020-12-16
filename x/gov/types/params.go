@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	params "github.com/evdatsion/cosmos-sdk/x/params/subspace"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	params "github.com/evdatsion/cusp-sdk/x/params/subspace"
 )
 
 // Parameter store key

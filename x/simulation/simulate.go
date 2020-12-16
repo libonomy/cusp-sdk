@@ -13,8 +13,8 @@ import (
 
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
-	"github.com/evdatsion/cosmos-sdk/baseapp"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/baseapp"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // AppStateFn returns the app state json bytes, the genesis accounts, and the chain identifier

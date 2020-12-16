@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/evdatsion/cosmos-sdk/client/input"
+	"github.com/evdatsion/cusp-sdk/client/input"
 )
 
 func exportKeyCommand() *cobra.Command {

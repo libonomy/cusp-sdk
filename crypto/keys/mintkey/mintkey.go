@@ -13,7 +13,7 @@ import (
 
 	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
 
-	"github.com/evdatsion/cosmos-sdk/crypto/keys/keyerror"
+	"github.com/evdatsion/cusp-sdk/crypto/keys/keyerror"
 )
 
 const (

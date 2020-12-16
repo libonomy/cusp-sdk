@@ -3,10 +3,10 @@ package server
 import (
 	"fmt"
 
-	"github.com/evdatsion/cosmos-sdk/crypto/keys"
+	"github.com/evdatsion/cusp-sdk/crypto/keys"
 
-	clkeys "github.com/evdatsion/cosmos-sdk/client/keys"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	clkeys "github.com/evdatsion/cusp-sdk/client/keys"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // GenerateCoinKey returns the address of a public key, along with the secret

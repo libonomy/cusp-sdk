@@ -6,8 +6,8 @@ import (
 
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/store"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/store"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // File for storing in-package BaseApp optional functions,

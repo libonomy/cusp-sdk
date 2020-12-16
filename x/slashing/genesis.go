@@ -1,9 +1,9 @@
 package slashing
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/slashing/types"
-	"github.com/evdatsion/cosmos-sdk/x/staking/exported"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/slashing/types"
+	"github.com/evdatsion/cusp-sdk/x/staking/exported"
 )
 
 // InitGenesis initialize default parameters

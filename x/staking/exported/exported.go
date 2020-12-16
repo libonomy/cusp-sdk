@@ -1,7 +1,7 @@
 package exported
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 )
 

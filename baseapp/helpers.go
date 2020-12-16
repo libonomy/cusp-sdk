@@ -5,7 +5,7 @@ import (
 
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 var isAlphaNumeric = regexp.MustCompile(`^[a-zA-Z0-9]+$`).MatchString

@@ -9,9 +9,9 @@ import (
 	tmcrypto "github.com/evdatsion/aphelion-dpos-bft/crypto"
 	cryptoAmino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
 
-	"github.com/evdatsion/cosmos-sdk/crypto/keys/hd"
-	"github.com/evdatsion/cosmos-sdk/tests"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
+	"github.com/evdatsion/cusp-sdk/tests"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 func TestLedgerErrorHandling(t *testing.T) {

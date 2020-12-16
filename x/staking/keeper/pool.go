@@ -1,9 +1,9 @@
 package keeper
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/staking/types"
-	"github.com/evdatsion/cosmos-sdk/x/supply/exported"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/staking/types"
+	"github.com/evdatsion/cusp-sdk/x/supply/exported"
 )
 
 // GetBondedPool returns the bonded tokens pool's module account

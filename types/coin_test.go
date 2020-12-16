@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/codec"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

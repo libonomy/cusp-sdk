@@ -12,14 +12,14 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/multisig"
 	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 
-	"github.com/evdatsion/cosmos-sdk/client/context"
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/client/keys"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	crkeys "github.com/evdatsion/cosmos-sdk/crypto/keys"
-	"github.com/evdatsion/cosmos-sdk/version"
-	"github.com/evdatsion/cosmos-sdk/x/auth/client/utils"
-	"github.com/evdatsion/cosmos-sdk/x/auth/types"
+	"github.com/evdatsion/cusp-sdk/client/context"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/client/keys"
+	"github.com/evdatsion/cusp-sdk/codec"
+	crkeys "github.com/evdatsion/cusp-sdk/crypto/keys"
+	"github.com/evdatsion/cusp-sdk/version"
+	"github.com/evdatsion/cusp-sdk/x/auth/client/utils"
+	"github.com/evdatsion/cusp-sdk/x/auth/types"
 )
 
 // GetSignCommand returns the sign command

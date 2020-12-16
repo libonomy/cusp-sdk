@@ -14,14 +14,14 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 	rpcserver "github.com/evdatsion/aphelion-dpos-bft/rpc/lib/server"
 
-	"github.com/evdatsion/cosmos-sdk/client/context"
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	keybase "github.com/evdatsion/cosmos-sdk/crypto/keys"
-	"github.com/evdatsion/cosmos-sdk/server"
+	"github.com/evdatsion/cusp-sdk/client/context"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/codec"
+	keybase "github.com/evdatsion/cusp-sdk/crypto/keys"
+	"github.com/evdatsion/cusp-sdk/server"
 
 	// unnamed import of statik for swagger UI support
-	_ "github.com/evdatsion/cosmos-sdk/client/lcd/statik"
+	_ "github.com/evdatsion/cusp-sdk/client/lcd/statik"
 )
 
 // RestServer represents the Light Client Rest server

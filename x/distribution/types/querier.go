@@ -1,6 +1,6 @@
 package types
 
-import sdk "github.com/evdatsion/cosmos-sdk/types"
+import sdk "github.com/evdatsion/cusp-sdk/types"
 
 // querier keys
 const (

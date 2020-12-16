@@ -8,8 +8,8 @@ import (
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/staking"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/staking"
 )
 
 func TestTallyNoOneVotes(t *testing.T) {

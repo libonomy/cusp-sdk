@@ -13,8 +13,8 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/bech32"
 	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 var bech32Prefixes = []string{

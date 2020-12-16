@@ -7,7 +7,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/codec"
 
 	ctypes "github.com/evdatsion/aphelion-dpos-bft/rpc/core/types"
 )

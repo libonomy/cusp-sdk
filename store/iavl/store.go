@@ -5,10 +5,10 @@ import (
 	"io"
 	"sync"
 
-	"github.com/evdatsion/cosmos-sdk/store/cachekv"
-	serrors "github.com/evdatsion/cosmos-sdk/store/errors"
-	"github.com/evdatsion/cosmos-sdk/store/tracekv"
-	"github.com/evdatsion/cosmos-sdk/store/types"
+	"github.com/evdatsion/cusp-sdk/store/cachekv"
+	serrors "github.com/evdatsion/cusp-sdk/store/errors"
+	"github.com/evdatsion/cusp-sdk/store/tracekv"
+	"github.com/evdatsion/cusp-sdk/store/types"
 
 	"github.com/pkg/errors"
 	"github.com/evdatsion/iavl"

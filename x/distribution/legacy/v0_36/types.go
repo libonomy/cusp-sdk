@@ -3,8 +3,8 @@
 package v0_36
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	v034distr "github.com/evdatsion/cosmos-sdk/x/distribution/legacy/v0_34"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	v034distr "github.com/evdatsion/cusp-sdk/x/distribution/legacy/v0_34"
 )
 
 // ----------------------------------------------------------------------------

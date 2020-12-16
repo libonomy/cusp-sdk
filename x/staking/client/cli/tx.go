@@ -12,14 +12,14 @@ import (
 	cfg "github.com/evdatsion/aphelion-dpos-bft/config"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 
-	"github.com/evdatsion/cosmos-sdk/client"
-	"github.com/evdatsion/cosmos-sdk/client/context"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/version"
-	"github.com/evdatsion/cosmos-sdk/x/auth"
-	"github.com/evdatsion/cosmos-sdk/x/auth/client/utils"
-	"github.com/evdatsion/cosmos-sdk/x/staking/types"
+	"github.com/evdatsion/cusp-sdk/client"
+	"github.com/evdatsion/cusp-sdk/client/context"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/version"
+	"github.com/evdatsion/cusp-sdk/x/auth"
+	"github.com/evdatsion/cusp-sdk/x/auth/client/utils"
+	"github.com/evdatsion/cusp-sdk/x/staking/types"
 )
 
 // GetTxCmd returns the transaction commands for this module

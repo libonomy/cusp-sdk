@@ -1,9 +1,9 @@
 package gov
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	stakingexported "github.com/evdatsion/cosmos-sdk/x/staking/exported"
-	supplyexported "github.com/evdatsion/cosmos-sdk/x/supply/exported"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	stakingexported "github.com/evdatsion/cusp-sdk/x/staking/exported"
+	supplyexported "github.com/evdatsion/cusp-sdk/x/supply/exported"
 )
 
 // SupplyKeeper defines the supply Keeper for module accounts
@@ -11,7 +11,7 @@ type SupplyKeeper interface {
 	GetModuleAddress(name string) sdk.AccAddress
 	GetModuleAccount(ctx sdk.Context, name string) supplyexported.ModuleAccountI
 
-	// TODO remove with genesis 2-phases refactor https://github.com/evdatsion/cosmos-sdk/issues/2862
+	// TODO remove with genesis 2-phases refactor https://github.com/evdatsion/cusp-sdk/issues/2862
 	SetModuleAccount(sdk.Context, supplyexported.ModuleAccountI)
 
 	SendCoinsFromModuleToAccount(ctx sdk.Context, senderModule string, recipientAddr sdk.AccAddress, amt sdk.Coins) sdk.Error

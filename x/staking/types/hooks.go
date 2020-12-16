@@ -1,7 +1,7 @@
 package types
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // combine multiple staking hooks, all hook functions are run in array sequence

@@ -14,7 +14,7 @@
 
 # change this to a specific release or branch
 set BRANCH=master
-set REPO=github.com/evdatsion/cosmos-sdk
+set REPO=github.com/evdatsion/cusp-sdk
 
 set GO_VERSION=1.12.5
 

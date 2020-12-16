@@ -6,8 +6,8 @@ import (
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/tests"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/tests"
 )
 
 func Test_runExportCmd(t *testing.T) {

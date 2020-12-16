@@ -7,7 +7,7 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // Account contains a privkey, pubkey, address tuple

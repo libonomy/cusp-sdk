@@ -1,7 +1,7 @@
 package types
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // QueryBalanceParams defines the params for querying an account balance.

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // QueryDelegatorTotalRewardsResponse defines the properties of

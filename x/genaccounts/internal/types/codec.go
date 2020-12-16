@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/evdatsion/cosmos-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/codec"
 )
 
 // ModuleName is "accounts"

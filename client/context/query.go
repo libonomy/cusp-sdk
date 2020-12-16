@@ -14,8 +14,8 @@ import (
 	rpcclient "github.com/evdatsion/aphelion-dpos-bft/rpc/client"
 	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 
-	"github.com/evdatsion/cosmos-sdk/store/rootmulti"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/store/rootmulti"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // GetNode returns an RPC client. If the context's client is not defined, an

@@ -6,8 +6,8 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/evdatsion/cosmos-sdk/client/input"
-	"github.com/evdatsion/cosmos-sdk/crypto/keys"
+	"github.com/evdatsion/cusp-sdk/client/input"
+	"github.com/evdatsion/cusp-sdk/crypto/keys"
 
 	"github.com/spf13/cobra"
 )

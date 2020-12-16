@@ -6,8 +6,8 @@ import (
 	"sort"
 	"time"
 
-	"github.com/evdatsion/cosmos-sdk/baseapp"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/baseapp"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // Operation runs a state machine transition, and ensures the transition

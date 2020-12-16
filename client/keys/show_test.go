@@ -10,10 +10,10 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/multisig"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/crypto/keys"
-	"github.com/evdatsion/cosmos-sdk/tests"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/crypto/keys"
+	"github.com/evdatsion/cusp-sdk/tests"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 func Test_multiSigKey_Properties(t *testing.T) {

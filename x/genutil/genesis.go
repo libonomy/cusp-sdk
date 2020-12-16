@@ -3,9 +3,9 @@ package genutil
 import (
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/genutil/types"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/genutil/types"
 )
 
 // InitGenesis - initialize accounts and deliver genesis transactions

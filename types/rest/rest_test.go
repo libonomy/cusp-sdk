@@ -15,10 +15,10 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
-	"github.com/evdatsion/cosmos-sdk/client/context"
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/client/context"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/types"
 )
 
 type mockResponseWriter struct{}

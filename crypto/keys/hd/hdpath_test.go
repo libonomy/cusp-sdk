@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/types"
 
 	bip39 "github.com/evdatsion/go-bip39"
 	"github.com/stretchr/testify/assert"

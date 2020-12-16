@@ -8,9 +8,9 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/common"
 	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	authtypes "github.com/evdatsion/cosmos-sdk/x/auth/types"
-	stakingtypes "github.com/evdatsion/cosmos-sdk/x/staking/types"
+	"github.com/evdatsion/cusp-sdk/codec"
+	authtypes "github.com/evdatsion/cusp-sdk/x/auth/types"
+	stakingtypes "github.com/evdatsion/cusp-sdk/x/staking/types"
 )
 
 // GenesisState defines the raw genesis transaction in JSON
@@ -20,7 +20,7 @@ type GenesisState struct {
 
 // NewGenesisState creates a new GenesisState object
 func NewGenesisState(genTxs []json.RawMessage) GenesisState {
-	// Ensure genTxs is never nil, https://github.com/evdatsion/cosmos-sdk/issues/5086
+	// Ensure genTxs is never nil, https://github.com/evdatsion/cusp-sdk/issues/5086
 	if len(genTxs) == 0 {
 		genTxs = make([]json.RawMessage, 0)
 	}

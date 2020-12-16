@@ -6,9 +6,9 @@ import (
 
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/crisis/internal/types"
-	"github.com/evdatsion/cosmos-sdk/x/params"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/crisis/internal/types"
+	"github.com/evdatsion/cusp-sdk/x/params"
 )
 
 // Keeper - crisis keeper

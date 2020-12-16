@@ -7,8 +7,8 @@ import (
 	cryptoAmino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
-	"github.com/evdatsion/cosmos-sdk/crypto/keys"
-	"github.com/evdatsion/cosmos-sdk/crypto/keys/mintkey"
+	"github.com/evdatsion/cusp-sdk/crypto/keys"
+	"github.com/evdatsion/cusp-sdk/crypto/keys/mintkey"
 )
 
 func TestArmorUnarmorPrivKey(t *testing.T) {

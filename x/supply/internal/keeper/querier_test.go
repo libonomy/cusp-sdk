@@ -7,8 +7,8 @@ import (
 	"github.com/stretchr/testify/require"
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/supply/internal/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/supply/internal/types"
 )
 
 func TestNewQuerier(t *testing.T) {

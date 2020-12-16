@@ -8,13 +8,13 @@ import (
 	"github.com/spf13/cobra"
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
-	"github.com/evdatsion/cosmos-sdk/client/context"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/types/module"
-	"github.com/evdatsion/cosmos-sdk/x/slashing/client/cli"
-	"github.com/evdatsion/cosmos-sdk/x/slashing/client/rest"
-	"github.com/evdatsion/cosmos-sdk/x/slashing/types"
+	"github.com/evdatsion/cusp-sdk/client/context"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/types/module"
+	"github.com/evdatsion/cusp-sdk/x/slashing/client/cli"
+	"github.com/evdatsion/cusp-sdk/x/slashing/client/rest"
+	"github.com/evdatsion/cusp-sdk/x/slashing/types"
 )
 
 var (

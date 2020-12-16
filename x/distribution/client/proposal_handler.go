@@ -1,9 +1,9 @@
 package client
 
 import (
-	"github.com/evdatsion/cosmos-sdk/x/distribution/client/cli"
-	"github.com/evdatsion/cosmos-sdk/x/distribution/client/rest"
-	govclient "github.com/evdatsion/cosmos-sdk/x/gov/client"
+	"github.com/evdatsion/cusp-sdk/x/distribution/client/cli"
+	"github.com/evdatsion/cusp-sdk/x/distribution/client/rest"
+	govclient "github.com/evdatsion/cusp-sdk/x/gov/client"
 )
 
 // param change proposal handler

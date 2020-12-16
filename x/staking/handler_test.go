@@ -12,9 +12,9 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	keep "github.com/evdatsion/cosmos-sdk/x/staking/keeper"
-	"github.com/evdatsion/cosmos-sdk/x/staking/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	keep "github.com/evdatsion/cusp-sdk/x/staking/keeper"
+	"github.com/evdatsion/cusp-sdk/x/staking/types"
 )
 
 //______________________________________________________________________

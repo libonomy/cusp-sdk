@@ -9,11 +9,11 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 
-	"github.com/evdatsion/cosmos-sdk/client"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/server"
-	"github.com/evdatsion/cosmos-sdk/x/genutil"
-	"github.com/evdatsion/cosmos-sdk/x/genutil/types"
+	"github.com/evdatsion/cusp-sdk/client"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/server"
+	"github.com/evdatsion/cusp-sdk/x/genutil"
+	"github.com/evdatsion/cusp-sdk/x/genutil/types"
 )
 
 const flagGenTxDir = "gentx-dir"

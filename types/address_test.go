@@ -13,7 +13,7 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
-	"github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/types"
 )
 
 var invalidStrs = []string{

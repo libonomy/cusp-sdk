@@ -3,7 +3,7 @@ package baseapp
 import (
 	"fmt"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 type queryRouter struct {

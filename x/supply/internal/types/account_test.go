@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 	"gopkg.in/yaml.v2"
 

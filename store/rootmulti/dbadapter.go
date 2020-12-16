@@ -1,8 +1,8 @@
 package rootmulti
 
 import (
-	"github.com/evdatsion/cosmos-sdk/store/dbadapter"
-	"github.com/evdatsion/cosmos-sdk/store/types"
+	"github.com/evdatsion/cusp-sdk/store/dbadapter"
+	"github.com/evdatsion/cusp-sdk/store/types"
 )
 
 var commithash = []byte("FAKE_HASH")

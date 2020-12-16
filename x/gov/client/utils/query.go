@@ -3,10 +3,10 @@ package utils
 import (
 	"fmt"
 
-	"github.com/evdatsion/cosmos-sdk/client/context"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/auth/client/utils"
-	"github.com/evdatsion/cosmos-sdk/x/gov/types"
+	"github.com/evdatsion/cusp-sdk/client/context"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/auth/client/utils"
+	"github.com/evdatsion/cusp-sdk/x/gov/types"
 )
 
 const (

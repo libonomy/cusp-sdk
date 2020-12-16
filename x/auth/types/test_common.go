@@ -5,7 +5,7 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 func NewTestMsg(addrs ...sdk.AccAddress) *sdk.TestMsg {

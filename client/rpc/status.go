@@ -9,11 +9,11 @@ import (
 
 	ctypes "github.com/evdatsion/aphelion-dpos-bft/rpc/core/types"
 
-	"github.com/evdatsion/cosmos-sdk/client/context"
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/types/rest"
-	"github.com/evdatsion/cosmos-sdk/version"
+	"github.com/evdatsion/cusp-sdk/client/context"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/types/rest"
+	"github.com/evdatsion/cusp-sdk/version"
 
 	"github.com/evdatsion/aphelion-dpos-bft/p2p"
 )

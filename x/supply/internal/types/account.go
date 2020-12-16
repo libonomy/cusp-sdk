@@ -7,9 +7,9 @@ import (
 
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	authtypes "github.com/evdatsion/cosmos-sdk/x/auth/types"
-	"github.com/evdatsion/cosmos-sdk/x/supply/exported"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	authtypes "github.com/evdatsion/cusp-sdk/x/auth/types"
+	"github.com/evdatsion/cusp-sdk/x/supply/exported"
 )
 
 var _ exported.ModuleAccountI = (*ModuleAccount)(nil)

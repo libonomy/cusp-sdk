@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	authtypes "github.com/evdatsion/cosmos-sdk/x/auth/types"
-	stakingtypes "github.com/evdatsion/cosmos-sdk/x/staking/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	authtypes "github.com/evdatsion/cusp-sdk/x/auth/types"
+	stakingtypes "github.com/evdatsion/cusp-sdk/x/staking/types"
 )
 
 var (
@@ -20,7 +20,7 @@ var (
 
 func TestNetGenesisState(t *testing.T) {
 	gen := NewGenesisState(nil)
-	assert.NotNil(t, gen.GenTxs) // https://github.com/evdatsion/cosmos-sdk/issues/5086
+	assert.NotNil(t, gen.GenTxs) // https://github.com/evdatsion/cusp-sdk/issues/5086
 
 	gen = NewGenesisState(
 		[]json.RawMessage{

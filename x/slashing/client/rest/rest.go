@@ -3,7 +3,7 @@ package rest
 import (
 	"github.com/gorilla/mux"
 
-	"github.com/evdatsion/cosmos-sdk/client/context"
+	"github.com/evdatsion/cusp-sdk/client/context"
 )
 
 // RegisterRoutes registers staking-related REST handlers to a router

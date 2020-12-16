@@ -10,10 +10,10 @@ import (
 
 	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/crypto/keys"
-	"github.com/evdatsion/cosmos-sdk/tests"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/crypto/keys"
+	"github.com/evdatsion/cusp-sdk/tests"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 func Test_runAddCmdLedgerWithCustomCoinType(t *testing.T) {

@@ -10,9 +10,9 @@ import (
 	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/store/types"
+	"github.com/evdatsion/cusp-sdk/store/types"
 
-	"github.com/evdatsion/cosmos-sdk/store/tracekv"
+	"github.com/evdatsion/cusp-sdk/store/tracekv"
 )
 
 // If value is nil but deleted is false, it means the parent doesn't have the

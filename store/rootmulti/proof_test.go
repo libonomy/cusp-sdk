@@ -7,8 +7,8 @@ import (
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/store/iavl"
-	"github.com/evdatsion/cosmos-sdk/store/types"
+	"github.com/evdatsion/cusp-sdk/store/iavl"
+	"github.com/evdatsion/cusp-sdk/store/types"
 )
 
 func TestVerifyIAVLStoreQueryProof(t *testing.T) {

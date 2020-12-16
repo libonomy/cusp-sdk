@@ -8,9 +8,9 @@ import (
 
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	authtypes "github.com/evdatsion/cosmos-sdk/x/auth/types"
-	"github.com/evdatsion/cosmos-sdk/x/bank/internal/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	authtypes "github.com/evdatsion/cusp-sdk/x/auth/types"
+	"github.com/evdatsion/cusp-sdk/x/bank/internal/types"
 )
 
 func TestBalances(t *testing.T) {

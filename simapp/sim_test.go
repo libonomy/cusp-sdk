@@ -17,24 +17,24 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/baseapp"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/auth"
-	authsim "github.com/evdatsion/cosmos-sdk/x/auth/simulation"
-	"github.com/evdatsion/cosmos-sdk/x/bank"
-	distr "github.com/evdatsion/cosmos-sdk/x/distribution"
-	distrsim "github.com/evdatsion/cosmos-sdk/x/distribution/simulation"
-	"github.com/evdatsion/cosmos-sdk/x/gov"
-	govsim "github.com/evdatsion/cosmos-sdk/x/gov/simulation"
-	"github.com/evdatsion/cosmos-sdk/x/mint"
-	"github.com/evdatsion/cosmos-sdk/x/params"
-	paramsim "github.com/evdatsion/cosmos-sdk/x/params/simulation"
-	"github.com/evdatsion/cosmos-sdk/x/simulation"
-	"github.com/evdatsion/cosmos-sdk/x/slashing"
-	slashingsim "github.com/evdatsion/cosmos-sdk/x/slashing/simulation"
-	"github.com/evdatsion/cosmos-sdk/x/staking"
-	stakingsim "github.com/evdatsion/cosmos-sdk/x/staking/simulation"
-	"github.com/evdatsion/cosmos-sdk/x/supply"
+	"github.com/evdatsion/cusp-sdk/baseapp"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/auth"
+	authsim "github.com/evdatsion/cusp-sdk/x/auth/simulation"
+	"github.com/evdatsion/cusp-sdk/x/bank"
+	distr "github.com/evdatsion/cusp-sdk/x/distribution"
+	distrsim "github.com/evdatsion/cusp-sdk/x/distribution/simulation"
+	"github.com/evdatsion/cusp-sdk/x/gov"
+	govsim "github.com/evdatsion/cusp-sdk/x/gov/simulation"
+	"github.com/evdatsion/cusp-sdk/x/mint"
+	"github.com/evdatsion/cusp-sdk/x/params"
+	paramsim "github.com/evdatsion/cusp-sdk/x/params/simulation"
+	"github.com/evdatsion/cusp-sdk/x/simulation"
+	"github.com/evdatsion/cusp-sdk/x/slashing"
+	slashingsim "github.com/evdatsion/cusp-sdk/x/slashing/simulation"
+	"github.com/evdatsion/cusp-sdk/x/staking"
+	stakingsim "github.com/evdatsion/cusp-sdk/x/staking/simulation"
+	"github.com/evdatsion/cusp-sdk/x/supply"
 )
 
 func init() {
@@ -365,7 +365,7 @@ func testAndRunTxs(app *SimApp) []simulation.WeightedOperation {
 
 func invariants(app *SimApp) []sdk.Invariant {
 	// TODO: fix PeriodicInvariants, it doesn't seem to call individual invariants for a period of 1
-	// Ref: https://github.com/evdatsion/cosmos-sdk/issues/4631
+	// Ref: https://github.com/evdatsion/cusp-sdk/issues/4631
 	if period == 1 {
 		return app.crisisKeeper.Invariants()
 	}
@@ -378,7 +378,7 @@ func fauxMerkleModeOpt(bapp *baseapp.BaseApp) {
 }
 
 // Profile with:
-// /usr/local/go/bin/go test -benchmem -run=^$ github.com/evdatsion/cosmos-sdk/simapp -bench ^BenchmarkFullAppSimulation$ -Commit=true -cpuprofile cpu.out
+// /usr/local/go/bin/go test -benchmem -run=^$ github.com/evdatsion/cusp-sdk/simapp -bench ^BenchmarkFullAppSimulation$ -Commit=true -cpuprofile cpu.out
 func BenchmarkFullAppSimulation(b *testing.B) {
 	logger := log.NewNopLogger()
 

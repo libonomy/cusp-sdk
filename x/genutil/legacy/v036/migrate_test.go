@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/cosmos-sdk/x/genutil"
+	"github.com/evdatsion/cusp-sdk/x/genutil"
 )
 
 var basic034Gov = []byte(`

@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/evdatsion/cosmos-sdk/baseapp"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/auth"
-	"github.com/evdatsion/cosmos-sdk/x/distribution"
-	"github.com/evdatsion/cosmos-sdk/x/gov"
-	govsim "github.com/evdatsion/cosmos-sdk/x/gov/simulation"
-	"github.com/evdatsion/cosmos-sdk/x/simulation"
+	"github.com/evdatsion/cusp-sdk/baseapp"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/auth"
+	"github.com/evdatsion/cusp-sdk/x/distribution"
+	"github.com/evdatsion/cusp-sdk/x/gov"
+	govsim "github.com/evdatsion/cusp-sdk/x/gov/simulation"
+	"github.com/evdatsion/cusp-sdk/x/simulation"
 )
 
 // SimulateMsgSetWithdrawAddress generates a MsgSetWithdrawAddress with random values.

@@ -6,12 +6,12 @@ import (
 
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 
-	"github.com/evdatsion/cosmos-sdk/baseapp"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/bank/internal/keeper"
-	"github.com/evdatsion/cosmos-sdk/x/bank/internal/types"
-	"github.com/evdatsion/cosmos-sdk/x/mock"
-	"github.com/evdatsion/cosmos-sdk/x/simulation"
+	"github.com/evdatsion/cusp-sdk/baseapp"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/bank/internal/keeper"
+	"github.com/evdatsion/cusp-sdk/x/bank/internal/types"
+	"github.com/evdatsion/cusp-sdk/x/mock"
+	"github.com/evdatsion/cusp-sdk/x/simulation"
 )
 
 // SendTx tests and runs a single msg send where both

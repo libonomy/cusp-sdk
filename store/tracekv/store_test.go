@@ -10,10 +10,10 @@ import (
 
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cosmos-sdk/store/dbadapter"
-	"github.com/evdatsion/cosmos-sdk/store/prefix"
-	"github.com/evdatsion/cosmos-sdk/store/tracekv"
-	"github.com/evdatsion/cosmos-sdk/store/types"
+	"github.com/evdatsion/cusp-sdk/store/dbadapter"
+	"github.com/evdatsion/cusp-sdk/store/prefix"
+	"github.com/evdatsion/cusp-sdk/store/tracekv"
+	"github.com/evdatsion/cusp-sdk/store/types"
 )
 
 func bz(s string) []byte { return []byte(s) }

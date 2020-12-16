@@ -6,8 +6,8 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
 
-	"github.com/evdatsion/cosmos-sdk/crypto/keys/hd"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 var _ Keybase = lazyKeybase{}

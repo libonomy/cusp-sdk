@@ -13,12 +13,12 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/common"
 	"github.com/evdatsion/aphelion-dpos-bft/types"
 
-	"github.com/evdatsion/cosmos-sdk/client"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/server"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/types/module"
-	"github.com/evdatsion/cosmos-sdk/x/genutil"
+	"github.com/evdatsion/cusp-sdk/client"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/server"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/types/module"
+	"github.com/evdatsion/cusp-sdk/x/genutil"
 )
 
 const (

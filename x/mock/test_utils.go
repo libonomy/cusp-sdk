@@ -5,14 +5,14 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/codec"
 
 	"github.com/stretchr/testify/require"
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 
-	"github.com/evdatsion/cosmos-sdk/baseapp"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/baseapp"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // BigInterval is a representation of the interval [lo, hi), where

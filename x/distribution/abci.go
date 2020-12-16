@@ -3,8 +3,8 @@ package distribution
 import (
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/distribution/keeper"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/distribution/keeper"
 )
 
 // set the proposer for determining distribution during endblock
@@ -20,7 +20,7 @@ func BeginBlocker(ctx sdk.Context, req abci.RequestBeginBlock, k keeper.Keeper) 
 	}
 
 	// TODO this is Tendermint-dependent
-	// ref https://github.com/evdatsion/cosmos-sdk/issues/3095
+	// ref https://github.com/evdatsion/cusp-sdk/issues/3095
 	if ctx.BlockHeight() > 1 {
 		previousProposer := k.GetPreviousProposerConsAddr(ctx)
 		k.AllocateTokens(ctx, sumPreviousPrecommitPower, previousTotalPower, previousProposer, req.LastCommitInfo.GetVotes())

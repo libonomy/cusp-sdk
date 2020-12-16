@@ -1,7 +1,7 @@
 package bank
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // GenesisState is the bank state that must be provided at genesis.

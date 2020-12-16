@@ -3,10 +3,10 @@ package bank_test
 import (
 	"testing"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/auth"
-	"github.com/evdatsion/cosmos-sdk/x/bank/internal/types"
-	"github.com/evdatsion/cosmos-sdk/x/mock"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/auth"
+	"github.com/evdatsion/cusp-sdk/x/bank/internal/types"
+	"github.com/evdatsion/cusp-sdk/x/mock"
 
 	"github.com/stretchr/testify/require"
 

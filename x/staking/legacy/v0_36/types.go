@@ -5,9 +5,9 @@ package v0_36
 import (
 	"time"
 
-	"github.com/evdatsion/cosmos-sdk/codec"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	v034staking "github.com/evdatsion/cosmos-sdk/x/staking/legacy/v0_34"
+	"github.com/evdatsion/cusp-sdk/codec"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	v034staking "github.com/evdatsion/cusp-sdk/x/staking/legacy/v0_34"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 )
 

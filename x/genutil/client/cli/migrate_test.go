@@ -12,9 +12,9 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 
-	"github.com/evdatsion/cosmos-sdk/client"
-	"github.com/evdatsion/cosmos-sdk/server"
-	"github.com/evdatsion/cosmos-sdk/tests"
+	"github.com/evdatsion/cusp-sdk/client"
+	"github.com/evdatsion/cusp-sdk/server"
+	"github.com/evdatsion/cusp-sdk/tests"
 )
 
 func setupCmd(genesisTime string, chainId string) *cobra.Command {

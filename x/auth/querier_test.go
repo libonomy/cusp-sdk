@@ -8,7 +8,7 @@ import (
 
 	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
-	"github.com/evdatsion/cosmos-sdk/x/auth/types"
+	"github.com/evdatsion/cusp-sdk/x/auth/types"
 )
 
 func Test_queryAccount(t *testing.T) {

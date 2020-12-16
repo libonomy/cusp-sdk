@@ -1,7 +1,7 @@
 package auth
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // InitGenesis - Init store state from genesis data

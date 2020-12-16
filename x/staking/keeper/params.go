@@ -3,9 +3,9 @@ package keeper
 import (
 	"time"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/params"
-	"github.com/evdatsion/cosmos-sdk/x/staking/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/params"
+	"github.com/evdatsion/cusp-sdk/x/staking/types"
 )
 
 // Default parameter namespace

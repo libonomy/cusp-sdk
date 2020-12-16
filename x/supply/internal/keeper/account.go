@@ -1,9 +1,9 @@
 package keeper
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/supply/exported"
-	"github.com/evdatsion/cosmos-sdk/x/supply/internal/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/supply/exported"
+	"github.com/evdatsion/cusp-sdk/x/supply/internal/types"
 )
 
 // GetModuleAddress returns an address based on the module name

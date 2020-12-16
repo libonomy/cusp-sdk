@@ -1,8 +1,8 @@
 package v0_36
 
 import (
-	"github.com/evdatsion/cosmos-sdk/types"
-	v034auth "github.com/evdatsion/cosmos-sdk/x/auth/legacy/v0_34"
+	"github.com/evdatsion/cusp-sdk/types"
+	v034auth "github.com/evdatsion/cusp-sdk/x/auth/legacy/v0_34"
 	"testing"
 
 	"github.com/stretchr/testify/require"

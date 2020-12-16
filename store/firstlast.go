@@ -5,7 +5,7 @@ import (
 
 	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
 
-	"github.com/evdatsion/cosmos-sdk/store/types"
+	"github.com/evdatsion/cusp-sdk/store/types"
 )
 
 // Gets the first item.

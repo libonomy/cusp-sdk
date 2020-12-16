@@ -4,7 +4,7 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
 
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // nolint: deadcode unused

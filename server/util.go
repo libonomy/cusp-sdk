@@ -21,10 +21,10 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 	pvm "github.com/evdatsion/aphelion-dpos-bft/privval"
 
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/server/config"
-	"github.com/evdatsion/cosmos-sdk/version"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/server/config"
+	"github.com/evdatsion/cusp-sdk/version"
 )
 
 // server context

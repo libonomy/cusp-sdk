@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/cosmos-sdk/x/staking/types"
+	"github.com/evdatsion/cusp-sdk/x/staking/types"
 )
 
 func TestParams(t *testing.T) {

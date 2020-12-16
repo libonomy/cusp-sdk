@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/cosmos-sdk/x/auth/exported"
+	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/evdatsion/cusp-sdk/x/auth/exported"
 )
 
 // RegisterCodec registers concrete types on the codec

@@ -1,8 +1,8 @@
 package mint
 
 import (
-	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/cosmos-sdk/x/mint/internal/types"
+	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/evdatsion/cusp-sdk/x/mint/internal/types"
 )
 
 // BeginBlocker mints new tokens for the previous block.

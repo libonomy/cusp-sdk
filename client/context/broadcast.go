@@ -3,8 +3,8 @@ package context
 import (
 	"fmt"
 
-	"github.com/evdatsion/cosmos-sdk/client/flags"
-	sdk "github.com/evdatsion/cosmos-sdk/types"
+	"github.com/evdatsion/cusp-sdk/client/flags"
+	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
 // BroadcastTx broadcasts a transactions either synchronously or asynchronously
