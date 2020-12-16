@@ -34,15 +34,3 @@ sim_log_file
 *.box
 *.log
 vagrant
-
-# IDE
-.idea/
-*.iml
-
-# Graphviz
-dependency-graph.png
-
-# Latex
-*.aux
-*.out
-*.synctex.gz

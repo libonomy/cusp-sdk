@@ -24,3 +24,4 @@ issues:
     - composite
 run:
   tests: false
+#Remove golang config @nalrsa

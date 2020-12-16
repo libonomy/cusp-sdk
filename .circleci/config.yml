@@ -1,5 +1,5 @@
 version: 2.1
-
+#TODO remove circleCI for until libonoym AI configs Added
 executors:
   golang:
     docker:
