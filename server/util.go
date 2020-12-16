@@ -14,12 +14,12 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	tcmd "github.com/evdatsion/tendermint/cmd/tendermint/commands"
-	cfg "github.com/evdatsion/tendermint/config"
-	"github.com/evdatsion/tendermint/libs/cli"
-	tmflags "github.com/evdatsion/tendermint/libs/cli/flags"
-	"github.com/evdatsion/tendermint/libs/log"
-	pvm "github.com/evdatsion/tendermint/privval"
+	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/tendermint/commands"
+	cfg "github.com/evdatsion/aphelion-dpos-bft/config"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
+	tmflags "github.com/evdatsion/aphelion-dpos-bft/libs/cli/flags"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	pvm "github.com/evdatsion/aphelion-dpos-bft/privval"
 
 	"github.com/evdatsion/cosmos-sdk/client/flags"
 	"github.com/evdatsion/cosmos-sdk/codec"

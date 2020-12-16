@@ -3,8 +3,8 @@ package slashing
 import (
 	"fmt"
 
-	abci "github.com/evdatsion/tendermint/abci/types"
-	tmtypes "github.com/evdatsion/tendermint/types"
+	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 )

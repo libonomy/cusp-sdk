@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	abci "github.com/evdatsion/tendermint/abci/types"
-	"github.com/evdatsion/tendermint/libs/log"
+	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 
 	"github.com/stretchr/testify/require"
 

@@ -11,9 +11,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	tmclient "github.com/evdatsion/tendermint/rpc/client"
-	ctypes "github.com/evdatsion/tendermint/rpc/core/types"
-	rpcclient "github.com/evdatsion/tendermint/rpc/lib/client"
+	tmclient "github.com/evdatsion/aphelion-dpos-bft/rpc/client"
+	ctypes "github.com/evdatsion/aphelion-dpos-bft/rpc/core/types"
+	rpcclient "github.com/evdatsion/aphelion-dpos-bft/rpc/lib/client"
 
 	"github.com/evdatsion/cosmos-sdk/codec"
 )

@@ -11,7 +11,7 @@ import (
 	v034gov "github.com/evdatsion/cosmos-sdk/x/gov/legacy/v0_34"
 	v034staking "github.com/evdatsion/cosmos-sdk/x/staking/legacy/v0_34"
 
-	"github.com/evdatsion/tendermint/crypto"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 )
 
 const (

@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	abci "github.com/evdatsion/tendermint/abci/types"
-	cmn "github.com/evdatsion/tendermint/libs/common"
-	tmtypes "github.com/evdatsion/tendermint/types"
+	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
+	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 )
 
 type mockValidator struct {

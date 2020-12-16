@@ -5,10 +5,10 @@ import (
 
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
-	tcmd "github.com/evdatsion/tendermint/cmd/tendermint/commands"
-	cfg "github.com/evdatsion/tendermint/config"
-	"github.com/evdatsion/tendermint/crypto"
-	"github.com/evdatsion/tendermint/libs/log"
+	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/tendermint/commands"
+	cfg "github.com/evdatsion/aphelion-dpos-bft/config"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 
 	"github.com/evdatsion/cosmos-sdk/server"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

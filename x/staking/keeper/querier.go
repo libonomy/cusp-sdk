@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	abci "github.com/evdatsion/tendermint/abci/types"
+	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
 	"github.com/evdatsion/cosmos-sdk/client"
 	"github.com/evdatsion/cosmos-sdk/codec"

@@ -9,13 +9,13 @@ import (
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/evdatsion/tendermint/abci/server"
-	tcmd "github.com/evdatsion/tendermint/cmd/tendermint/commands"
-	cmn "github.com/evdatsion/tendermint/libs/common"
-	"github.com/evdatsion/tendermint/node"
-	"github.com/evdatsion/tendermint/p2p"
-	pvm "github.com/evdatsion/tendermint/privval"
-	"github.com/evdatsion/tendermint/proxy"
+	"github.com/evdatsion/aphelion-dpos-bft/abci/server"
+	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/tendermint/commands"
+	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
+	"github.com/evdatsion/aphelion-dpos-bft/node"
+	"github.com/evdatsion/aphelion-dpos-bft/p2p"
+	pvm "github.com/evdatsion/aphelion-dpos-bft/privval"
+	"github.com/evdatsion/aphelion-dpos-bft/proxy"
 )
 
 // Tendermint full-node start flags

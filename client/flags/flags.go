@@ -8,7 +8,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	tmcli "github.com/evdatsion/tendermint/libs/cli"
+	tmcli "github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 )
 
 // nolint

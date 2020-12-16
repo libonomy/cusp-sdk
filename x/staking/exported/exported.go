@@ -2,7 +2,7 @@ package exported
 
 import (
 	sdk "github.com/evdatsion/cosmos-sdk/types"
-	"github.com/evdatsion/tendermint/crypto"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 )
 
 // DelegationI delegation bond for a delegated proof of stake system

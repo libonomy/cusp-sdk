@@ -8,7 +8,7 @@ import (
 	"github.com/evdatsion/cosmos-sdk/x/params/subspace"
 	"github.com/evdatsion/cosmos-sdk/x/params/types"
 
-	"github.com/evdatsion/tendermint/libs/log"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 )
 
 // Keeper of the global paramstore

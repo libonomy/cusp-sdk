@@ -11,8 +11,8 @@ import (
 	"github.com/rakyll/statik/fs"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/evdatsion/tendermint/libs/log"
-	rpcserver "github.com/evdatsion/tendermint/rpc/lib/server"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	rpcserver "github.com/evdatsion/aphelion-dpos-bft/rpc/lib/server"
 
 	"github.com/evdatsion/cosmos-sdk/client/context"
 	"github.com/evdatsion/cosmos-sdk/client/flags"

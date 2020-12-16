@@ -17,9 +17,9 @@ import (
 
 	"github.com/evdatsion/go-bip39"
 
-	"github.com/evdatsion/tendermint/crypto"
-	"github.com/evdatsion/tendermint/crypto/multisig"
-	"github.com/evdatsion/tendermint/libs/cli"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/multisig"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 )
 
 const (

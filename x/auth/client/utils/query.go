@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	ctypes "github.com/evdatsion/tendermint/rpc/core/types"
+	ctypes "github.com/evdatsion/aphelion-dpos-bft/rpc/core/types"
 
 	"github.com/evdatsion/cosmos-sdk/client/context"
 	"github.com/evdatsion/cosmos-sdk/codec"

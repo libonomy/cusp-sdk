@@ -9,11 +9,11 @@ import (
 	"github.com/spf13/viper"
 	"gopkg.in/yaml.v2"
 
-	tcmd "github.com/evdatsion/tendermint/cmd/tendermint/commands"
-	"github.com/evdatsion/tendermint/libs/cli"
-	"github.com/evdatsion/tendermint/p2p"
-	pvm "github.com/evdatsion/tendermint/privval"
-	tversion "github.com/evdatsion/tendermint/version"
+	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/tendermint/commands"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
+	"github.com/evdatsion/aphelion-dpos-bft/p2p"
+	pvm "github.com/evdatsion/aphelion-dpos-bft/privval"
+	tversion "github.com/evdatsion/aphelion-dpos-bft/version"
 
 	"github.com/evdatsion/cosmos-sdk/codec"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

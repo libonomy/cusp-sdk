@@ -10,7 +10,7 @@ import (
 	"github.com/evdatsion/cosmos-sdk/x/params"
 	"github.com/evdatsion/cosmos-sdk/x/supply/exported"
 
-	"github.com/evdatsion/tendermint/libs/log"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 )
 
 // Governance Keeper

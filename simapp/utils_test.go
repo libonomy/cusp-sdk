@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/evdatsion/cosmos-sdk/codec"
-	"github.com/evdatsion/tendermint/crypto/ed25519"
-	cmn "github.com/evdatsion/tendermint/libs/common"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
+	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
 
 	"github.com/evdatsion/cosmos-sdk/x/auth"
 	"github.com/evdatsion/cosmos-sdk/x/distribution"

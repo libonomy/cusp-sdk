@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	abci "github.com/evdatsion/tendermint/abci/types"
+	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
 	"github.com/evdatsion/cosmos-sdk/codec"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

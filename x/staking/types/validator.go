@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	abci "github.com/evdatsion/tendermint/abci/types"
-	"github.com/evdatsion/tendermint/crypto"
-	tmtypes "github.com/evdatsion/tendermint/types"
+	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 	yaml "gopkg.in/yaml.v2"
 
 	"github.com/evdatsion/cosmos-sdk/codec"

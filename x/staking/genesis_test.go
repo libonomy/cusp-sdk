@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/evdatsion/tendermint/crypto/ed25519"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
 
 	"github.com/stretchr/testify/assert"
 
 	"github.com/stretchr/testify/require"
-	abci "github.com/evdatsion/tendermint/abci/types"
+	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 	keep "github.com/evdatsion/cosmos-sdk/x/staking/keeper"

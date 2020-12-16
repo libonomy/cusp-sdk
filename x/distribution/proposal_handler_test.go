@@ -3,7 +3,7 @@ package distribution
 import (
 	"testing"
 
-	"github.com/evdatsion/tendermint/crypto/ed25519"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 	"github.com/evdatsion/cosmos-sdk/x/distribution/types"

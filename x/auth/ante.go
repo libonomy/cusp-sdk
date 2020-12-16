@@ -5,11 +5,11 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/evdatsion/tendermint/crypto/ed25519"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
 
-	"github.com/evdatsion/tendermint/crypto"
-	"github.com/evdatsion/tendermint/crypto/multisig"
-	"github.com/evdatsion/tendermint/crypto/secp256k1"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/multisig"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
 	"github.com/evdatsion/cosmos-sdk/codec"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

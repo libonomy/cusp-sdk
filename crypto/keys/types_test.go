@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/evdatsion/tendermint/crypto/secp256k1"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
 	"github.com/evdatsion/cosmos-sdk/crypto/keys/hd"
 	"github.com/evdatsion/cosmos-sdk/types"

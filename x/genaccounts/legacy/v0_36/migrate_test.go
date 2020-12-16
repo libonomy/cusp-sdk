@@ -6,8 +6,8 @@ import (
 	v034accounts "github.com/evdatsion/cosmos-sdk/x/genaccounts/legacy/v0_34"
 	v034gov "github.com/evdatsion/cosmos-sdk/x/gov/legacy/v0_34"
 	v034staking "github.com/evdatsion/cosmos-sdk/x/staking/legacy/v0_34"
-	"github.com/evdatsion/tendermint/crypto"
-	"github.com/evdatsion/tendermint/crypto/secp256k1"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 	"testing"
 
 	"github.com/stretchr/testify/require"

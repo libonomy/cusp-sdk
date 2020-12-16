@@ -10,8 +10,8 @@ import (
 	"github.com/spf13/viper"
 	"gopkg.in/yaml.v2"
 
-	"github.com/evdatsion/tendermint/libs/bech32"
-	"github.com/evdatsion/tendermint/libs/cli"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/bech32"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 
 	"github.com/evdatsion/cosmos-sdk/client/flags"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

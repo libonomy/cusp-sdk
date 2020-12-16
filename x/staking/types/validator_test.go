@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	tmtypes "github.com/evdatsion/tendermint/types"
+	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
 	"gopkg.in/yaml.v2"
 
 	"github.com/evdatsion/cosmos-sdk/codec"

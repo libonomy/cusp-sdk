@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	"github.com/evdatsion/iavl"
-	"github.com/evdatsion/tendermint/crypto/merkle"
-	cmn "github.com/evdatsion/tendermint/libs/common"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/merkle"
+	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
 )
 
 // MultiStoreProof defines a collection of store proofs in a multi-store

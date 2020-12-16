@@ -8,8 +8,8 @@ import (
 	"github.com/pkg/errors"
 
 	tmbtcec "github.com/tendermint/btcd/btcec"
-	tmcrypto "github.com/evdatsion/tendermint/crypto"
-	tmsecp256k1 "github.com/evdatsion/tendermint/crypto/secp256k1"
+	tmcrypto "github.com/evdatsion/aphelion-dpos-bft/crypto"
+	tmsecp256k1 "github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
 	"github.com/evdatsion/cosmos-sdk/crypto/keys/hd"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

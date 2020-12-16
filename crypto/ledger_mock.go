@@ -9,8 +9,8 @@ import (
 	"github.com/pkg/errors"
 
 	secp256k1 "github.com/tendermint/btcd/btcec"
-	"github.com/evdatsion/tendermint/crypto"
-	tmsecp256k1 "github.com/evdatsion/tendermint/crypto/secp256k1"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	tmsecp256k1 "github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
 	bip39 "github.com/evdatsion/go-bip39"
 

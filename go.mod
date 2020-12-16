@@ -6,10 +6,10 @@ require (
 	github.com/bartekn/go-bip39 v0.0.0-20171116152956-a05967ea095d
 	github.com/bgentry/speakeasy v0.1.0
 	github.com/btcsuite/btcd v0.0.0-20190115013929-ed77733ec07d
+	github.com/evdatsion/aphelion-dpos-bft v0.32.14-rf2
 	github.com/evdatsion/go-amino v0.15.0
 	github.com/evdatsion/go-bip39 v0.0.0-20180618194314-52158e4697b8
-	github.com/evdatsion/iavl v0.12.4
-	github.com/evdatsion/tendermint v0.32.14-rf1
+	github.com/evdatsion/iavl v0.12.4-rf2
 	github.com/evdatsion/tm-db v0.2.0-rf1
 	// github.com/evdatsion/ledger-cosmos-go v0.11.1
 	github.com/gogo/protobuf v1.3.1

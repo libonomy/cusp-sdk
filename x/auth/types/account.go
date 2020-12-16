@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/evdatsion/tendermint/crypto"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 	yaml "gopkg.in/yaml.v2"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"

@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	cryptoAmino "github.com/evdatsion/tendermint/crypto/encoding/amino"
-	"github.com/evdatsion/tendermint/crypto/secp256k1"
+	cryptoAmino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 
 	"github.com/evdatsion/cosmos-sdk/crypto/keys"
 	"github.com/evdatsion/cosmos-sdk/crypto/keys/mintkey"

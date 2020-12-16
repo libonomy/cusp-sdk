@@ -1,7 +1,7 @@
 package keys
 
 import (
-	cryptoAmino "github.com/evdatsion/tendermint/crypto/encoding/amino"
+	cryptoAmino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
 
 	"github.com/evdatsion/cosmos-sdk/codec"
 	"github.com/evdatsion/cosmos-sdk/crypto/keys/hd"

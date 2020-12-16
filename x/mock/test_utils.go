@@ -8,8 +8,8 @@ import (
 	"github.com/evdatsion/cosmos-sdk/codec"
 
 	"github.com/stretchr/testify/require"
-	abci "github.com/evdatsion/tendermint/abci/types"
-	"github.com/evdatsion/tendermint/crypto"
+	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 
 	"github.com/evdatsion/cosmos-sdk/baseapp"
 	sdk "github.com/evdatsion/cosmos-sdk/types"

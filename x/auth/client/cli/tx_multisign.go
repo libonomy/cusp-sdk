@@ -9,8 +9,8 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/evdatsion/tendermint/crypto/multisig"
-	"github.com/evdatsion/tendermint/libs/cli"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/multisig"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 
 	"github.com/evdatsion/cosmos-sdk/client/context"
 	"github.com/evdatsion/cosmos-sdk/client/flags"

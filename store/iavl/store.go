@@ -12,9 +12,9 @@ import (
 
 	"github.com/pkg/errors"
 	"github.com/evdatsion/iavl"
-	abci "github.com/evdatsion/tendermint/abci/types"
-	"github.com/evdatsion/tendermint/crypto/merkle"
-	cmn "github.com/evdatsion/tendermint/libs/common"
+	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/merkle"
+	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
 	dbm "github.com/evdatsion/tm-db"
 )
 
@@ -58,7 +58,7 @@ type Store struct {
 	numRecent int64
 
 	// This is the distance between state-sync waypoint states to be stored.
-	// See https://github.com/evdatsion/tendermint/issues/828
+	// See https://github.com/evdatsion/aphelion-dpos-bft/issues/828
 	// A value of 1 means store every state.
 	// A value of 0 means store no waypoints. (node cannot assist in state-sync)
 	// By default this value should be set the same across all nodes,

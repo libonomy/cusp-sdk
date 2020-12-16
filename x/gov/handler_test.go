@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
-	abci "github.com/evdatsion/tendermint/abci/types"
+	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
 
 	"github.com/stretchr/testify/require"
 )

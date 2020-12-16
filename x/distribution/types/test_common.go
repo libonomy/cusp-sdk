@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/evdatsion/tendermint/crypto"
-	"github.com/evdatsion/tendermint/crypto/ed25519"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
 
 	sdk "github.com/evdatsion/cosmos-sdk/types"
 )

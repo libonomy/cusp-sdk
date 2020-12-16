@@ -17,9 +17,9 @@ import (
 
 	bip39 "github.com/evdatsion/go-bip39"
 
-	tmcrypto "github.com/evdatsion/tendermint/crypto"
-	cryptoAmino "github.com/evdatsion/tendermint/crypto/encoding/amino"
-	"github.com/evdatsion/tendermint/crypto/secp256k1"
+	tmcrypto "github.com/evdatsion/aphelion-dpos-bft/crypto"
+	cryptoAmino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
 	dbm "github.com/evdatsion/tm-db"
 )
 

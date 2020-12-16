@@ -6,12 +6,12 @@ import (
 
 	"github.com/tendermint/crypto/bcrypt"
 
-	"github.com/evdatsion/tendermint/crypto"
-	"github.com/evdatsion/tendermint/crypto/armor"
-	cryptoAmino "github.com/evdatsion/tendermint/crypto/encoding/amino"
-	"github.com/evdatsion/tendermint/crypto/xsalsa20symmetric"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/armor"
+	cryptoAmino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
+	"github.com/evdatsion/aphelion-dpos-bft/crypto/xsalsa20symmetric"
 
-	cmn "github.com/evdatsion/tendermint/libs/common"
+	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
 
 	"github.com/evdatsion/cosmos-sdk/crypto/keys/keyerror"
 )

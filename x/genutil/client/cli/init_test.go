@@ -9,10 +9,10 @@ import (
 
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
-	abciServer "github.com/evdatsion/tendermint/abci/server"
-	tcmd "github.com/evdatsion/tendermint/cmd/tendermint/commands"
-	"github.com/evdatsion/tendermint/libs/cli"
-	"github.com/evdatsion/tendermint/libs/log"
+	abciServer "github.com/evdatsion/aphelion-dpos-bft/abci/server"
+	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/tendermint/commands"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
+	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 
 	"github.com/evdatsion/cosmos-sdk/client"
 	"github.com/evdatsion/cosmos-sdk/codec"
