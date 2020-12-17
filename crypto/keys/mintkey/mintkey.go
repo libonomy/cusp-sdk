@@ -17,9 +17,9 @@ import (
 )
 
 const (
-	blockTypePrivKey = "TENDERMINT PRIVATE KEY"
-	blockTypeKeyInfo = "TENDERMINT KEY INFO"
-	blockTypePubKey  = "TENDERMINT PUBLIC KEY"
+	blockTypePrivKey = "APHELION PRIVATE KEY"
+	blockTypeKeyInfo = "APHELION KEY INFO"
+	blockTypePubKey  = "APHELION PUBLIC KEY"
 )
 
 // Make bcrypt security parameter var, so it can be changed within the lcd test

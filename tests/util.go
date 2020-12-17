@@ -18,13 +18,13 @@ import (
 	"github.com/evdatsion/cusp-sdk/codec"
 )
 
-// Wait for the next tendermint block from the Tendermint RPC
+// Wait for the next aphelion block from the Aphelion RPC
 // on localhost
 func WaitForNextHeightTM(port string) {
 	WaitForNextNBlocksTM(1, port)
 }
 
-// Wait for N tendermint blocks to pass using the Tendermint RPC
+// Wait for N aphelion blocks to pass using the Aphelion RPC
 // on localhost
 func WaitForNextNBlocksTM(n int64, port string) {
 
@@ -43,7 +43,7 @@ func WaitForNextNBlocksTM(n int64, port string) {
 	waitForHeightTM(height, url)
 }
 
-// Wait for the given height from the Tendermint RPC
+// Wait for the given height from the Aphelion RPC
 // on localhost
 func WaitForHeightTM(height int64, port string) {
 	url := fmt.Sprintf("http://localhost:%v", port)
@@ -126,13 +126,13 @@ func waitForHeight(height int64, url string) {
 	}
 }
 
-// wait for tendermint to start by querying the LCD
+// wait for aphelion to start by querying the LCD
 func WaitForLCDStart(port string) {
 	url := fmt.Sprintf("http://localhost:%v/blocks/latest", port)
 	WaitForStart(url)
 }
 
-// wait for tendermint to start by querying tendermint
+// wait for aphelion to start by querying aphelion
 func WaitForTMStart(port string) {
 	url := fmt.Sprintf("http://localhost:%v/block", port)
 	WaitForStart(url)

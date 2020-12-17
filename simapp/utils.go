@@ -87,8 +87,8 @@ func AppStateFromGenesisFileFn(r *rand.Rand) (tmtypes.GenesisDoc, []simulation.A
 	newAccs := make([]simulation.Account, len(accounts))
 	for i, acc := range accounts {
 		// Pick a random private key, since we don't know the actual key
-		// This should be fine as it's only used for mock Tendermint validators
-		// and these keys are never actually used to sign by mock Tendermint.
+		// This should be fine as it's only used for mock Aphelion validators
+		// and these keys are never actually used to sign by mock Aphelion.
 		privkeySeed := make([]byte, 15)
 		r.Read(privkeySeed)
 

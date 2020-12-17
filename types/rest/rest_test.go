@@ -24,7 +24,7 @@ import (
 type mockResponseWriter struct{}
 
 func TestBaseReqValidateBasic(t *testing.T) {
-	fromAddr := "cosmos1cq0sxam6x4l0sv9yz3a2vlqhdhvt2k6jtgcse0"
+	fromAddr := "libonomy1cq0sxam6x4l0sv9yz3a2vlqhdhvt2k6jtgcse0"
 	tenstakes, err := types.ParseCoins("10stake")
 	require.NoError(t, err)
 	onestake, err := types.ParseDecCoins("1.0stake")
@@ -172,14 +172,14 @@ func TestProcessPostResponse(t *testing.T) {
 	privKey := secp256k1.GenPrivKey()
 	pubKey := privKey.PubKey()
 	addr := types.AccAddress(pubKey.Address())
-	coins := types.NewCoins(types.NewCoin("atom", types.NewInt(100)), types.NewCoin("tree", types.NewInt(125)))
+	coins := types.NewCoins(types.NewCoin("libocoin", types.NewInt(100)), types.NewCoin("tree", types.NewInt(125)))
 	accNumber := uint64(104)
 	sequence := uint64(32)
 
 	acc := mockAccount{addr, coins, pubKey, accNumber, sequence}
 	cdc := codec.New()
 	codec.RegisterCrypto(cdc)
-	cdc.RegisterConcrete(&mockAccount{}, "cosmos-sdk/mockAccount", nil)
+	cdc.RegisterConcrete(&mockAccount{}, "cusp-sdk/mockAccount", nil)
 	ctx = ctx.WithCodec(cdc)
 
 	// setup expected results

@@ -58,7 +58,7 @@ func (k Keeper) HandleDoubleSign(ctx sdk.Context, addr crypto.Address, infractio
 		// NOTE:
 		// We used to panic with:
 		// `panic(fmt.Sprintf("Validator consensus-address %v not found", consAddr))`,
-		// but this couples the expectations of the app to both Tendermint and
+		// but this couples the expectations of the app to both Aphelion and
 		// the simulator.  Both are expected to provide the full range of
 		// allowable but none of the disallowed evidence types.  Instead of
 		// getting this coordination right, it is easier to relax the
@@ -78,7 +78,7 @@ func (k Keeper) HandleDoubleSign(ctx sdk.Context, addr crypto.Address, infractio
 	if validator == nil || validator.IsUnbonded() {
 		// Defensive.
 		// Simulation doesn't take unbonding periods into account, and
-		// Tendermint might break this assumption at some point.
+		// Aphelion might break this assumption at some point.
 		return
 	}
 
@@ -108,7 +108,7 @@ func (k Keeper) HandleDoubleSign(ctx sdk.Context, addr crypto.Address, infractio
 
 	// Slash validator
 	// `power` is the int64 power of the validator as provided to/by
-	// Tendermint. This value is validator.Tokens as sent to Tendermint via
+	// Aphelion. This value is validator.Tokens as sent to Aphelion via
 	// ABCI, and now received as evidence.
 	// The fraction is passed in to separately to slash unbonding and rebonding delegations.
 	ctx.EventManager().EmitEvent(

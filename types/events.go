@@ -85,7 +85,7 @@ func (a Attribute) String() string {
 	return fmt.Sprintf("%s: %s", a.Key, a.Value)
 }
 
-// ToKVPair converts an Attribute object into a Tendermint key/value pair.
+// ToKVPair converts an Attribute object into a Aphelion key/value pair.
 func (a Attribute) ToKVPair() cmn.KVPair {
 	return cmn.KVPair{Key: toBytes(a.Key), Value: toBytes(a.Value)}
 }

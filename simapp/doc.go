@@ -1,5 +1,5 @@
 /*
-Package simapp implements a full fledged Cosmos SDK application used for executing
+Package simapp implements a full fledged Cusp SDK application used for executing
 simulation test suites.
 
 Simulation App

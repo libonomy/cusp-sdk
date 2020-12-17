@@ -55,7 +55,7 @@ func setupTestInput() testInput {
 	cdc := codec.New()
 	types.RegisterCodec(cdc)
 	cdc.RegisterInterface((*exported.ModuleAccountI)(nil), nil)
-	cdc.RegisterConcrete(&moduleAccount{}, "cosmos-sdk/ModuleAccount", nil)
+	cdc.RegisterConcrete(&moduleAccount{}, "cusp-sdk/ModuleAccount", nil)
 	codec.RegisterCrypto(cdc)
 
 	authCapKey := sdk.NewKVStoreKey("authCapKey")

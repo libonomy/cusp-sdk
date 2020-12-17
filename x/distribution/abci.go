@@ -19,7 +19,7 @@ func BeginBlocker(ctx sdk.Context, req abci.RequestBeginBlock, k keeper.Keeper) 
 		}
 	}
 
-	// TODO this is Tendermint-dependent
+	// TODO this is Aphelion-dependent
 	// ref https://github.com/evdatsion/cusp-sdk/issues/3095
 	if ctx.BlockHeight() > 1 {
 		previousProposer := k.GetPreviousProposerConsAddr(ctx)

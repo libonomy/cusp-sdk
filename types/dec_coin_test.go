@@ -280,7 +280,7 @@ func TestParseDecCoins(t *testing.T) {
 	}{
 		{"", nil, false},
 		{"4stake", nil, true},
-		{"5.5atom,4stake", nil, true},
+		{"5.5libocoin,4stake", nil, true},
 		{"0.0stake", nil, true},
 		{"0.004STAKE", nil, true},
 		{
@@ -289,9 +289,9 @@ func TestParseDecCoins(t *testing.T) {
 			false,
 		},
 		{
-			"5.04atom,0.004stake",
+			"5.04libocoin,0.004stake",
 			DecCoins{
-				NewDecCoinFromDec("atom", NewDecWithPrec(5040000000000000000, Precision)),
+				NewDecCoinFromDec("libocoin", NewDecWithPrec(5040000000000000000, Precision)),
 				NewDecCoinFromDec("stake", NewDecWithPrec(4000000000000000, Precision)),
 			},
 			false,
@@ -317,10 +317,10 @@ func TestDecCoinsString(t *testing.T) {
 		{DecCoins{}, ""},
 		{
 			DecCoins{
-				NewDecCoinFromDec("atom", NewDecWithPrec(5040000000000000000, Precision)),
+				NewDecCoinFromDec("libocoin", NewDecWithPrec(5040000000000000000, Precision)),
 				NewDecCoinFromDec("stake", NewDecWithPrec(4000000000000000, Precision)),
 			},
-			"5.040000000000000000atom,0.004000000000000000stake",
+			"5.040000000000000000libocoin,0.004000000000000000stake",
 		},
 	}
 

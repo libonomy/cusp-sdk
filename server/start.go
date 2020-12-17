@@ -10,7 +10,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"github.com/evdatsion/aphelion-dpos-bft/abci/server"
-	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/tendermint/commands"
+	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/aphelion/commands"
 	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
 	"github.com/evdatsion/aphelion-dpos-bft/node"
 	"github.com/evdatsion/aphelion-dpos-bft/p2p"
@@ -18,9 +18,9 @@ import (
 	"github.com/evdatsion/aphelion-dpos-bft/proxy"
 )
 
-// Tendermint full-node start flags
+// Aphelion full-node start flags
 const (
-	flagWithTendermint = "with-tendermint"
+	flagWithAphelion = "with-aphelion"
 	flagAddress        = "address"
 	flagTraceStore     = "trace-store"
 	flagPruning        = "pruning"
@@ -31,13 +31,13 @@ const (
 )
 
 // StartCmd runs the service passed in, either stand-alone or in-process with
-// Tendermint.
+// Aphelion.
 func StartCmd(ctx *Context, appCreator AppCreator) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "start",
 		Short: "Run the full node",
-		Long: `Run the full node application with Tendermint in or out of process. By
-default, the application will run with Tendermint in process.
+		Long: `Run the full node application with Aphelion in or out of process. By
+default, the application will run with Aphelion in process.
 
 Pruning options can be provided via the '--pruning' flag. The options are as follows:
 
@@ -55,12 +55,12 @@ For profiling and benchmarking purposes, CPU profiling can be enabled via the '-
 which accepts a path for the resulting pprof file.
 `,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			if !viper.GetBool(flagWithTendermint) {
-				ctx.Logger.Info("starting ABCI without Tendermint")
+			if !viper.GetBool(flagWithAphelion) {
+				ctx.Logger.Info("starting ABCI without Aphelion")
 				return startStandAlone(ctx, appCreator)
 			}
 
-			ctx.Logger.Info("starting ABCI with Tendermint")
+			ctx.Logger.Info("starting ABCI with Aphelion")
 
 			_, err := startInProcess(ctx, appCreator)
 			return err
@@ -68,7 +68,7 @@ which accepts a path for the resulting pprof file.
 	}
 
 	// core flags for the ABCI application
-	cmd.Flags().Bool(flagWithTendermint, true, "Run abci app embedded in-process with tendermint")
+	cmd.Flags().Bool(flagWithAphelion, true, "Run abci app embedded in-process with aphelion")
 	cmd.Flags().String(flagAddress, "tcp://0.0.0.0:26658", "Listen address")
 	cmd.Flags().String(flagTraceStore, "", "Enable KVStore tracing to an output file")
 	cmd.Flags().String(flagPruning, "syncable", "Pruning strategy: syncable, nothing, everything")
@@ -80,7 +80,7 @@ which accepts a path for the resulting pprof file.
 	cmd.Flags().Uint64(FlagHaltTime, 0, "Minimum block time (in Unix seconds) at which to gracefully halt the chain and shutdown the node")
 	cmd.Flags().String(flagCPUProfile, "", "Enable CPU profiling and write to the provided file")
 
-	// add support for all Tendermint-specific command line options
+	// add support for all Aphelion-specific command line options
 	tcmd.AddNodeFlags(cmd)
 	return cmd
 }
@@ -148,7 +148,7 @@ func startInProcess(ctx *Context, appCreator AppCreator) (*node.Node, error) {
 
 	UpgradeOldPrivValFile(cfg)
 
-	// create & start tendermint node
+	// create & start aphelion node
 	tmNode, err := node.NewNode(
 		cfg,
 		pvm.LoadOrGenFilePV(cfg.PrivValidatorKeyFile(), cfg.PrivValidatorStateFile()),

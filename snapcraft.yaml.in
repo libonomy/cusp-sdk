@@ -1,23 +1,23 @@
-name: gaia # you probably want to 'snapcraft register <name>'
+name: cusp # you probably want to 'snapcraft register <name>'
 # base: core18 # the base snap is the execution environment for this snap
 version: '@VERSION@' # just for humans, typically '1.2+git' or '1.3.2'
-summary: Gaia Daemon # 79 char long summary
+summary: Cusp Daemon # 79 char long summary
 description: |
-  This snap provides the Gaia daemon gaiad and the command line
-  tool gaiacli.
+  This snap provides the Cusp daemon cuspd and the command line
+  tool cuspcli.
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
 
 apps:
-    gaiad:
-        command: bin/gaiad
+    cuspd:
+        command: bin/cuspd
         plugs: [home,network,network-bind]
-    gaiacli:
-        command: bin/gaiacli
+    cuspcli:
+        command: bin/cuspcli
         plugs: [home,network,network-bind]
 
 parts:
-  gaia:
+  cusp:
     plugin: dump
     source: ./
     override-pull: |
@@ -31,5 +31,5 @@ parts:
     build-snaps: [go]
     override-build: |
         mkdir -p $SNAPCRAFT_PART_INSTALL/bin
-        cp $GOBIN/gaiad $SNAPCRAFT_PART_INSTALL/bin
-        cp $GOBIN/gaiacli $SNAPCRAFT_PART_INSTALL/bin
+        cp $GOBIN/cuspd $SNAPCRAFT_PART_INSTALL/bin
+        cp $GOBIN/cuspcli $SNAPCRAFT_PART_INSTALL/bin

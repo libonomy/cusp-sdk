@@ -12,7 +12,7 @@ func Commands() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "keys",
 		Short: "Add or view local private keys",
-		Long: `Keys allows you to manage your local keystore for tendermint.
+		Long: `Keys allows you to manage your local keystore for aphelion.
 
     These keys may be in any format supported by go-crypto and can be
     used by light-clients, full nodes, or any other application that

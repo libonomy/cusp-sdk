@@ -39,7 +39,7 @@ Vagrant.configure("2") do |config|
     echo 'export LC_ALL=en_US.UTF-8' >> /home/vagrant/.bash_profile
 
     mkdir -p /home/vagrant/go/bin
-    mkdir -p /home/vagrant/go/src/github.com/cosmos
+    mkdir -p /home/vagrant/go/src/github.com/libonomy
     ln -s /vagrant /home/vagrant/go/src/github.com/evdatsion/cusp-sdk
 
     chown -R vagrant:vagrant /home/vagrant/go

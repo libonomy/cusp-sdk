@@ -90,8 +90,8 @@ func GetCmdQueryProposals(queryRoute string, cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`Query for a all proposals. You can filter the returns with the following flags.
 
 Example:
-$ %s query gov proposals --depositor cosmos1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
-$ %s query gov proposals --voter cosmos1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
+$ %s query gov proposals --depositor libonomy1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
+$ %s query gov proposals --voter libonomy1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
 $ %s query gov proposals --status (DepositPeriod|VotingPeriod|Passed|Rejected)
 `,
 				version.ClientName, version.ClientName, version.ClientName,
@@ -178,7 +178,7 @@ func GetCmdQueryVote(queryRoute string, cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`Query details for a single vote on a proposal given its identifier.
 
 Example:
-$ %s query gov vote 1 cosmos1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
+$ %s query gov vote 1 libonomy1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
 `,
 				version.ClientName,
 			),
@@ -305,7 +305,7 @@ func GetCmdQueryDeposit(queryRoute string, cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`Query details for a single proposal deposit on a proposal by its identifier.
 
 Example:
-$ %s query gov deposit 1 cosmos1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
+$ %s query gov deposit 1 libonomy1skjwj5whet0lpe65qaq4rpq03hjxlwd9nf39lk
 `,
 				version.ClientName,
 			),

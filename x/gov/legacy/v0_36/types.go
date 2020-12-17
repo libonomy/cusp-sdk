@@ -159,6 +159,6 @@ func ValidateAbstract(codespace sdk.CodespaceType, c Content) sdk.Error {
 
 func RegisterCodec(cdc *codec.Codec) {
 	cdc.RegisterInterface((*Content)(nil), nil)
-	cdc.RegisterConcrete(TextProposal{}, "cosmos-sdk/TextProposal", nil)
-	cdc.RegisterConcrete(SoftwareUpgradeProposal{}, "cosmos-sdk/SoftwareUpgradeProposal", nil)
+	cdc.RegisterConcrete(TextProposal{}, "cusp-sdk/TextProposal", nil)
+	cdc.RegisterConcrete(SoftwareUpgradeProposal{}, "cusp-sdk/SoftwareUpgradeProposal", nil)
 }

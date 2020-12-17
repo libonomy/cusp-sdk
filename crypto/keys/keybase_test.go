@@ -38,7 +38,7 @@ func TestCreateAccountInvalidMnemonic(t *testing.T) {
 
 func TestCreateLedgerUnsupportedAlgo(t *testing.T) {
 	kb := NewInMemory()
-	_, err := kb.CreateLedger("some_account", Ed25519, "cosmos", 0, 1)
+	_, err := kb.CreateLedger("some_account", Ed25519, "libonomy", 0, 1)
 	assert.Error(t, err)
 	assert.Equal(t, "unsupported signing algo: only secp256k1 is supported", err.Error())
 }
@@ -50,7 +50,7 @@ func TestCreateLedger(t *testing.T) {
 	// test_cover does not compile some dependencies so ledger is disabled
 	// test_unit may add a ledger mock
 	// both cases are acceptable
-	ledger, err := kb.CreateLedger("some_account", Secp256k1, "cosmos", 3, 1)
+	ledger, err := kb.CreateLedger("some_account", Secp256k1, "libonomy", 3, 1)
 
 	if err != nil {
 		assert.Error(t, err)
@@ -64,7 +64,7 @@ func TestCreateLedger(t *testing.T) {
 	pubKey := ledger.GetPubKey()
 	pk, err := sdk.Bech32ifyAccPub(pubKey)
 	assert.NoError(t, err)
-	assert.Equal(t, "cosmospub1addwnpepqdszcr95mrqqs8lw099aa9h8h906zmet22pmwe9vquzcgvnm93eqygufdlv", pk)
+	assert.Equal(t, "libonomypub1addwnpepqdszcr95mrqqs8lw099aa9h8h906zmet22pmwe9vquzcgvnm93eqygufdlv", pk)
 
 	// Check that restoring the key gets the same results
 	restoredKey, err := kb.Get("some_account")
@@ -73,7 +73,7 @@ func TestCreateLedger(t *testing.T) {
 	assert.Equal(t, TypeLedger, restoredKey.GetType())
 	pubKey = restoredKey.GetPubKey()
 	pk, err = sdk.Bech32ifyAccPub(pubKey)
-	assert.Equal(t, "cosmospub1addwnpepqdszcr95mrqqs8lw099aa9h8h906zmet22pmwe9vquzcgvnm93eqygufdlv", pk)
+	assert.Equal(t, "libonomypub1addwnpepqdszcr95mrqqs8lw099aa9h8h906zmet22pmwe9vquzcgvnm93eqygufdlv", pk)
 
 	path, err := restoredKey.GetPath()
 	assert.NoError(t, err)
@@ -114,7 +114,7 @@ func TestKeyManagement(t *testing.T) {
 	require.NotNil(t, err)
 	_, err = cstore.GetByAddress(accAddr(i2))
 	require.NoError(t, err)
-	addr, err := sdk.AccAddressFromBech32("cosmos1yq8lgssgxlx9smjhes6ryjasmqmd3ts2559g0t")
+	addr, err := sdk.AccAddressFromBech32("libonomy1yq8lgssgxlx9smjhes6ryjasmqmd3ts2559g0t")
 	require.NoError(t, err)
 	_, err = cstore.GetByAddress(addr)
 	require.NotNil(t, err)

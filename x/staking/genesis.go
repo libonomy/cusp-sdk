@@ -117,7 +117,7 @@ func InitGenesis(ctx sdk.Context, keeper Keeper, accountKeeper types.AccountKeep
 		supplyKeeper.SetModuleAccount(ctx, notBondedPool)
 	}
 
-	// don't need to run Tendermint updates if we exported
+	// don't need to run Aphelion updates if we exported
 	if data.Exported {
 		for _, lv := range data.LastValidatorPowers {
 			keeper.SetLastValidatorPower(ctx, lv.Address, lv.Power)

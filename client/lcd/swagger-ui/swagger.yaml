@@ -2,13 +2,13 @@
 swagger: "2.0"
 info:
   version: "3.0"
-  title: Gaia-Lite for Cosmos
+  title: Cusp-Lite for Libonomy
   description: A REST interface for state queries, transaction generation and broadcasting.
 tags:
   - name: Transactions
     description: Search, encode, or broadcast transactions.
-  - name: Tendermint RPC
-    description: Tendermint APIs, such as query blocks, transactions and validatorset
+  - name: Aphelion RPC
+    description: Aphelion APIs, such as query blocks, transactions and validatorset
   - name: Auth
     description: Authenticate accounts
   - name: Bank
@@ -30,7 +30,7 @@ tags:
     description: Query app version
 schemes:
   - https
-host: stargate.cosmos.network
+host: api.aphelion.ai
 securityDefinitions:
   kms:
     type: basic
@@ -40,7 +40,7 @@ paths:
       description: Information about the connected node
       summary: The properties of the connected node
       tags:
-        - Tendermint RPC
+        - Aphelion RPC
       produces:
         - application/json
       responses:
@@ -85,14 +85,14 @@ paths:
                         example: 0
                   network:
                     type: string
-                    example: gaia-2
+                    example: cusp-2
                   channels:
                     type: string
                   listen_addr:
                     type: string
                     example: 192.168.56.1:26656
                   version:
-                    description: Tendermint version
+                    description: Aphelion version
                     type: string
                     example: 0.15.0
                   other:
@@ -111,7 +111,7 @@ paths:
     get:
       summary: Syncing state of node
       tags:
-        - Tendermint RPC
+        - Aphelion RPC
       description: Get if the node is currently syning with other nodes
       produces:
         - application/json
@@ -129,7 +129,7 @@ paths:
     get:
       summary: Get the latest block
       tags:
-        - Tendermint RPC
+        - Aphelion RPC
       produces:
         - application/json
       responses:
@@ -143,7 +143,7 @@ paths:
     get:
       summary: Get a block at a certain height
       tags:
-        - Tendermint RPC
+        - Aphelion RPC
       produces:
         - application/json
       parameters:
@@ -168,7 +168,7 @@ paths:
     get:
       summary: Get the latest validator set
       tags:
-        - Tendermint RPC
+        - Aphelion RPC
       produces:
         - application/json
       responses:
@@ -182,14 +182,14 @@ paths:
               validators:
                 type: array
                 items:
-                  $ref: "#/definitions/TendermintValidator"
+                  $ref: "#/definitions/AphelionValidator"
         500:
           description: Server internal error
   /validatorsets/{height}:
     get:
       summary: Get a validator set a certain height
       tags:
-        - Tendermint RPC
+        - Aphelion RPC
       produces:
         - application/json
       parameters:
@@ -210,7 +210,7 @@ paths:
               validators:
                 type: array
                 items:
-                  $ref: "#/definitions/TendermintValidator"
+                  $ref: "#/definitions/AphelionValidator"
         404:
           description: Block at height not available
         400:
@@ -256,8 +256,8 @@ paths:
         - in: query
           name: message.sender
           type: string
-          description: "transaction tags with sender: 'GET /txs?message.action=send&message.sender=cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv'"
-          x-example: "cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv"
+          description: "transaction tags with sender: 'GET /txs?message.action=send&message.sender=libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv'"
+          x-example: "libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv"
         - in: query
           name: page
           description: Page number
@@ -362,7 +362,7 @@ paths:
           description: Account address in bech32 format
           required: true
           type: string
-          x-example: cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
+          x-example: libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
       responses:
         200:
           description: Account balances
@@ -387,7 +387,7 @@ paths:
           description: Account address in bech32 format
           required: true
           type: string
-          x-example: cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
+          x-example: libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
         - in: body
           name: account
           description: The sender and tx information
@@ -423,7 +423,7 @@ paths:
           description: Account address
           required: true
           type: string
-          x-example: cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
+          x-example: libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
       responses:
         200:
           description: Account information on the blockchain
@@ -456,7 +456,7 @@ paths:
         description: Bech32 AccAddress of Delegator
         required: true
         type: string
-        x-example: cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
+        x-example: libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
     get:
       summary: Get all delegations from a delegator
       tags:
@@ -515,13 +515,13 @@ paths:
         description: Bech32 AccAddress of Delegator
         required: true
         type: string
-        x-example: cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
+        x-example: libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
       - in: path
         name: validatorAddr
         description: Bech32 OperatorAddress of validator
         required: true
         type: string
-        x-example: cosmosvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
+        x-example: libonomyvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
     get:
       summary: Query the current delegation between a delegator and a validator
       tags:
@@ -544,7 +544,7 @@ paths:
         description: Bech32 AccAddress of Delegator
         required: true
         type: string
-        x-example: cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
+        x-example: libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
     get:
       summary: Get all unbonding delegations from a delegator
       tags:
@@ -604,13 +604,13 @@ paths:
         description: Bech32 AccAddress of Delegator
         required: true
         type: string
-        x-example: cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
+        x-example: libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
       - in: path
         name: validatorAddr
         description: Bech32 OperatorAddress of validator
         required: true
         type: string
-        x-example: cosmosvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
+        x-example: libonomyvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
     get:
       summary: Query all unbonding delegations between a delegator and a validator
       tags:
@@ -665,7 +665,7 @@ paths:
         description: Bech32 AccAddress of Delegator
         required: true
         type: string
-        x-example: cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
+        x-example: libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
     post:
       summary: Submit a redelegation
       parameters:
@@ -708,7 +708,7 @@ paths:
         description: Bech32 AccAddress of Delegator
         required: true
         type: string
-        x-example: cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
+        x-example: libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
     get:
       summary: Query all validators that a delegator is bonded to
       tags:
@@ -733,13 +733,13 @@ paths:
         description: Bech32 AccAddress of Delegator
         required: true
         type: string
-        x-example: cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
+        x-example: libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
       - in: path
         name: validatorAddr
         description: Bech32 ValAddress of Delegator
         required: true
         type: string
-        x-example: cosmosvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
+        x-example: libonomyvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
     get:
       summary: Query a validator that a delegator is bonded to
       tags:
@@ -794,7 +794,7 @@ paths:
         description: Bech32 OperatorAddress of validator
         required: true
         type: string
-        x-example: cosmosvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
+        x-example: libonomyvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
     get:
       summary: Query the information from a single validator
       tags:
@@ -817,7 +817,7 @@ paths:
         description: Bech32 OperatorAddress of validator
         required: true
         type: string
-        x-example: cosmosvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
+        x-example: libonomyvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
     get:
       summary: Get all delegations from a validator
       tags:
@@ -842,7 +842,7 @@ paths:
         description: Bech32 OperatorAddress of validator
         required: true
         type: string
-        x-example: cosmosvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
+        x-example: libonomyvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
     get:
       summary: Get all unbonding delegations from a validator
       tags:
@@ -931,7 +931,7 @@ paths:
   #          name: validatorPubKey
   #          required: true
   #          in: path
-  #          x-example: cosmosvalconspub1zcjduepq0vu2zgkgk49efa0nqwzndanq5m4c7pa3u4apz4g2r9gspqg6g9cs3k9cuf
+  #          x-example: libonomyvalconspub1zcjduepq0vu2zgkgk49efa0nqwzndanq5m4c7pa3u4apz4g2r9gspqg6g9cs3k9cuf
   #      responses:
   #        200:
   #          description: OK
@@ -989,7 +989,7 @@ paths:
           name: validatorAddr
           required: true
           in: path
-          x-example: cosmosvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
+          x-example: libonomyvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
         - description: ""
           name: UnjailBody
           in: body
@@ -1291,7 +1291,7 @@ paths:
           name: depositor
           required: true
           in: path
-          x-example: cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
+          x-example: libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
       responses:
         200:
           description: OK
@@ -1390,7 +1390,7 @@ paths:
           name: voter
           required: true
           in: path
-          x-example: cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
+          x-example: libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
       responses:
         200:
           description: OK
@@ -1510,7 +1510,7 @@ paths:
         description: Bech32 AccAddress of Delegator
         required: true
         type: string
-        x-example: cosmos167w96tdvmazakdwkw2u57227eduula2cy572lf
+        x-example: libonomy167w96tdvmazakdwkw2u57227eduula2cy572lf
     get:
       summary: Get the total rewards balance from all delegations
       description: Get the sum of all the rewards earned by delegations by a single delegator
@@ -1561,13 +1561,13 @@ paths:
         description: Bech32 AccAddress of Delegator
         required: true
         type: string
-        x-example: cosmos16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
+        x-example: libonomy16xyempempp92x9hyzz9wrgf94r6j9h5f06pxxv
       - in: path
         name: validatorAddr
         description: Bech32 OperatorAddress of validator
         required: true
         type: string
-        x-example: cosmosvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
+        x-example: libonomyvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
     get:
       summary: Query a delegation reward
       description: Query a single delegation reward by a delegator
@@ -1620,7 +1620,7 @@ paths:
         description: Bech32 AccAddress of Delegator
         required: true
         type: string
-        x-example: cosmos167w96tdvmazakdwkw2u57227eduula2cy572lf
+        x-example: libonomy167w96tdvmazakdwkw2u57227eduula2cy572lf
     get:
       summary: Get the rewards withdrawal address
       description: Get the delegations' rewards withdrawal address. This is the address in which the user will receive the reward funds
@@ -1673,7 +1673,7 @@ paths:
         description: Bech32 OperatorAddress of validator
         required: true
         type: string
-        x-example: cosmosvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
+        x-example: libonomyvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
     get:
       summary: Validator distribution information
       description: Query the distribution information of a single validator
@@ -1697,7 +1697,7 @@ paths:
         description: Bech32 OperatorAddress of validator
         required: true
         type: string
-        x-example: cosmosvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
+        x-example: libonomyvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
     get:
       summary: Fee distribution outstanding rewards of a single validator
       tags:
@@ -1720,7 +1720,7 @@ paths:
         description: Bech32 OperatorAddress of validator
         required: true
         type: string
-        x-example: cosmosvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
+        x-example: libonomyvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
     get:
       summary: Commission and self-delegation rewards of a single validator
       description: Query the commission and self-delegation rewards of validator.
@@ -1877,7 +1877,7 @@ paths:
         description: Coin denomination
         required: true
         type: string
-        x-example: uatom
+        x-example: ulibocoin
     get:
       summary: Total supply of a single coin denomination
       tags:
@@ -1975,11 +1975,11 @@ definitions:
   Address:
     type: string
     description: bech32 encoded address
-    example: cosmos1depk54cuajgkzea6zpgkq36tnjwdzv4afc3d27
+    example: libonomy1depk54cuajgkzea6zpgkq36tnjwdzv4afc3d27
   ValidatorAddress:
     type: string
     description: bech32 encoded address
-    example: cosmosvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
+    example: libonomyvaloper16xyempempp92x9hyzz9wrgf94r6j9h5f2w4n2l
   Coin:
     type: object
     properties:
@@ -2069,7 +2069,7 @@ definitions:
             properties:
               type:
                 type: string
-                example: "tendermint/PubKeySecp256k1"
+                example: "aphelion/PubKeySecp256k1"
               value:
                 type: string
                 example: "Avz04VhtKJh8ACCVzlI8aTosGy0ikFXKIVHQ3jKMrosH"
@@ -2097,7 +2097,7 @@ definitions:
     properties:
       chain_id:
         type: string
-        example: cosmoshub-2
+        example: libonomycluster-1
       height:
         type: number
         example: 1
@@ -2221,14 +2221,14 @@ definitions:
     properties:
       from:
         type: string
-        example: "cosmos1g9ahr6xhht5rmqven628nklxluzyv8z9jqjcmc"
+        example: "libonomy1g9ahr6xhht5rmqven628nklxluzyv8z9jqjcmc"
         description: Sender address or Keybase name to generate a transaction
       memo:
         type: string
-        example: "Sent via Cosmos Voyager 🚀"
+        example: "Sent via Libonomy"
       chain_id:
         type: string
-        example: "Cosmos-Hub"
+        example: "Libono"
       account_number:
         type: string
         example: "0"
@@ -2249,14 +2249,14 @@ definitions:
         type: boolean
         example: false
         description: Estimate gas for a transaction (cannot be used in conjunction with generate_only)
-  TendermintValidator:
+  AphelionValidator:
     type: object
     properties:
       address:
         $ref: "#/definitions/ValidatorAddress"
       pub_key:
         type: string
-        example: cosmosvalconspub1zcjduepq0vu2zgkgk49efa0nqwzndanq5m4c7pa3u4apz4g2r9gspqg6g9cs3k9cuf
+        example: libonomyvalconspub1zcjduepq0vu2zgkgk49efa0nqwzndanq5m4c7pa3u4apz4g2r9gspqg6g9cs3k9cuf
       voting_power:
         type: string
         example: "1000"
@@ -2335,7 +2335,7 @@ definitions:
         $ref: "#/definitions/ValidatorAddress"
       consensus_pubkey:
         type: string
-        example: cosmosvalconspub1zcjduepq0vu2zgkgk49efa0nqwzndanq5m4c7pa3u4apz4g2r9gspqg6g9cs3k9cuf
+        example: libonomyvalconspub1zcjduepq0vu2zgkgk49efa0nqwzndanq5m4c7pa3u4apz4g2r9gspqg6g9cs3k9cuf
       jailed:
         type: boolean
       status:

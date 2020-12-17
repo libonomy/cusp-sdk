@@ -10,7 +10,7 @@ import (
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
 	abciServer "github.com/evdatsion/aphelion-dpos-bft/abci/server"
-	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/tendermint/commands"
+	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/aphelion/commands"
 	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
 

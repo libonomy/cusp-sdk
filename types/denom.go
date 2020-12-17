@@ -5,7 +5,7 @@ import (
 )
 
 // denomUnits contains a mapping of denomination mapped to their respective unit
-// multipliers (e.g. 1atom = 10^-6uatom).
+// multipliers (e.g. 1libocoin = 10^-6ulibocoin).
 var denomUnits = map[string]Dec{}
 
 // RegisterDenom registers a denomination with a corresponding unit. If the

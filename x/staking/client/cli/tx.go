@@ -121,7 +121,7 @@ func GetCmdEditValidator(cdc *codec.Codec) *cobra.Command {
 
 			msg := types.NewMsgEditValidator(sdk.ValAddress(valAddr), description, newRate, newMinSelfDelegation)
 
-			// build and sign the transaction, then broadcast to Tendermint
+			// build and sign the transaction, then broadcast to Aphelion
 			return utils.GenerateOrBroadcastMsgs(cliCtx, txBldr, []sdk.Msg{msg})
 		},
 	}
@@ -142,7 +142,7 @@ func GetCmdDelegate(cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`Delegate an amount of liquid coins to a validator from your wallet.
 
 Example:
-$ %s tx staking delegate cosmosvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm 1000stake --from mykey
+$ %s tx staking delegate libonomyvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm 1000stake --from mykey
 `,
 				version.ClientName,
 			),
@@ -178,7 +178,7 @@ func GetCmdRedelegate(storeName string, cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`Redelegate an amount of illiquid staking tokens from one validator to another.
 
 Example:
-$ %s tx staking redelegate cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj cosmosvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm 100stake --from mykey
+$ %s tx staking redelegate libonomyvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj libonomyvaloper1l2rsakp388kuv9k8qzq6lrm9taddae7fpx59wm 100stake --from mykey
 `,
 				version.ClientName,
 			),
@@ -219,7 +219,7 @@ func GetCmdUnbond(storeName string, cdc *codec.Codec) *cobra.Command {
 			fmt.Sprintf(`Unbond an amount of bonded shares from a validator.
 
 Example:
-$ %s tx staking unbond cosmosvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj 100stake --from mykey
+$ %s tx staking unbond libonomyvaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj 100stake --from mykey
 `,
 				version.ClientName,
 			),

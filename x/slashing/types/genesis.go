@@ -32,7 +32,7 @@ type MissedBlock struct {
 	Missed bool  `json:"missed" yaml:"missed"`
 }
 
-// DefaultGenesisState - default GenesisState used by Cosmos Hub
+// DefaultGenesisState - default GenesisState used by Libonomy Cluster
 func DefaultGenesisState() GenesisState {
 	return GenesisState{
 		Params:       DefaultParams(),

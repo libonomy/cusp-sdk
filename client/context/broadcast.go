@@ -29,7 +29,7 @@ func (ctx CLIContext) BroadcastTx(txBytes []byte) (res sdk.TxResponse, err error
 	return res, err
 }
 
-// BroadcastTxCommit broadcasts transaction bytes to a Tendermint node and
+// BroadcastTxCommit broadcasts transaction bytes to a Aphelion node and
 // waits for a commit. An error is only returned if there is no RPC node
 // connection or if broadcasting fails.
 //
@@ -58,7 +58,7 @@ func (ctx CLIContext) BroadcastTxCommit(txBytes []byte) (sdk.TxResponse, error) 
 	return sdk.NewResponseFormatBroadcastTxCommit(res), nil
 }
 
-// BroadcastTxSync broadcasts transaction bytes to a Tendermint node
+// BroadcastTxSync broadcasts transaction bytes to a Aphelion node
 // synchronously (i.e. returns after CheckTx execution).
 func (ctx CLIContext) BroadcastTxSync(txBytes []byte) (sdk.TxResponse, error) {
 	node, err := ctx.GetNode()
@@ -70,7 +70,7 @@ func (ctx CLIContext) BroadcastTxSync(txBytes []byte) (sdk.TxResponse, error) {
 	return sdk.NewResponseFormatBroadcastTx(res), err
 }
 
-// BroadcastTxAsync broadcasts transaction bytes to a Tendermint node
+// BroadcastTxAsync broadcasts transaction bytes to a Aphelion node
 // asynchronously (i.e. returns immediately).
 func (ctx CLIContext) BroadcastTxAsync(txBytes []byte) (sdk.TxResponse, error) {
 	node, err := ctx.GetNode()

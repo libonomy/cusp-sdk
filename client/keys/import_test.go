@@ -22,14 +22,14 @@ func Test_runImportCmd(t *testing.T) {
 	viper.Set(flags.FlagHome, kbHome)
 
 	keyfile := filepath.Join(kbHome, "key.asc")
-	armoredKey := `-----BEGIN TENDERMINT PRIVATE KEY-----
+	armoredKey := `-----BEGIN APHELION PRIVATE KEY-----
 salt: A790BB721D1C094260EA84F5E5B72289
 kdf: bcrypt
 
 HbP+c6JmeJy9JXe2rbbF1QtCX1gLqGcDQPBXiCtFvP7/8wTZtVOPj8vREzhZ9ElO
 3P7YnrzPQThG0Q+ZnRSbl9MAS8uFAM4mqm5r/Ys=
 =f3l4
------END TENDERMINT PRIVATE KEY-----
+-----END APHELION PRIVATE KEY-----
 `
 	require.NoError(t, ioutil.WriteFile(keyfile, []byte(armoredKey), 0644))
 

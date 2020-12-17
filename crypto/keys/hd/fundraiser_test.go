@@ -25,7 +25,7 @@ type addrData struct {
 }
 
 func initFundraiserTestVectors(t *testing.T) []addrData {
-	// NOTE: atom fundraiser address
+	// NOTE: libocoin fundraiser address
 	// var hdPath string = "m/44'/118'/0'/0/0"
 	var hdToAddrTable []addrData
 

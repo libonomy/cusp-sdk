@@ -11,7 +11,7 @@ import (
 
 var _ types.KVStore = Store{}
 
-// Store is similar with tendermint/tendermint/libs/db/prefix_db
+// Store is similar with aphelion/aphelion/libs/db/prefix_db
 // both gives access only to the limited subset of the store
 // for convinience or safety
 type Store struct {

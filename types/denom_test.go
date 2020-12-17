@@ -7,23 +7,23 @@ import (
 )
 
 var (
-	atom  = "atom"  // 1 (base denom unit)
-	matom = "matom" // 10^-3 (milli)
-	uatom = "uatom" // 10^-6 (micro)
-	natom = "natom" // 10^-9 (nano)
+	libocoin  = "libocoin"  // 1 (base denom unit)
+	mlibocoin = "mlibocoin" // 10^-3 (milli)
+	ulibocoin = "ulibocoin" // 10^-6 (micro)
+	nlibocoin = "nlibocoin" // 10^-9 (nano)
 )
 
 func TestRegisterDenom(t *testing.T) {
-	atomUnit := OneDec() // 1 (base denom unit)
+	libocoinUnit := OneDec() // 1 (base denom unit)
 
-	require.NoError(t, RegisterDenom(atom, atomUnit))
-	require.Error(t, RegisterDenom(atom, atomUnit))
+	require.NoError(t, RegisterDenom(libocoin, libocoinUnit))
+	require.Error(t, RegisterDenom(libocoin, libocoinUnit))
 
-	res, ok := GetDenomUnit(atom)
+	res, ok := GetDenomUnit(libocoin)
 	require.True(t, ok)
-	require.Equal(t, atomUnit, res)
+	require.Equal(t, libocoinUnit, res)
 
-	res, ok = GetDenomUnit(matom)
+	res, ok = GetDenomUnit(mlibocoin)
 	require.False(t, ok)
 	require.Equal(t, ZeroDec(), res)
 
@@ -32,17 +32,17 @@ func TestRegisterDenom(t *testing.T) {
 }
 
 func TestConvertCoins(t *testing.T) {
-	atomUnit := OneDec() // 1 (base denom unit)
-	require.NoError(t, RegisterDenom(atom, atomUnit))
+	libocoinUnit := OneDec() // 1 (base denom unit)
+	require.NoError(t, RegisterDenom(libocoin, libocoinUnit))
 
-	matomUnit := NewDecWithPrec(1, 3) // 10^-3 (milli)
-	require.NoError(t, RegisterDenom(matom, matomUnit))
+	mlibocoinUnit := NewDecWithPrec(1, 3) // 10^-3 (milli)
+	require.NoError(t, RegisterDenom(mlibocoin, mlibocoinUnit))
 
-	uatomUnit := NewDecWithPrec(1, 6) // 10^-6 (micro)
-	require.NoError(t, RegisterDenom(uatom, uatomUnit))
+	ulibocoinUnit := NewDecWithPrec(1, 6) // 10^-6 (micro)
+	require.NoError(t, RegisterDenom(ulibocoin, ulibocoinUnit))
 
-	natomUnit := NewDecWithPrec(1, 9) // 10^-9 (nano)
-	require.NoError(t, RegisterDenom(natom, natomUnit))
+	nlibocoinUnit := NewDecWithPrec(1, 9) // 10^-9 (nano)
+	require.NoError(t, RegisterDenom(nlibocoin, nlibocoinUnit))
 
 	testCases := []struct {
 		input  Coin
@@ -50,20 +50,20 @@ func TestConvertCoins(t *testing.T) {
 		result Coin
 		expErr bool
 	}{
-		{NewCoin("foo", ZeroInt()), atom, Coin{}, true},
-		{NewCoin(atom, ZeroInt()), "foo", Coin{}, true},
-		{NewCoin(atom, ZeroInt()), "FOO", Coin{}, true},
+		{NewCoin("foo", ZeroInt()), libocoin, Coin{}, true},
+		{NewCoin(libocoin, ZeroInt()), "foo", Coin{}, true},
+		{NewCoin(libocoin, ZeroInt()), "FOO", Coin{}, true},
 
-		{NewCoin(atom, NewInt(5)), matom, NewCoin(matom, NewInt(5000)), false},       // atom => matom
-		{NewCoin(atom, NewInt(5)), uatom, NewCoin(uatom, NewInt(5000000)), false},    // atom => uatom
-		{NewCoin(atom, NewInt(5)), natom, NewCoin(natom, NewInt(5000000000)), false}, // atom => natom
+		{NewCoin(libocoin, NewInt(5)), mlibocoin, NewCoin(mlibocoin, NewInt(5000)), false},       // libocoin => mlibocoin
+		{NewCoin(libocoin, NewInt(5)), ulibocoin, NewCoin(ulibocoin, NewInt(5000000)), false},    // libocoin => ulibocoin
+		{NewCoin(libocoin, NewInt(5)), nlibocoin, NewCoin(nlibocoin, NewInt(5000000000)), false}, // libocoin => nlibocoin
 
-		{NewCoin(uatom, NewInt(5000000)), matom, NewCoin(matom, NewInt(5000)), false},       // uatom => matom
-		{NewCoin(uatom, NewInt(5000000)), natom, NewCoin(natom, NewInt(5000000000)), false}, // uatom => natom
-		{NewCoin(uatom, NewInt(5000000)), atom, NewCoin(atom, NewInt(5)), false},            // uatom => atom
+		{NewCoin(ulibocoin, NewInt(5000000)), mlibocoin, NewCoin(mlibocoin, NewInt(5000)), false},       // ulibocoin => mlibocoin
+		{NewCoin(ulibocoin, NewInt(5000000)), nlibocoin, NewCoin(nlibocoin, NewInt(5000000000)), false}, // ulibocoin => nlibocoin
+		{NewCoin(ulibocoin, NewInt(5000000)), libocoin, NewCoin(libocoin, NewInt(5)), false},            // ulibocoin => libocoin
 
-		{NewCoin(matom, NewInt(5000)), natom, NewCoin(natom, NewInt(5000000000)), false}, // matom => natom
-		{NewCoin(matom, NewInt(5000)), uatom, NewCoin(uatom, NewInt(5000000)), false},    // matom => uatom
+		{NewCoin(mlibocoin, NewInt(5000)), nlibocoin, NewCoin(nlibocoin, NewInt(5000000000)), false}, // mlibocoin => nlibocoin
+		{NewCoin(mlibocoin, NewInt(5000)), ulibocoin, NewCoin(ulibocoin, NewInt(5000000)), false},    // mlibocoin => ulibocoin
 	}
 
 	for i, tc := range testCases {

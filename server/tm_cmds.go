@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/viper"
 	"gopkg.in/yaml.v2"
 
-	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/tendermint/commands"
+	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/aphelion/commands"
 	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 	"github.com/evdatsion/aphelion-dpos-bft/p2p"
 	pvm "github.com/evdatsion/aphelion-dpos-bft/privval"
@@ -19,7 +19,7 @@ import (
 	sdk "github.com/evdatsion/cusp-sdk/types"
 )
 
-// ShowNodeIDCmd - ported from Tendermint, dump node ID to stdout
+// ShowNodeIDCmd - ported from Aphelion, dump node ID to stdout
 func ShowNodeIDCmd(ctx *Context) *cobra.Command {
 	return &cobra.Command{
 		Use:   "show-node-id",
@@ -36,11 +36,11 @@ func ShowNodeIDCmd(ctx *Context) *cobra.Command {
 	}
 }
 
-// ShowValidator - ported from Tendermint, show this node's validator info
+// ShowValidator - ported from Aphelion, show this node's validator info
 func ShowValidatorCmd(ctx *Context) *cobra.Command {
 	cmd := cobra.Command{
 		Use:   "show-validator",
-		Short: "Show this node's tendermint validator info",
+		Short: "Show this node's aphelion validator info",
 		RunE: func(cmd *cobra.Command, args []string) error {
 
 			cfg := ctx.Config
@@ -71,7 +71,7 @@ func ShowValidatorCmd(ctx *Context) *cobra.Command {
 func ShowAddressCmd(ctx *Context) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "show-address",
-		Short: "Shows this node's tendermint validator consensus address",
+		Short: "Shows this node's aphelion validator consensus address",
 		RunE: func(cmd *cobra.Command, args []string) error {
 
 			cfg := ctx.Config
@@ -93,23 +93,23 @@ func ShowAddressCmd(ctx *Context) *cobra.Command {
 	return cmd
 }
 
-// VersionCmd prints tendermint and ABCI version numbers.
+// VersionCmd prints aphelion and ABCI version numbers.
 func VersionCmd(ctx *Context) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "version",
-		Short: "Print tendermint libraries' version",
+		Short: "Print aphelion libraries' version",
 		Long: `Print protocols' and libraries' version numbers
 against which this app has been compiled.
 `,
 		RunE: func(cmd *cobra.Command, args []string) error {
 
 			bs, err := yaml.Marshal(&struct {
-				Tendermint    string
+				Aphelion    string
 				ABCI          string
 				BlockProtocol uint64
 				P2PProtocol   uint64
 			}{
-				Tendermint:    tversion.Version,
+				Aphelion:    tversion.Version,
 				ABCI:          tversion.ABCIVersion,
 				BlockProtocol: tversion.BlockProtocol.Uint64(),
 				P2PProtocol:   tversion.P2PProtocol.Uint64(),
@@ -136,7 +136,7 @@ func printlnJSON(v interface{}) error {
 	return nil
 }
 
-// UnsafeResetAllCmd - extension of the tendermint command, resets initialization
+// UnsafeResetAllCmd - extension of the aphelion command, resets initialization
 func UnsafeResetAllCmd(ctx *Context) *cobra.Command {
 	return &cobra.Command{
 		Use:   "unsafe-reset-all",

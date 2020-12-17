@@ -9,9 +9,9 @@
 // At build time, the variables Name, Version, Commit, and BuildTags
 // can be passed as build flags as shown in the following example:
 //
-//  go build -X github.com/evdatsion/cusp-sdk/version.Name=gaia \
-//   -X github.com/evdatsion/cusp-sdk/version.ServerName=gaiad \
-//   -X github.com/evdatsion/cusp-sdk/version.ClientName=gaiacli \
+//  go build -X github.com/evdatsion/cusp-sdk/version.Name=cusp \
+//   -X github.com/evdatsion/cusp-sdk/version.ServerName=cuspd \
+//   -X github.com/evdatsion/cusp-sdk/version.ClientName=cuspcli \
 //   -X github.com/evdatsion/cusp-sdk/version.Version=1.0 \
 //   -X github.com/evdatsion/cusp-sdk/version.Commit=f0f7b7dab7e36c20b757cebce0e8f4fc5b95de60 \
 //   -X "github.com/evdatsion/cusp-sdk/version.BuildTags=linux darwin amd64"

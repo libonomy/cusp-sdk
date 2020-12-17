@@ -56,7 +56,7 @@ func displayInfo(cdc *codec.Codec, info printInfo) error {
 	return err
 }
 
-// InitCmd returns a command that initializes all files needed for Tendermint
+// InitCmd returns a command that initializes all files needed for Aphelion
 // and the respective application.
 func InitCmd(ctx *server.Context, cdc *codec.Codec, mbm module.BasicManager,
 	defaultNodeHome string) *cobra.Command { // nolint: golint

@@ -643,7 +643,7 @@ func TestApplyAndReturnValidatorSetUpdatesAllNone(t *testing.T) {
 	}
 
 	// test from nothing to something
-	//  tendermintUpdate set: {} -> {c1, c3}
+	//  aphelionUpdate set: {} -> {c1, c3}
 	require.Equal(t, 0, len(keeper.ApplyAndReturnValidatorSetUpdates(ctx)))
 	keeper.SetValidator(ctx, validators[0])
 	keeper.SetValidatorByPowerIndex(ctx, validators[0])
@@ -675,7 +675,7 @@ func TestApplyAndReturnValidatorSetUpdatesIdentical(t *testing.T) {
 	require.Equal(t, 2, len(keeper.ApplyAndReturnValidatorSetUpdates(ctx)))
 
 	// test identical,
-	//  tendermintUpdate set: {} -> {}
+	//  aphelionUpdate set: {} -> {}
 	validators[0] = TestingUpdateValidator(keeper, ctx, validators[0], false)
 	validators[1] = TestingUpdateValidator(keeper, ctx, validators[1], false)
 	require.Equal(t, 0, len(keeper.ApplyAndReturnValidatorSetUpdates(ctx)))
@@ -699,7 +699,7 @@ func TestApplyAndReturnValidatorSetUpdatesSingleValueChange(t *testing.T) {
 	require.Equal(t, 2, len(keeper.ApplyAndReturnValidatorSetUpdates(ctx)))
 
 	// test single value change
-	//  tendermintUpdate set: {} -> {c1'}
+	//  aphelionUpdate set: {} -> {c1'}
 	validators[0].Status = sdk.Bonded
 	validators[0].Tokens = sdk.TokensFromConsensusPower(600)
 	validators[0] = TestingUpdateValidator(keeper, ctx, validators[0], false)
@@ -728,7 +728,7 @@ func TestApplyAndReturnValidatorSetUpdatesMultipleValueChange(t *testing.T) {
 	require.Equal(t, 2, len(keeper.ApplyAndReturnValidatorSetUpdates(ctx)))
 
 	// test multiple value change
-	//  tendermintUpdate set: {c1, c3} -> {c1', c3'}
+	//  aphelionUpdate set: {c1, c3} -> {c1', c3'}
 	delTokens1 := sdk.TokensFromConsensusPower(190)
 	delTokens2 := sdk.TokensFromConsensusPower(80)
 	validators[0], _ = validators[0].AddTokensFromDel(delTokens1)
@@ -761,7 +761,7 @@ func TestApplyAndReturnValidatorSetUpdatesInserted(t *testing.T) {
 	require.Equal(t, 2, len(keeper.ApplyAndReturnValidatorSetUpdates(ctx)))
 
 	// test validtor added at the beginning
-	//  tendermintUpdate set: {} -> {c0}
+	//  aphelionUpdate set: {} -> {c0}
 	keeper.SetValidator(ctx, validators[2])
 	keeper.SetValidatorByPowerIndex(ctx, validators[2])
 	updates := keeper.ApplyAndReturnValidatorSetUpdates(ctx)
@@ -770,7 +770,7 @@ func TestApplyAndReturnValidatorSetUpdatesInserted(t *testing.T) {
 	require.Equal(t, validators[2].ABCIValidatorUpdate(), updates[0])
 
 	// test validtor added at the beginning
-	//  tendermintUpdate set: {} -> {c0}
+	//  aphelionUpdate set: {} -> {c0}
 	keeper.SetValidator(ctx, validators[3])
 	keeper.SetValidatorByPowerIndex(ctx, validators[3])
 	updates = keeper.ApplyAndReturnValidatorSetUpdates(ctx)
@@ -779,7 +779,7 @@ func TestApplyAndReturnValidatorSetUpdatesInserted(t *testing.T) {
 	require.Equal(t, validators[3].ABCIValidatorUpdate(), updates[0])
 
 	// test validtor added at the end
-	//  tendermintUpdate set: {} -> {c0}
+	//  aphelionUpdate set: {} -> {c0}
 	keeper.SetValidator(ctx, validators[4])
 	keeper.SetValidatorByPowerIndex(ctx, validators[4])
 	updates = keeper.ApplyAndReturnValidatorSetUpdates(ctx)
@@ -809,13 +809,13 @@ func TestApplyAndReturnValidatorSetUpdatesWithCliffValidator(t *testing.T) {
 	require.Equal(t, 2, len(keeper.ApplyAndReturnValidatorSetUpdates(ctx)))
 
 	// test validator added at the end but not inserted in the valset
-	//  tendermintUpdate set: {} -> {}
+	//  aphelionUpdate set: {} -> {}
 	TestingUpdateValidator(keeper, ctx, validators[2], false)
 	updates := keeper.ApplyAndReturnValidatorSetUpdates(ctx)
 	require.Equal(t, 0, len(updates))
 
 	// test validator change its power and become a gotValidator (pushing out an existing)
-	//  tendermintUpdate set: {}     -> {c0, c4}
+	//  aphelionUpdate set: {}     -> {c0, c4}
 	require.Equal(t, 0, len(keeper.ApplyAndReturnValidatorSetUpdates(ctx)))
 
 	tokens := sdk.TokensFromConsensusPower(10)
@@ -851,7 +851,7 @@ func TestApplyAndReturnValidatorSetUpdatesPowerDecrease(t *testing.T) {
 	require.Equal(t, int64(100), validators[1].GetConsensusPower())
 
 	// test multiple value change
-	//  tendermintUpdate set: {c1, c3} -> {c1', c3'}
+	//  aphelionUpdate set: {c1, c3} -> {c1', c3'}
 	delTokens1 := sdk.TokensFromConsensusPower(20)
 	delTokens2 := sdk.TokensFromConsensusPower(30)
 	validators[0], _ = validators[0].RemoveDelShares(delTokens1.ToDec())
@@ -863,7 +863,7 @@ func TestApplyAndReturnValidatorSetUpdatesPowerDecrease(t *testing.T) {
 	require.Equal(t, int64(80), validators[0].GetConsensusPower())
 	require.Equal(t, int64(70), validators[1].GetConsensusPower())
 
-	// Tendermint updates should reflect power change
+	// Aphelion updates should reflect power change
 	updates := keeper.ApplyAndReturnValidatorSetUpdates(ctx)
 	require.Equal(t, 2, len(updates))
 	require.Equal(t, validators[0].ABCIValidatorUpdate(), updates[0])
@@ -894,7 +894,7 @@ func TestApplyAndReturnValidatorSetUpdatesNewValidator(t *testing.T) {
 		keeper.SetValidatorByPowerIndex(ctx, validators[i])
 	}
 
-	// verify initial Tendermint updates are correct
+	// verify initial Aphelion updates are correct
 	updates := keeper.ApplyAndReturnValidatorSetUpdates(ctx)
 	require.Equal(t, len(validators), len(updates))
 	validators[0], _ = keeper.GetValidator(ctx, validators[0].OperatorAddress)
@@ -940,7 +940,7 @@ func TestApplyAndReturnValidatorSetUpdatesNewValidator(t *testing.T) {
 	keeper.SetValidator(ctx, validator)
 	keeper.SetValidatorByPowerIndex(ctx, validator)
 
-	// verify initial Tendermint updates are correct
+	// verify initial Aphelion updates are correct
 	updates = keeper.ApplyAndReturnValidatorSetUpdates(ctx)
 	validator, _ = keeper.GetValidator(ctx, validator.OperatorAddress)
 	validators[0], _ = keeper.GetValidator(ctx, validators[0].OperatorAddress)
@@ -974,7 +974,7 @@ func TestApplyAndReturnValidatorSetUpdatesBondTransition(t *testing.T) {
 		keeper.SetValidatorByPowerIndex(ctx, validators[i])
 	}
 
-	// verify initial Tendermint updates are correct
+	// verify initial Aphelion updates are correct
 	updates := keeper.ApplyAndReturnValidatorSetUpdates(ctx)
 	require.Equal(t, 2, len(updates))
 	validators[2], _ = keeper.GetValidator(ctx, validators[2].OperatorAddress)
@@ -997,7 +997,7 @@ func TestApplyAndReturnValidatorSetUpdatesBondTransition(t *testing.T) {
 	keeper.SetValidator(ctx, validators[0])
 	keeper.SetValidatorByPowerIndex(ctx, validators[0])
 
-	// verify initial Tendermint updates are correct
+	// verify initial Aphelion updates are correct
 	require.Equal(t, 0, len(keeper.ApplyAndReturnValidatorSetUpdates(ctx)))
 
 	// create a series of events that will bond and unbond the validator with
@@ -1020,7 +1020,7 @@ func TestApplyAndReturnValidatorSetUpdatesBondTransition(t *testing.T) {
 	keeper.SetValidator(ctx, validators[1])
 	keeper.SetValidatorByPowerIndex(ctx, validators[1])
 
-	// verify initial Tendermint updates are correct
+	// verify initial Aphelion updates are correct
 	updates = keeper.ApplyAndReturnValidatorSetUpdates(ctx)
 	require.Equal(t, 1, len(updates))
 	require.Equal(t, validators[1].ABCIValidatorUpdate(), updates[0])

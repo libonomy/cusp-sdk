@@ -14,7 +14,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/tendermint/commands"
+	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/aphelion/commands"
 	cfg "github.com/evdatsion/aphelion-dpos-bft/config"
 	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
 	tmflags "github.com/evdatsion/aphelion-dpos-bft/libs/cli/flags"
@@ -73,7 +73,7 @@ func PersistentPreRunEFn(context *Context) func(*cobra.Command, []string) error 
 	}
 }
 
-// If a new config is created, change some of the default tendermint settings
+// If a new config is created, change some of the default aphelion settings
 func interceptLoadConfig() (conf *cfg.Config, err error) {
 	tmpConf := cfg.DefaultConfig()
 	err = viper.Unmarshal(tmpConf)
@@ -124,12 +124,12 @@ func AddCommands(
 
 	rootCmd.PersistentFlags().String("log_level", ctx.Config.LogLevel, "Log level")
 
-	tendermintCmd := &cobra.Command{
-		Use:   "tendermint",
-		Short: "Tendermint subcommands",
+	aphelionCmd := &cobra.Command{
+		Use:   "aphelion",
+		Short: "Aphelion subcommands",
 	}
 
-	tendermintCmd.AddCommand(
+	aphelionCmd.AddCommand(
 		ShowNodeIDCmd(ctx),
 		ShowValidatorCmd(ctx),
 		ShowAddressCmd(ctx),
@@ -140,7 +140,7 @@ func AddCommands(
 		StartCmd(ctx, appCreator),
 		UnsafeResetAllCmd(ctx),
 		flags.LineBreak,
-		tendermintCmd,
+		aphelionCmd,
 		ExportCmd(ctx, cdc, appExport),
 		flags.LineBreak,
 		version.Cmd,
@@ -217,7 +217,7 @@ func TrapSignal(cleanupFunc func()) {
 	}()
 }
 
-// UpgradeOldPrivValFile converts old priv_validator.json file (prior to Tendermint 0.28)
+// UpgradeOldPrivValFile converts old priv_validator.json file (prior to Aphelion 0.28)
 // to the new priv_validator_key.json and priv_validator_state.json files.
 func UpgradeOldPrivValFile(config *cfg.Config) {
 	if _, err := os.Stat(config.OldPrivValidatorFile()); !os.IsNotExist(err) {

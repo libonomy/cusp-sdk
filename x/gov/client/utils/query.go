@@ -11,7 +11,7 @@ import (
 
 const (
 	defaultPage  = 1
-	defaultLimit = 30 // should be consistent with tendermint/tendermint/rpc/core/pipe.go:19
+	defaultLimit = 30 // should be consistent with aphelion/aphelion/rpc/core/pipe.go:19
 )
 
 // Proposer contains metadata of a governance proposal used for querying a

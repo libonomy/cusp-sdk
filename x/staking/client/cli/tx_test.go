@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
-	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/tendermint/commands"
+	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/aphelion/commands"
 	cfg "github.com/evdatsion/aphelion-dpos-bft/config"
 	"github.com/evdatsion/aphelion-dpos-bft/crypto"
 	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
@@ -21,7 +21,7 @@ func TestPrepareFlagsForTxCreateValidator(t *testing.T) {
 	logger := log.NewNopLogger()
 	ctx := server.NewContext(config, logger)
 
-	valPubKey, _ := sdk.GetConsPubKeyBech32("cosmosvalconspub1zcjduepq7jsrkl9fgqk0wj3ahmfr8pgxj6vakj2wzn656s8pehh0zhv2w5as5gd80a")
+	valPubKey, _ := sdk.GetConsPubKeyBech32("libonomyvalconspub1zcjduepq7jsrkl9fgqk0wj3ahmfr8pgxj6vakj2wzn656s8pehh0zhv2w5as5gd80a")
 
 	type args struct {
 		config    *cfg.Config

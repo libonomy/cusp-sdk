@@ -1004,7 +1004,7 @@ func (app *BaseApp) Commit() (res abci.ResponseCommit) {
 
 	// Reset the Check state to the latest committed.
 	//
-	// NOTE: This is safe because Tendermint holds a lock on the mempool for
+	// NOTE: This is safe because Aphelion holds a lock on the mempool for
 	// Commit. Use the header from this latest block.
 	app.setCheckState(header)
 
@@ -1022,7 +1022,7 @@ func (app *BaseApp) Commit() (res abci.ResponseCommit) {
 	}
 
 	if halt {
-		// Halt the binary and allow Tendermint to receive the ResponseCommit
+		// Halt the binary and allow Aphelion to receive the ResponseCommit
 		// response with the commit ID hash. This will allow the node to successfully
 		// restart and process blocks assuming the halt configuration has been
 		// reset or moved to a more distant value.

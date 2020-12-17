@@ -17,8 +17,8 @@ const (
 	// validators are expected to sign blocks beginning at block 11+X.
 	//
 	// This value is constant as this should not change without a hard fork.
-	// For Tendermint this should be set to 1 block, for more details see:
-	// https://tendermint.com/docs/spec/abci/apps.html#endblock
+	// For Aphelion this should be set to 1 block, for more details see:
+	// https://aphelion.ai/docs/spec/abci/apps.html#endblock
 	ValidatorUpdateDelay int64 = 1
 )
 

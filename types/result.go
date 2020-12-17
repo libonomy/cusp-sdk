@@ -100,7 +100,7 @@ type TxResponse struct {
 	Events StringEvents `json:"events,omitempty"`
 }
 
-// NewResponseResultTx returns a TxResponse given a ResultTx from tendermint
+// NewResponseResultTx returns a TxResponse given a ResultTx from aphelion
 func NewResponseResultTx(res *ctypes.ResultTx, tx Tx, timestamp string) TxResponse {
 	if res == nil {
 		return TxResponse{}
@@ -125,7 +125,7 @@ func NewResponseResultTx(res *ctypes.ResultTx, tx Tx, timestamp string) TxRespon
 }
 
 // NewResponseFormatBroadcastTxCommit returns a TxResponse given a
-// ResultBroadcastTxCommit from tendermint.
+// ResultBroadcastTxCommit from aphelion.
 func NewResponseFormatBroadcastTxCommit(res *ctypes.ResultBroadcastTxCommit) TxResponse {
 	if res == nil {
 		return TxResponse{}
@@ -192,7 +192,7 @@ func newTxResponseDeliverTx(res *ctypes.ResultBroadcastTxCommit) TxResponse {
 	}
 }
 
-// NewResponseFormatBroadcastTx returns a TxResponse given a ResultBroadcastTx from tendermint
+// NewResponseFormatBroadcastTx returns a TxResponse given a ResultBroadcastTx from aphelion
 func NewResponseFormatBroadcastTx(res *ctypes.ResultBroadcastTx) TxResponse {
 	if res == nil {
 		return TxResponse{}

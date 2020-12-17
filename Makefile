@@ -92,8 +92,8 @@ test_sim_nondeterminism:
 
 test_sim_custom_genesis_fast:
 	@echo "Running custom genesis simulation..."
-	@echo "By default, ${HOME}/.gaiad/config/genesis.json will be used."
-	@go test -mod=readonly $(SIMAPP) -run TestFullAppSimulation -Genesis=${HOME}/.gaiad/config/genesis.json \
+	@echo "By default, ${HOME}/.cuspd/config/genesis.json will be used."
+	@go test -mod=readonly $(SIMAPP) -run TestFullAppSimulation -Genesis=${HOME}/.cuspd/config/genesis.json \
 		-Enabled=true -NumBlocks=100 -BlockSize=200 -Commit=true -Seed=99 -Period=5 -v -timeout 24h
 
 test_sim_import_export: runsim
@@ -106,8 +106,8 @@ test_sim_after_import: runsim
 
 test_sim_custom_genesis_multi_seed: runsim
 	@echo "Running multi-seed custom genesis simulation..."
-	@echo "By default, ${HOME}/.gaiad/config/genesis.json will be used."
-	@$(BINDIR)/runsim -Genesis=${HOME}/.gaiad/config/genesis.json -SimAppPkg=$(SIMAPP) 400 5 TestFullAppSimulation
+	@echo "By default, ${HOME}/.cuspd/config/genesis.json will be used."
+	@$(BINDIR)/runsim -Genesis=${HOME}/.cuspd/config/genesis.json -SimAppPkg=$(SIMAPP) 400 5 TestFullAppSimulation
 
 test_sim_multi_seed_long: runsim
 	@echo "Running multi-seed application simulation. This may take awhile!"
@@ -172,7 +172,7 @@ benchmark:
 DEVDOC_SAVE = docker commit `docker ps -a -n 1 -q` devdoc:local
 
 devdoc_init:
-	docker run -it -v "$(CURDIR):/go/src/github.com/evdatsion/cusp-sdk" -w "/go/src/github.com/evdatsion/cusp-sdk" tendermint/devdoc echo
+	docker run -it -v "$(CURDIR):/go/src/github.com/evdatsion/cusp-sdk" -w "/go/src/github.com/evdatsion/cusp-sdk" aphelion/devdoc echo
 	# TODO make this safer
 	$(call DEVDOC_SAVE)
 
@@ -187,6 +187,6 @@ devdoc_clean:
 	docker rmi -f $$(docker images -f "dangling=true" -q)
 
 devdoc_update:
-	docker pull tendermint/devdoc
+	docker pull aphelion/devdoc
 
 .PHONY: devdoc devdoc_clean devdoc_init devdoc_save devdoc_update

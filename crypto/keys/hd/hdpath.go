@@ -8,7 +8,7 @@
 // BIP 44 HD path, or, more general, by passing a BIP 32 path.
 //
 // In particular, this package (together with bip39) provides all necessary functionality to derive keys from
-// mnemonics generated during the cosmos fundraiser.
+// mnemonics generated during the libonomy fundraiser.
 package hd
 
 import (

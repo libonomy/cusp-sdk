@@ -28,28 +28,28 @@ func (ctx CLIContext) GetNode() (rpcclient.Client, error) {
 	return ctx.Client, nil
 }
 
-// Query performs a query to a Tendermint node with the provided path.
+// Query performs a query to a Aphelion node with the provided path.
 // It returns the result and height of the query upon success or an error if
 // the query fails.
 func (ctx CLIContext) Query(path string) ([]byte, int64, error) {
 	return ctx.query(path, nil)
 }
 
-// QueryWithData performs a query to a Tendermint node with the provided path
+// QueryWithData performs a query to a Aphelion node with the provided path
 // and a data payload. It returns the result and height of the query upon success
 // or an error if the query fails.
 func (ctx CLIContext) QueryWithData(path string, data []byte) ([]byte, int64, error) {
 	return ctx.query(path, data)
 }
 
-// QueryStore performs a query to a Tendermint node with the provided key and
+// QueryStore performs a query to a Aphelion node with the provided key and
 // store name. It returns the result and height of the query upon success
 // or an error if the query fails.
 func (ctx CLIContext) QueryStore(key cmn.HexBytes, storeName string) ([]byte, int64, error) {
 	return ctx.queryStore(key, storeName, "key")
 }
 
-// QuerySubspace performs a query to a Tendermint node with the provided
+// QuerySubspace performs a query to a Aphelion node with the provided
 // store name and subspace. It returns key value pair and height of the query
 // upon success or an error if the query fails.
 func (ctx CLIContext) QuerySubspace(subspace []byte, storeName string) (res []sdk.KVPair, height int64, err error) {
@@ -72,7 +72,7 @@ func (ctx CLIContext) GetFromName() string {
 	return ctx.FromName
 }
 
-// query performs a query to a Tendermint node with the provided store name
+// query performs a query to a Aphelion node with the provided store name
 // and path. It returns the result and height of the query upon success
 // or an error if the query fails. In addition, it will verify the returned
 // proof if TrustNode is disabled. If proof verification fails or the query
@@ -164,7 +164,7 @@ func (ctx CLIContext) verifyProof(queryPath string, resp abci.ResponseQuery) err
 	return nil
 }
 
-// queryStore performs a query to a Tendermint node with the provided a store
+// queryStore performs a query to a Aphelion node with the provided a store
 // name and path. It returns the result and height of the query upon success
 // or an error if the query fails.
 func (ctx CLIContext) queryStore(key cmn.HexBytes, storeName, endPath string) ([]byte, int64, error) {

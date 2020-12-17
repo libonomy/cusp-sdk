@@ -1192,7 +1192,7 @@ func TestBondUnbondRedelegateSlashTwice(t *testing.T) {
 	got = handleMsgDelegate(ctx, msgDelegate, keeper)
 	require.True(t, got.IsOK(), "expected no error on runMsgDelegate")
 
-	// apply Tendermint updates
+	// apply Aphelion updates
 	updates := keeper.ApplyAndReturnValidatorSetUpdates(ctx)
 	require.Equal(t, 2, len(updates))
 

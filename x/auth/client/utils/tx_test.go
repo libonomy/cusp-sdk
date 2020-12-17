@@ -97,7 +97,7 @@ func TestReadStdTxFromFile(t *testing.T) {
 	sdk.RegisterCodec(cdc)
 
 	// Build a test transaction
-	fee := authtypes.NewStdFee(50000, sdk.Coins{sdk.NewInt64Coin("atom", 150)})
+	fee := authtypes.NewStdFee(50000, sdk.Coins{sdk.NewInt64Coin("libocoin", 150)})
 	stdTx := authtypes.NewStdTx([]sdk.Msg{}, fee, []authtypes.StdSignature{}, "foomemo")
 
 	// Write it to the file
@@ -137,6 +137,6 @@ func makeCodec() *codec.Codec {
 	sdk.RegisterCodec(cdc)
 	codec.RegisterCrypto(cdc)
 	authtypes.RegisterCodec(cdc)
-	cdc.RegisterConcrete(sdk.TestMsg{}, "cosmos-sdk/Test", nil)
+	cdc.RegisterConcrete(sdk.TestMsg{}, "cusp-sdk/Test", nil)
 	return cdc
 }

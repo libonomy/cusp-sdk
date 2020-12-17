@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	testDenom1 = "atom"
+	testDenom1 = "libocoin"
 	testDenom2 = "muon"
 )
 
@@ -56,10 +56,10 @@ func TestCoinIsValid(t *testing.T) {
 		{Coin{testDenom1, NewInt(-1)}, false},
 		{Coin{testDenom1, NewInt(0)}, true},
 		{Coin{testDenom1, NewInt(1)}, true},
-		{Coin{"Atom", NewInt(1)}, false},
+		{Coin{"Libocoin", NewInt(1)}, false},
 		{Coin{"a", NewInt(1)}, false},
 		{Coin{"a very long coin denom", NewInt(1)}, false},
-		{Coin{"atOm", NewInt(1)}, false},
+		{Coin{"libOc0in", NewInt(1)}, false},
 		{Coin{"     ", NewInt(1)}, false},
 	}
 
@@ -569,7 +569,7 @@ func TestCoinsIsAllGTE(t *testing.T) {
 }
 
 func TestNewCoins(t *testing.T) {
-	tenatom := NewInt64Coin("atom", 10)
+	tenlibocoin := NewInt64Coin("libocoin", 10)
 	tenbtc := NewInt64Coin("btc", 10)
 	zeroeth := NewInt64Coin("eth", 0)
 	tests := []struct {
@@ -579,10 +579,10 @@ func TestNewCoins(t *testing.T) {
 		wantPanic bool
 	}{
 		{"empty args", []Coin{}, Coins{}, false},
-		{"one coin", []Coin{tenatom}, Coins{tenatom}, false},
-		{"sort after create", []Coin{tenbtc, tenatom}, Coins{tenatom, tenbtc}, false},
-		{"sort and remove zeroes", []Coin{zeroeth, tenbtc, tenatom}, Coins{tenatom, tenbtc}, false},
-		{"panic on dups", []Coin{tenatom, tenatom}, Coins{}, true},
+		{"one coin", []Coin{tenlibocoin}, Coins{tenlibocoin}, false},
+		{"sort after create", []Coin{tenbtc, tenlibocoin}, Coins{tenlibocoin, tenbtc}, false},
+		{"sort and remove zeroes", []Coin{zeroeth, tenbtc, tenlibocoin}, Coins{tenlibocoin, tenbtc}, false},
+		{"panic on dups", []Coin{tenlibocoin, tenlibocoin}, Coins{}, true},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -597,22 +597,22 @@ func TestNewCoins(t *testing.T) {
 }
 
 func TestCoinsIsAnyGT(t *testing.T) {
-	twoAtom := NewInt64Coin("atom", 2)
-	fiveAtom := NewInt64Coin("atom", 5)
+	twoLibocoin := NewInt64Coin("libocoin", 2)
+	fiveLibocoin := NewInt64Coin("libocoin", 5)
 	threeEth := NewInt64Coin("eth", 3)
 	sixEth := NewInt64Coin("eth", 6)
 	twoBtc := NewInt64Coin("btc", 2)
 
 	require.False(t, Coins{}.IsAnyGT(Coins{}))
 
-	require.False(t, Coins{fiveAtom}.IsAnyGT(Coins{}))
-	require.False(t, Coins{}.IsAnyGT(Coins{fiveAtom}))
-	require.True(t, Coins{fiveAtom}.IsAnyGT(Coins{twoAtom}))
-	require.False(t, Coins{twoAtom}.IsAnyGT(Coins{fiveAtom}))
+	require.False(t, Coins{fiveLibocoin}.IsAnyGT(Coins{}))
+	require.False(t, Coins{}.IsAnyGT(Coins{fiveLibocoin}))
+	require.True(t, Coins{fiveLibocoin}.IsAnyGT(Coins{twoLibocoin}))
+	require.False(t, Coins{twoLibocoin}.IsAnyGT(Coins{fiveLibocoin}))
 
-	require.True(t, Coins{twoAtom, sixEth}.IsAnyGT(Coins{twoBtc, fiveAtom, threeEth}))
-	require.False(t, Coins{twoBtc, twoAtom, threeEth}.IsAnyGT(Coins{fiveAtom, sixEth}))
-	require.False(t, Coins{twoAtom, sixEth}.IsAnyGT(Coins{twoBtc, fiveAtom}))
+	require.True(t, Coins{twoLibocoin, sixEth}.IsAnyGT(Coins{twoBtc, fiveLibocoin, threeEth}))
+	require.False(t, Coins{twoBtc, twoLibocoin, threeEth}.IsAnyGT(Coins{fiveLibocoin, sixEth}))
+	require.False(t, Coins{twoLibocoin, sixEth}.IsAnyGT(Coins{twoBtc, fiveLibocoin}))
 }
 
 func TestFindDup(t *testing.T) {

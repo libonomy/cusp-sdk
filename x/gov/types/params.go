@@ -27,7 +27,7 @@ func ParamKeyTable() params.KeyTable {
 // Param around deposits for governance
 type DepositParams struct {
 	MinDeposit       sdk.Coins     `json:"min_deposit,omitempty" yaml:"min_deposit,omitempty"`               //  Minimum deposit for a proposal to enter voting period.
-	MaxDepositPeriod time.Duration `json:"max_deposit_period,omitempty" yaml:"max_deposit_period,omitempty"` //  Maximum period for Atom holders to deposit on a proposal. Initial value: 2 months
+	MaxDepositPeriod time.Duration `json:"max_deposit_period,omitempty" yaml:"max_deposit_period,omitempty"` //  Maximum period for Libocoin holders to deposit on a proposal. Initial value: 2 months
 }
 
 // NewDepositParams creates a new DepositParams object

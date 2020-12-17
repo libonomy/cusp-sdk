@@ -48,7 +48,7 @@ func SendTxCmd(cdc *codec.Codec) *cobra.Command {
 				return err
 			}
 
-			// build and sign the transaction, then broadcast to Tendermint
+			// build and sign the transaction, then broadcast to Aphelion
 			msg := types.NewMsgSend(cliCtx.GetFromAddress(), to, coins)
 			return utils.GenerateOrBroadcastMsgs(cliCtx, txBldr, []sdk.Msg{msg})
 		},

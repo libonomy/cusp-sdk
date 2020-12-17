@@ -40,8 +40,8 @@ func TestGenesisAccountValidate(t *testing.T) {
 		{
 			"invalid vesting amount with multi coins",
 			NewGenesisAccountRaw(addr,
-				sdk.NewCoins(sdk.NewInt64Coin("uatom", 50), sdk.NewInt64Coin("eth", 50)),
-				sdk.NewCoins(sdk.NewInt64Coin("uatom", 100), sdk.NewInt64Coin("eth", 20)),
+				sdk.NewCoins(sdk.NewInt64Coin("ulibocoin", 50), sdk.NewInt64Coin("eth", 50)),
+				sdk.NewCoins(sdk.NewInt64Coin("ulibocoin", 100), sdk.NewInt64Coin("eth", 20)),
 				0, 0, "", ""),
 			errors.New("vesting amount cannot be greater than total amount"),
 		},

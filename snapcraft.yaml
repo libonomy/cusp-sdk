@@ -1,34 +1,34 @@
-name: gaia
+name: cusp
 version: git
-summary: Gaia Daemon # 79 char long summary
+summary: Cusp Daemon # 79 char long summary
 description: |
-  This snap provides the Gaia daemon gaiad and the command line
-  tool gaiacli.
+  This snap provides the Cusp daemon cuspd and the command line
+  tool cuspcli.
 grade: stable
 confinement: strict
 
 apps:
-    gaiad:
-        command: bin/gaiad
+    cuspd:
+        command: bin/cuspd
         plugs: [home,network,network-bind]
-    gaiacli:
-        command: bin/gaiacli
+    cuspcli:
+        command: bin/cuspcli
         plugs: [home,network,network-bind,raw-usb]
 
 parts:
-  gaia:
+  cusp:
     plugin: dump
     source: ./
     override-pull: |
         rootdir=$(pwd)
         gitroot=$(git rev-parse --show-toplevel)
         cd ${gitroot} && git archive \
-            -o ${rootdir}/gaia-git.tar.gz \
-            --format tar.gz -9 --prefix gaia-git/ HEAD
+            -o ${rootdir}/cusp-git.tar.gz \
+            --format tar.gz -9 --prefix cusp-git/ HEAD
         cd ${rootdir}
-        tar xf gaia-git.tar.gz ; rm -f gaia-git.tar.gz
-        mkdir -p go/src/github.com/cosmos bin
-        mv gaia-git/ go/src/github.com/evdatsion/cusp-sdk/
+        tar xf cusp-git.tar.gz ; rm -f cusp-git.tar.gz
+        mkdir -p go/src/github.com/libonomy bin
+        mv cusp-git/ go/src/github.com/evdatsion/cusp-sdk/
 
     build-snaps: [go]
     override-build: |
@@ -42,5 +42,5 @@ parts:
         make tools
         make install
         mkdir $SNAPCRAFT_PART_INSTALL/bin
-        cp $GOPATH/bin/gaiad $SNAPCRAFT_PART_INSTALL/bin
-        cp $GOPATH/bin/gaiacli $SNAPCRAFT_PART_INSTALL/bin
+        cp $GOPATH/bin/cuspd $SNAPCRAFT_PART_INSTALL/bin
+        cp $GOPATH/bin/cuspcli $SNAPCRAFT_PART_INSTALL/bin

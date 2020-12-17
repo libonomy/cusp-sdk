@@ -5,7 +5,7 @@ import (
 	stypes "github.com/evdatsion/cusp-sdk/store/types"
 )
 
-// Import cosmos-sdk/types/store.go for convenience.
+// Import cusp-sdk/types/store.go for convenience.
 // nolint
 type (
 	PruningOptions   = types.PruningOptions

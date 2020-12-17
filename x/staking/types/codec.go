@@ -6,11 +6,11 @@ import (
 
 // Register concrete types on codec codec
 func RegisterCodec(cdc *codec.Codec) {
-	cdc.RegisterConcrete(MsgCreateValidator{}, "cosmos-sdk/MsgCreateValidator", nil)
-	cdc.RegisterConcrete(MsgEditValidator{}, "cosmos-sdk/MsgEditValidator", nil)
-	cdc.RegisterConcrete(MsgDelegate{}, "cosmos-sdk/MsgDelegate", nil)
-	cdc.RegisterConcrete(MsgUndelegate{}, "cosmos-sdk/MsgUndelegate", nil)
-	cdc.RegisterConcrete(MsgBeginRedelegate{}, "cosmos-sdk/MsgBeginRedelegate", nil)
+	cdc.RegisterConcrete(MsgCreateValidator{}, "cusp-sdk/MsgCreateValidator", nil)
+	cdc.RegisterConcrete(MsgEditValidator{}, "cusp-sdk/MsgEditValidator", nil)
+	cdc.RegisterConcrete(MsgDelegate{}, "cusp-sdk/MsgDelegate", nil)
+	cdc.RegisterConcrete(MsgUndelegate{}, "cusp-sdk/MsgUndelegate", nil)
+	cdc.RegisterConcrete(MsgBeginRedelegate{}, "cusp-sdk/MsgBeginRedelegate", nil)
 }
 
 // generic sealed codec to be used throughout this module

@@ -104,7 +104,7 @@ func CompleteAndBroadcastTxCLI(txBldr authtypes.TxBuilder, cliCtx context.CLICon
 		return err
 	}
 
-	// broadcast to a Tendermint node
+	// broadcast to a Aphelion node
 	res, err := cliCtx.BroadcastTx(txBytes)
 	if err != nil {
 		return err

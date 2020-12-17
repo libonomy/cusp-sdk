@@ -11,15 +11,15 @@ def process_raw_genesis(genesis, parsed_args):
 
     genesis['app_state']['crisis'] = {
         'constant_fee': {
-            'amount': '1333000000',  # ~$5,000 worth of uatoms
-            'denom': 'uatom',
+            'amount': '1333000000',  # ~$5,000 worth of ulibocoin
+            'denom': 'ulibocoin',
         },
     }
 
     # migrate governance state as the internal structure of proposals has changed
     migrate_gov_data(genesis['app_state']['gov'])
 
-    # default Tendermint block time (ms)
+    # default Aphelion block time (ms)
     genesis['consensus_params']['block']['time_iota_ms'] = '1000'
 
     # proposal #1 updates
@@ -73,7 +73,7 @@ def migrate_gov_data(gov_data):
 if __name__ == '__main__':
     parser = lib.init_default_argument_parser(
         prog_desc='Convert genesis.json from v0.33.x to v0.34.0',
-        default_chain_id='cosmoshub-n',
+        default_chain_id='libonomycluster-n',
         default_start_time='2019-02-11T12:00:00Z',
     )
     lib.main(parser, process_raw_genesis)

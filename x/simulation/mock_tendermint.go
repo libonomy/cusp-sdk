@@ -75,7 +75,7 @@ func (vals mockValidators) randomProposer(r *rand.Rand) cmn.HexBytes {
 	return pk.Address()
 }
 
-// updateValidators mimicks Tendermint's update logic
+// updateValidators mimicks Aphelion's update logic
 // nolint: unparam
 func updateValidators(tb testing.TB, r *rand.Rand, params Params,
 	current map[string]mockValidator, updates []abci.ValidatorUpdate,
@@ -176,7 +176,7 @@ func RandomRequestBeginBlock(r *rand.Rand, params Params,
 		vals := voteInfos
 
 		if r.Float64() < params.PastEvidenceFraction && header.Height > 1 {
-			height = int64(r.Intn(int(header.Height)-1)) + 1 // Tendermint starts at height 1
+			height = int64(r.Intn(int(header.Height)-1)) + 1 // Aphelion starts at height 1
 			// array indices offset by one
 			time = pastTimes[height-1]
 			vals = pastVoteInfos[height-1]
