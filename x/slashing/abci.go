@@ -19,7 +19,7 @@ func BeginBlocker(ctx sdk.Context, req abci.RequestBeginBlock, sk Keeper) {
 	}
 
 	// Iterate through any newly discovered evidence of infraction
-	// Slash any validators (and since-unbonded stake within the unbonding period)
+	// Slash any validators (and since-unbonded libocoin within the unbonding period)
 	// who contributed to valid infractions
 	for _, evidence := range req.ByzantineValidators {
 		switch evidence.Type {

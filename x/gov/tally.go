@@ -100,7 +100,7 @@ func tally(ctx sdk.Context, keeper Keeper, proposal Proposal) (passes bool, burn
 	tallyResults = NewTallyResultFromMap(results)
 
 	// TODO: Upgrade the spec to cover all of these cases & remove pseudocode.
-	// If there is no staked coins, the proposal fails
+	// If there is no libocoind coins, the proposal fails
 	if keeper.sk.TotalBondedTokens(ctx).IsZero() {
 		return false, false, tallyResults
 	}

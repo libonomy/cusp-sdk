@@ -216,13 +216,13 @@ Where proposal.json contains:
   "recipient": "libonomy1s5afhd6gxevu37mkqcvvsj8qeylhn0rz46zdlq",
   "amount": [
     {
-      "denom": "stake",
+      "denom": "libocoin",
       "amount": "10000"
     }
   ],
   "deposit": [
     {
-      "denom": "stake",
+      "denom": "libocoin",
       "amount": "10000"
     }
   ]

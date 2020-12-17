@@ -20,24 +20,24 @@ func (k Keeper) initializeDelegation(ctx sdk.Context, val sdk.ValAddress, del sd
 	validator := k.stakingKeeper.Validator(ctx, val)
 	delegation := k.stakingKeeper.Delegation(ctx, del, val)
 
-	// calculate delegation stake in tokens
+	// calculate delegation libocoin in tokens
 	// we don't store directly, so multiply delegation shares * (tokens per share)
 	// note: necessary to truncate so we don't allow withdrawing more rewards than owed
-	stake := validator.TokensFromSharesTruncated(delegation.GetShares())
-	k.SetDelegatorStartingInfo(ctx, val, del, types.NewDelegatorStartingInfo(previousPeriod, stake, uint64(ctx.BlockHeight())))
+	libocoin := validator.TokensFromSharesTruncated(delegation.GetShares())
+	k.SetDelegatorStartingInfo(ctx, val, del, types.NewDelegatorStartingInfo(previousPeriod, libocoin, uint64(ctx.BlockHeight())))
 }
 
 // calculate the rewards accrued by a delegation between two periods
 func (k Keeper) calculateDelegationRewardsBetween(ctx sdk.Context, val exported.ValidatorI,
-	startingPeriod, endingPeriod uint64, stake sdk.Dec) (rewards sdk.DecCoins) {
+	startingPeriod, endingPeriod uint64, libocoin sdk.Dec) (rewards sdk.DecCoins) {
 	// sanity check
 	if startingPeriod > endingPeriod {
 		panic("startingPeriod cannot be greater than endingPeriod")
 	}
 
 	// sanity check
-	if stake.LT(sdk.ZeroDec()) {
-		panic("stake should not be negative")
+	if libocoin.LT(sdk.ZeroDec()) {
+		panic("libocoin should not be negative")
 	}
 
 	// return staking * (ending - starting)
@@ -48,7 +48,7 @@ func (k Keeper) calculateDelegationRewardsBetween(ctx sdk.Context, val exported.
 		panic("negative rewards should not be possible")
 	}
 	// note: necessary to truncate so we don't allow withdrawing more rewards than owed
-	rewards = difference.MulDecTruncate(stake)
+	rewards = difference.MulDecTruncate(libocoin)
 	return
 }
 
@@ -63,7 +63,7 @@ func (k Keeper) calculateDelegationRewards(ctx sdk.Context, val exported.Validat
 	}
 
 	startingPeriod := startingInfo.PreviousPeriod
-	stake := startingInfo.Stake
+	libocoin := startingInfo.Stake
 
 	// Iterate through slashes and withdraw with calculated staking for
 	// distribution periods. These period offsets are dependent on *when* slashes
@@ -74,18 +74,18 @@ func (k Keeper) calculateDelegationRewards(ctx sdk.Context, val exported.Validat
 	// redelegation source validator) earlier in the same BeginBlock.
 	startingHeight := startingInfo.Height
 	// Slashes this block happened after reward allocation, but we have to account
-	// for them for the stake sanity check below.
+	// for them for the libocoin sanity check below.
 	endingHeight := uint64(ctx.BlockHeight())
 	if endingHeight > startingHeight {
 		k.IterateValidatorSlashEventsBetween(ctx, del.GetValidatorAddr(), startingHeight, endingHeight,
 			func(height uint64, event types.ValidatorSlashEvent) (stop bool) {
 				endingPeriod := event.ValidatorPeriod
 				if endingPeriod > startingPeriod {
-					rewards = rewards.Add(k.calculateDelegationRewardsBetween(ctx, val, startingPeriod, endingPeriod, stake))
+					rewards = rewards.Add(k.calculateDelegationRewardsBetween(ctx, val, startingPeriod, endingPeriod, libocoin))
 
 					// Note: It is necessary to truncate so we don't allow withdrawing
 					// more rewards than owed.
-					stake = stake.MulTruncate(sdk.OneDec().Sub(event.Fraction))
+					libocoin = libocoin.MulTruncate(sdk.OneDec().Sub(event.Fraction))
 					startingPeriod = endingPeriod
 				}
 				return false
@@ -93,46 +93,46 @@ func (k Keeper) calculateDelegationRewards(ctx sdk.Context, val exported.Validat
 		)
 	}
 
-	// A total stake sanity check; Recalculated final stake should be less than or
-	// equal to current stake here. We cannot use Equals because stake is truncated
+	// A total libocoin sanity check; Recalculated final libocoin should be less than or
+	// equal to current libocoin here. We cannot use Equals because libocoin is truncated
 	// when multiplied by slash fractions (see above). We could only use equals if
 	// we had arbitrary-precision rationals.
 	currentStake := val.TokensFromShares(del.GetShares())
 
-	if stake.GT(currentStake) {
+	if libocoin.GT(currentStake) {
 		// Account for rounding inconsistencies between:
 		//
 		//     currentStake: calculated as in staking with a single computation
-		//     stake:        calculated as an accumulation of stake
+		//     libocoin:        calculated as an accumulation of libocoin
 		//                   calculations across validator's distribution periods
 		//
 		// These inconsistencies are due to differing order of operations which
 		// will inevitably have different accumulated rounding and may lead to
-		// the smallest decimal place being one greater in stake than
+		// the smallest decimal place being one greater in libocoin than
 		// currentStake. When we calculated slashing by period, even if we
 		// round down for each slash fraction, it's possible due to how much is
 		// being rounded that we slash less when slashing by period instead of
 		// for when we slash without periods. In other words, the single slash,
 		// and the slashing by period could both be rounding down but the
-		// slashing by period is simply rounding down less, thus making stake >
+		// slashing by period is simply rounding down less, thus making libocoin >
 		// currentStake
 		//
 		// A small amount of this error is tolerated and corrected for,
 		// however any greater amount should be considered a breach in expected
 		// behaviour.
 		marginOfErr := sdk.SmallestDec().MulInt64(3)
-		if stake.LTE(currentStake.Add(marginOfErr)) {
-			stake = currentStake
+		if libocoin.LTE(currentStake.Add(marginOfErr)) {
+			libocoin = currentStake
 		} else {
-			panic(fmt.Sprintf("calculated final stake for delegator %s greater than current stake"+
-				"\n\tfinal stake:\t%s"+
-				"\n\tcurrent stake:\t%s",
-				del.GetDelegatorAddr(), stake, currentStake))
+			panic(fmt.Sprintf("calculated final libocoin for delegator %s greater than current libocoin"+
+				"\n\tfinal libocoin:\t%s"+
+				"\n\tcurrent libocoin:\t%s",
+				del.GetDelegatorAddr(), libocoin, currentStake))
 		}
 	}
 
 	// calculate rewards for final period
-	rewards = rewards.Add(k.calculateDelegationRewardsBetween(ctx, val, startingPeriod, endingPeriod, stake))
+	rewards = rewards.Add(k.calculateDelegationRewardsBetween(ctx, val, startingPeriod, endingPeriod, libocoin))
 	return rewards
 }
 

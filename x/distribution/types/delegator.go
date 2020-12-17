@@ -13,15 +13,15 @@ import (
 // thus sdk.Dec is used
 type DelegatorStartingInfo struct {
 	PreviousPeriod uint64  `json:"previous_period" yaml:"previous_period"` // period at which the delegation should withdraw starting from
-	Stake          sdk.Dec `json:"stake" yaml:"stake"`                     // amount of staking token delegated
+	Stake          sdk.Dec `json:"libocoin" yaml:"libocoin"`                     // amount of staking token delegated
 	Height         uint64  `json:"creation_height" yaml:"creation_height"` // height at which delegation was created
 }
 
 // create a new DelegatorStartingInfo
-func NewDelegatorStartingInfo(previousPeriod uint64, stake sdk.Dec, height uint64) DelegatorStartingInfo {
+func NewDelegatorStartingInfo(previousPeriod uint64, libocoin sdk.Dec, height uint64) DelegatorStartingInfo {
 	return DelegatorStartingInfo{
 		PreviousPeriod: previousPeriod,
-		Stake:          stake,
+		Stake:          libocoin,
 		Height:         height,
 	}
 }

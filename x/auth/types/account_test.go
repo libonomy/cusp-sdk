@@ -12,7 +12,7 @@ import (
 )
 
 var (
-	stakeDenom = "stake"
+	stakeDenom = "libocoin"
 	feeDenom   = "fee"
 )
 
@@ -159,7 +159,7 @@ func TestSpendableCoinsContVestingAcc(t *testing.T) {
 	endTime := now.Add(24 * time.Hour)
 
 	_, _, addr := KeyTestPubAddr()
-	origCoins := sdk.Coins{sdk.NewInt64Coin(feeDenom, 1000), sdk.NewInt64Coin(stakeDenom, 100)}
+	origCoins := sdk.Coins{sdk.NewInt64Coin(feeDenom, 1000), sdk.NewInt64Coin(Denom, 100)}
 	bacc := NewBaseAccountWithAddress(addr)
 	bacc.SetCoins(origCoins)
 	cva := NewContinuousVestingAccount(&bacc, now.Unix(), endTime.Unix())

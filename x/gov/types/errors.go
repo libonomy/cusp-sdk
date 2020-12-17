@@ -40,7 +40,7 @@ func ErrAlreadyFinishedProposal(codespace sdk.CodespaceType, proposalID uint64) 
 }
 
 func ErrAddressNotStaked(codespace sdk.CodespaceType, address sdk.AccAddress) sdk.Error {
-	return sdk.NewError(codespace, CodeAddressNotStaked, fmt.Sprintf("address %s is not staked and is thus ineligible to vote", address))
+	return sdk.NewError(codespace, CodeAddressNotStaked, fmt.Sprintf("address %s is not libocoind and is thus ineligible to vote", address))
 }
 
 func ErrInvalidProposalContent(cs sdk.CodespaceType, msg string) sdk.Error {

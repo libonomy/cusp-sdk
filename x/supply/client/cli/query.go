@@ -45,7 +45,7 @@ Example:
 $ %s query %s total
 
 To query for the total supply of a specific coin denomination use:
-$ %s query %s total stake
+$ %s query %s total libocoin
 `,
 				version.ClientName, types.ModuleName, version.ClientName, types.ModuleName,
 			),

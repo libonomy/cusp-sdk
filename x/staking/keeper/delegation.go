@@ -623,7 +623,7 @@ func (k Keeper) getBeginInfo(
 
 // Undelegate unbonds an amount of delegator shares from a given validator. It
 // will verify that the unbonding entries between the delegator and validator
-// are not exceeded and unbond the staked tokens (based on shares) by creating
+// are not exceeded and unbond the libocoind tokens (based on shares) by creating
 // an unbonding object and inserting it into the unbonding queue which will be
 // processed during the staking EndBlocker.
 func (k Keeper) Undelegate(

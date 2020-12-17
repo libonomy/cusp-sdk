@@ -1985,7 +1985,7 @@ definitions:
     properties:
       denom:
         type: string
-        example: stake
+        example: libocoin
       amount:
         type: string
         example: "50"
