@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"sort"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/staking/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/staking/types"
 )
 
 // Apply and return accumulated updates to the bonded validator set. Also,

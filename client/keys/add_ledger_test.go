@@ -8,12 +8,12 @@ import (
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
+	"github.com/libonomy/aphelion-staking/libs/cli"
 
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	"github.com/evdatsion/cusp-sdk/crypto/keys"
-	"github.com/evdatsion/cusp-sdk/tests"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/crypto/keys"
+	"github.com/libonomy/cusp-sdk/tests"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 func Test_runAddCmdLedgerWithCustomCoinType(t *testing.T) {

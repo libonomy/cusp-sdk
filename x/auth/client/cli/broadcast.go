@@ -5,10 +5,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/x/auth/client/utils"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/x/auth/client/utils"
 )
 
 // GetBroadcastCommand returns the tx broadcast command.

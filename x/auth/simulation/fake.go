@@ -6,11 +6,11 @@ import (
 	"math/big"
 	"math/rand"
 
-	"github.com/evdatsion/cusp-sdk/baseapp"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/auth"
-	"github.com/evdatsion/cusp-sdk/x/auth/types"
-	"github.com/evdatsion/cusp-sdk/x/simulation"
+	"github.com/libonomy/cusp-sdk/baseapp"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/auth"
+	"github.com/libonomy/cusp-sdk/x/auth/types"
+	"github.com/libonomy/cusp-sdk/x/simulation"
 )
 
 // SimulateDeductFee

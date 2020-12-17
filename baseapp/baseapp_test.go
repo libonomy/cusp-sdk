@@ -7,17 +7,17 @@ import (
 	"os"
 	"testing"
 
-	store "github.com/evdatsion/cusp-sdk/store/types"
+	store "github.com/libonomy/cusp-sdk/store/types"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	"github.com/libonomy/aphelion-staking/libs/log"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 var (

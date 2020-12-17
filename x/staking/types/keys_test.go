@@ -6,9 +6,9 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
+	"github.com/libonomy/aphelion-staking/crypto/ed25519"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 var (

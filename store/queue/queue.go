@@ -3,10 +3,10 @@ package store
 // TODO: make it independent from list
 /*
 import (
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
 
-	"github.com/evdatsion/cusp-sdk/store/list"
+	"github.com/libonomy/cusp-sdk/store/list"
 )
 
 // Key for the top element position in the queue

@@ -3,10 +3,10 @@ package distribution
 import (
 	"testing"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
+	"github.com/libonomy/aphelion-staking/crypto/ed25519"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/distribution/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/distribution/types"
 	"github.com/stretchr/testify/require"
 )
 

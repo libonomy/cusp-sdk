@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/staking"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/staking"
 )
 
 func TestCalculateRewardsBasic(t *testing.T) {

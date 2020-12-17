@@ -3,7 +3,7 @@ package gaskv
 import (
 	"io"
 
-	"github.com/evdatsion/cusp-sdk/store/types"
+	"github.com/libonomy/cusp-sdk/store/types"
 )
 
 var _ types.KVStore = &Store{}

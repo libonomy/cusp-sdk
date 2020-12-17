@@ -7,12 +7,12 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/evdatsion/iavl"
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	cmn "github.com/libonomy/aphelion-staking/libs/common"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cusp-sdk/store/errors"
-	"github.com/evdatsion/cusp-sdk/store/types"
+	"github.com/libonomy/cusp-sdk/store/errors"
+	"github.com/libonomy/cusp-sdk/store/types"
 )
 
 var (

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/codec"
 
-	"github.com/evdatsion/cusp-sdk/store/types"
+	"github.com/libonomy/cusp-sdk/store/types"
 )
 
 // Key for the length of the list

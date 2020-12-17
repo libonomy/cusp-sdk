@@ -4,15 +4,15 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/auth"
-	"github.com/evdatsion/cusp-sdk/x/bank"
-	"github.com/evdatsion/cusp-sdk/x/bank/internal/keeper"
-	"github.com/evdatsion/cusp-sdk/x/bank/internal/types"
-	"github.com/evdatsion/cusp-sdk/x/mock"
-	"github.com/evdatsion/cusp-sdk/x/supply"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/auth"
+	"github.com/libonomy/cusp-sdk/x/bank"
+	"github.com/libonomy/cusp-sdk/x/bank/internal/keeper"
+	"github.com/libonomy/cusp-sdk/x/bank/internal/types"
+	"github.com/libonomy/cusp-sdk/x/mock"
+	"github.com/libonomy/cusp-sdk/x/supply"
 )
 
 var moduleAccAddr = sdk.AccAddress([]byte("moduleAcc"))

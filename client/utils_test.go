@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/cusp-sdk/client"
+	"github.com/libonomy/cusp-sdk/client"
 )
 
 func TestPaginate(t *testing.T) {

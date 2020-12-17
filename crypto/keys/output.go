@@ -1,7 +1,7 @@
 package keys
 
 import (
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // KeyOutput defines a structure wrapping around an Info object used for output

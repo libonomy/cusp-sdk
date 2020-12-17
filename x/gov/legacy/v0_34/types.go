@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 var (

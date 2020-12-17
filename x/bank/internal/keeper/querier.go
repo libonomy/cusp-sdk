@@ -3,11 +3,11 @@ package keeper
 import (
 	"fmt"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/bank/internal/types"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/bank/internal/types"
 )
 
 const (

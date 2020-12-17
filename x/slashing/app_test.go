@@ -4,17 +4,17 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	"github.com/libonomy/aphelion-staking/crypto/secp256k1"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/auth"
-	"github.com/evdatsion/cusp-sdk/x/bank"
-	"github.com/evdatsion/cusp-sdk/x/mock"
-	"github.com/evdatsion/cusp-sdk/x/staking"
-	"github.com/evdatsion/cusp-sdk/x/staking/types"
-	"github.com/evdatsion/cusp-sdk/x/supply"
-	supplyexported "github.com/evdatsion/cusp-sdk/x/supply/exported"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/auth"
+	"github.com/libonomy/cusp-sdk/x/bank"
+	"github.com/libonomy/cusp-sdk/x/mock"
+	"github.com/libonomy/cusp-sdk/x/staking"
+	"github.com/libonomy/cusp-sdk/x/staking/types"
+	"github.com/libonomy/cusp-sdk/x/supply"
+	supplyexported "github.com/libonomy/cusp-sdk/x/supply/exported"
 )
 
 var (

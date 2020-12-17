@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	tmtime "github.com/evdatsion/aphelion-dpos-bft/types/time"
+	tmtime "github.com/libonomy/aphelion-staking/types/time"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 var (

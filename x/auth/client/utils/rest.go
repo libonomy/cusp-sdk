@@ -4,11 +4,11 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/types/rest"
-	"github.com/evdatsion/cusp-sdk/x/auth/types"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/types/rest"
+	"github.com/libonomy/cusp-sdk/x/auth/types"
 )
 
 // WriteGenerateStdTxResponse writes response for the generate only mode.

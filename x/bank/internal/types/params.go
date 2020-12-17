@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/evdatsion/cusp-sdk/x/params"
+	"github.com/libonomy/cusp-sdk/x/params"
 )
 
 const (

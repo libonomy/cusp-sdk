@@ -7,12 +7,12 @@ import (
 	"path/filepath"
 
 	"github.com/spf13/viper"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
+	"github.com/libonomy/aphelion-staking/libs/cli"
 	"gopkg.in/yaml.v2"
 
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	"github.com/evdatsion/cusp-sdk/client/input"
-	"github.com/evdatsion/cusp-sdk/crypto/keys"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/client/input"
+	"github.com/libonomy/cusp-sdk/crypto/keys"
 )
 
 // available output formats.

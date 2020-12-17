@@ -6,12 +6,12 @@ import (
 	"os"
 	"path/filepath"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	"github.com/libonomy/aphelion-staking/libs/log"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 	dbm "github.com/evdatsion/tm-db"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 type (

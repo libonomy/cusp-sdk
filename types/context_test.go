@@ -6,15 +6,15 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	"github.com/libonomy/aphelion-staking/libs/log"
 	dbm "github.com/evdatsion/tm-db"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
+	"github.com/libonomy/aphelion-staking/crypto/secp256k1"
 
-	"github.com/evdatsion/cusp-sdk/store"
-	"github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/store"
+	"github.com/libonomy/cusp-sdk/types"
 )
 
 type MockLogger struct {

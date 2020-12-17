@@ -3,9 +3,9 @@ package keeper
 import (
 	"time"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/params"
-	"github.com/evdatsion/cusp-sdk/x/staking/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/params"
+	"github.com/libonomy/cusp-sdk/x/staking/types"
 )
 
 // Default parameter namespace

@@ -4,16 +4,16 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
+	"github.com/libonomy/aphelion-staking/crypto/ed25519"
 
 	"github.com/stretchr/testify/assert"
 
 	"github.com/stretchr/testify/require"
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	keep "github.com/evdatsion/cusp-sdk/x/staking/keeper"
-	"github.com/evdatsion/cusp-sdk/x/staking/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	keep "github.com/libonomy/cusp-sdk/x/staking/keeper"
+	"github.com/libonomy/cusp-sdk/x/staking/types"
 )
 
 func TestInitGenesis(t *testing.T) {

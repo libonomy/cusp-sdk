@@ -1,7 +1,7 @@
 package keys
 
 import (
-	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/client/flags"
 	"github.com/spf13/cobra"
 )
 

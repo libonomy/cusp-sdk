@@ -3,11 +3,11 @@ package keeper
 import (
 	"fmt"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	"github.com/evdatsion/cusp-sdk/client"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/supply/internal/types"
+	"github.com/libonomy/cusp-sdk/client"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/supply/internal/types"
 )
 
 // NewQuerier creates a querier for supply REST endpoints

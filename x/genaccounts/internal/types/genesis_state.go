@@ -6,7 +6,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/codec"
 )
 
 // State to Unmarshal

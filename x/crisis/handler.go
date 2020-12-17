@@ -3,9 +3,9 @@ package crisis
 import (
 	"fmt"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/crisis/internal/keeper"
-	"github.com/evdatsion/cusp-sdk/x/crisis/internal/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/crisis/internal/keeper"
+	"github.com/libonomy/cusp-sdk/x/crisis/internal/types"
 )
 
 // RouterKey

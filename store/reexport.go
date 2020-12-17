@@ -1,8 +1,8 @@
 package store
 
 import (
-	"github.com/evdatsion/cusp-sdk/store/types"
-	stypes "github.com/evdatsion/cusp-sdk/store/types"
+	"github.com/libonomy/cusp-sdk/store/types"
+	stypes "github.com/libonomy/cusp-sdk/store/types"
 )
 
 // Import cusp-sdk/types/store.go for convenience.

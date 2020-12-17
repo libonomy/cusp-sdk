@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/evdatsion/cusp-sdk/x/params/subspace"
+	"github.com/libonomy/cusp-sdk/x/params/subspace"
 )
 
 // DefaultParamspace defines the default auth module parameter subspace

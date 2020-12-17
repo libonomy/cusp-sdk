@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/gov/types"
-	"github.com/evdatsion/cusp-sdk/x/params"
-	"github.com/evdatsion/cusp-sdk/x/supply/exported"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/gov/types"
+	"github.com/libonomy/cusp-sdk/x/params"
+	"github.com/libonomy/cusp-sdk/x/supply/exported"
 
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	"github.com/libonomy/aphelion-staking/libs/log"
 )
 
 // Governance Keeper

@@ -3,14 +3,14 @@ package auth
 import (
 	"fmt"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	"github.com/libonomy/aphelion-staking/crypto"
+	"github.com/libonomy/aphelion-staking/libs/log"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/auth/exported"
-	"github.com/evdatsion/cusp-sdk/x/auth/types"
-	"github.com/evdatsion/cusp-sdk/x/params/subspace"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/auth/exported"
+	"github.com/libonomy/cusp-sdk/x/auth/types"
+	"github.com/libonomy/cusp-sdk/x/params/subspace"
 )
 
 // AccountKeeper encodes/decodes accounts using the go-amino (binary)

@@ -4,14 +4,14 @@ import (
 	"encoding/json"
 	"log"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/slashing"
-	"github.com/evdatsion/cusp-sdk/x/staking"
-	"github.com/evdatsion/cusp-sdk/x/staking/exported"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/slashing"
+	"github.com/libonomy/cusp-sdk/x/staking"
+	"github.com/libonomy/cusp-sdk/x/staking/exported"
 )
 
 // ExportAppStateAndValidators exports the state of the application for a genesis

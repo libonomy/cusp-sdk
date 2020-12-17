@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/cusp-sdk/x/genutil"
+	"github.com/libonomy/cusp-sdk/x/genutil"
 )
 
 var basic034Gov = []byte(`

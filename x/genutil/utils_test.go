@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/evdatsion/cusp-sdk/tests"
+	"github.com/libonomy/cusp-sdk/tests"
 
 	"github.com/stretchr/testify/require"
 )

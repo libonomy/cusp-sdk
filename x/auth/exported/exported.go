@@ -3,9 +3,9 @@ package exported
 import (
 	"time"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	"github.com/libonomy/aphelion-staking/crypto"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // Account is an interface used to store coins at a given address within state.

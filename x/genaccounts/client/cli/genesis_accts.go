@@ -5,14 +5,14 @@ import (
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
+	"github.com/libonomy/aphelion-staking/libs/cli"
 
-	"github.com/evdatsion/cusp-sdk/client/keys"
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/server"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/genaccounts"
-	"github.com/evdatsion/cusp-sdk/x/genutil"
+	"github.com/libonomy/cusp-sdk/client/keys"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/server"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/genaccounts"
+	"github.com/libonomy/cusp-sdk/x/genutil"
 )
 
 const (

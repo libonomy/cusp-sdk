@@ -6,11 +6,11 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/types/rest"
-	"github.com/evdatsion/cusp-sdk/x/auth/client/utils"
-	"github.com/evdatsion/cusp-sdk/x/staking/types"
+	"github.com/libonomy/cusp-sdk/client/context"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/types/rest"
+	"github.com/libonomy/cusp-sdk/x/auth/client/utils"
+	"github.com/libonomy/cusp-sdk/x/staking/types"
 )
 
 func registerTxRoutes(cliCtx context.CLIContext, r *mux.Router) {

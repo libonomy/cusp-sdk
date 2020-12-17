@@ -10,13 +10,13 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	"github.com/evdatsion/cusp-sdk/client/input"
-	"github.com/evdatsion/cusp-sdk/client/keys"
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	authtypes "github.com/evdatsion/cusp-sdk/x/auth/types"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/client/input"
+	"github.com/libonomy/cusp-sdk/client/keys"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	authtypes "github.com/libonomy/cusp-sdk/x/auth/types"
 )
 
 // GasEstimateResponse defines a response definition for tx gas estimation.

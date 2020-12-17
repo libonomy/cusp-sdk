@@ -4,21 +4,21 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	"github.com/libonomy/aphelion-staking/crypto/secp256k1"
+	"github.com/libonomy/aphelion-staking/libs/log"
 	dbm "github.com/evdatsion/tm-db"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/store"
-	"github.com/evdatsion/cusp-sdk/x/auth"
-	"github.com/evdatsion/cusp-sdk/x/bank"
-	"github.com/evdatsion/cusp-sdk/x/params"
-	"github.com/evdatsion/cusp-sdk/x/supply/internal/types"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/store"
+	"github.com/libonomy/cusp-sdk/x/auth"
+	"github.com/libonomy/cusp-sdk/x/bank"
+	"github.com/libonomy/cusp-sdk/x/params"
+	"github.com/libonomy/cusp-sdk/x/supply/internal/types"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // nolint: deadcode unused

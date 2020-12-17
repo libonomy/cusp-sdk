@@ -5,7 +5,7 @@ import (
 
 	dbm "github.com/evdatsion/tm-db"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 var _ sdk.MultiStore = multiStore{}

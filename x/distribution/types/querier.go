@@ -1,6 +1,6 @@
 package types
 
-import sdk "github.com/evdatsion/cusp-sdk/types"
+import sdk "github.com/libonomy/cusp-sdk/types"
 
 // querier keys
 const (

@@ -4,13 +4,13 @@ package cli
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/evdatsion/cusp-sdk/client"
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/auth"
-	"github.com/evdatsion/cusp-sdk/x/auth/client/utils"
-	"github.com/evdatsion/cusp-sdk/x/crisis/internal/types"
+	"github.com/libonomy/cusp-sdk/client"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/auth"
+	"github.com/libonomy/cusp-sdk/x/auth/client/utils"
+	"github.com/libonomy/cusp-sdk/x/crisis/internal/types"
 )
 
 // command to replace a delegator's withdrawal address

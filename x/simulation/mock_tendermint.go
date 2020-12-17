@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	cmn "github.com/libonomy/aphelion-staking/libs/common"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 )
 
 type mockValidator struct {

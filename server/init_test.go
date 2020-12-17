@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/cusp-sdk/client/keys"
-	"github.com/evdatsion/cusp-sdk/server"
+	"github.com/libonomy/cusp-sdk/client/keys"
+	"github.com/libonomy/cusp-sdk/server"
 )
 
 func TestGenerateCoinKey(t *testing.T) {

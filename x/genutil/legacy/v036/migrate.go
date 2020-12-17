@@ -1,19 +1,19 @@
 package v036
 
 import (
-	"github.com/evdatsion/cusp-sdk/codec"
-	v034auth "github.com/evdatsion/cusp-sdk/x/auth/legacy/v0_34"
-	v036auth "github.com/evdatsion/cusp-sdk/x/auth/legacy/v0_36"
-	v034distr "github.com/evdatsion/cusp-sdk/x/distribution/legacy/v0_34"
-	v036distr "github.com/evdatsion/cusp-sdk/x/distribution/legacy/v0_36"
-	v034genAccounts "github.com/evdatsion/cusp-sdk/x/genaccounts/legacy/v0_34"
-	v036genAccounts "github.com/evdatsion/cusp-sdk/x/genaccounts/legacy/v0_36"
-	"github.com/evdatsion/cusp-sdk/x/genutil"
-	v034gov "github.com/evdatsion/cusp-sdk/x/gov/legacy/v0_34"
-	v036gov "github.com/evdatsion/cusp-sdk/x/gov/legacy/v0_36"
-	v034staking "github.com/evdatsion/cusp-sdk/x/staking/legacy/v0_34"
-	v036staking "github.com/evdatsion/cusp-sdk/x/staking/legacy/v0_36"
-	v036supply "github.com/evdatsion/cusp-sdk/x/supply/legacy/v0_36"
+	"github.com/libonomy/cusp-sdk/codec"
+	v034auth "github.com/libonomy/cusp-sdk/x/auth/legacy/v0_34"
+	v036auth "github.com/libonomy/cusp-sdk/x/auth/legacy/v0_36"
+	v034distr "github.com/libonomy/cusp-sdk/x/distribution/legacy/v0_34"
+	v036distr "github.com/libonomy/cusp-sdk/x/distribution/legacy/v0_36"
+	v034genAccounts "github.com/libonomy/cusp-sdk/x/genaccounts/legacy/v0_34"
+	v036genAccounts "github.com/libonomy/cusp-sdk/x/genaccounts/legacy/v0_36"
+	"github.com/libonomy/cusp-sdk/x/genutil"
+	v034gov "github.com/libonomy/cusp-sdk/x/gov/legacy/v0_34"
+	v036gov "github.com/libonomy/cusp-sdk/x/gov/legacy/v0_36"
+	v034staking "github.com/libonomy/cusp-sdk/x/staking/legacy/v0_34"
+	v036staking "github.com/libonomy/cusp-sdk/x/staking/legacy/v0_36"
+	v036supply "github.com/libonomy/cusp-sdk/x/supply/legacy/v0_36"
 )
 
 // Migrate migrates exported state from v0.34 to a v0.36 genesis state.

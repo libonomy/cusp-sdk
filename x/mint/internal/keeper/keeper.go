@@ -3,12 +3,12 @@ package keeper
 import (
 	"fmt"
 
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	"github.com/libonomy/aphelion-staking/libs/log"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/mint/internal/types"
-	"github.com/evdatsion/cusp-sdk/x/params"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/mint/internal/types"
+	"github.com/libonomy/cusp-sdk/x/params"
 )
 
 // Keeper of the mint store

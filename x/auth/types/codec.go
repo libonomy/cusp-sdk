@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/x/auth/exported"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/x/auth/exported"
 )
 
 // RegisterCodec registers concrete types on the codec

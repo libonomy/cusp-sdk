@@ -3,10 +3,10 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 
-	"github.com/evdatsion/cusp-sdk/x/distribution/types"
-	"github.com/evdatsion/cusp-sdk/x/staking/exported"
+	"github.com/libonomy/cusp-sdk/x/distribution/types"
+	"github.com/libonomy/cusp-sdk/x/staking/exported"
 )
 
 // initialize starting info for a new delegation

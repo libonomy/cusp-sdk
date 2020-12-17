@@ -7,9 +7,9 @@ import (
 	"math"
 	"strings"
 
-	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/codec"
 
-	ctypes "github.com/evdatsion/aphelion-dpos-bft/rpc/core/types"
+	ctypes "github.com/libonomy/aphelion-staking/rpc/core/types"
 )
 
 // Result is the union of ResponseFormat and ResponseCheckTx.

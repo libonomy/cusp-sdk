@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/cusp-sdk/store/prefix"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/store/prefix"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 func TestKeeper(t *testing.T) {

@@ -3,8 +3,8 @@ package types
 import (
 	"fmt"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/auth/exported"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/auth/exported"
 )
 
 // NodeQuerier is an interface that is satisfied by types that provide the QueryWithData method

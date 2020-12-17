@@ -7,12 +7,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
+	"github.com/libonomy/aphelion-staking/crypto"
+	"github.com/libonomy/aphelion-staking/crypto/ed25519"
 
-	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
-	"github.com/evdatsion/cusp-sdk/crypto/keys/mintkey"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/crypto/keys/hd"
+	"github.com/libonomy/cusp-sdk/crypto/keys/mintkey"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 func init() {

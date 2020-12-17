@@ -6,11 +6,11 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/server"
-	"github.com/evdatsion/cusp-sdk/types/module"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/server"
+	"github.com/libonomy/cusp-sdk/types/module"
 )
 
 // Validate genesis command takes

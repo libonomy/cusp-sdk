@@ -7,12 +7,12 @@ import (
 	"sort"
 	"sync"
 
-	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
+	cmn "github.com/libonomy/aphelion-staking/libs/common"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cusp-sdk/store/types"
+	"github.com/libonomy/cusp-sdk/store/types"
 
-	"github.com/evdatsion/cusp-sdk/store/tracekv"
+	"github.com/libonomy/cusp-sdk/store/tracekv"
 )
 
 // If value is nil but deleted is false, it means the parent doesn't have the

@@ -8,12 +8,12 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/types/rest"
-	"github.com/evdatsion/cusp-sdk/x/auth/client/utils"
-	"github.com/evdatsion/cusp-sdk/x/auth/types"
-	genutilrest "github.com/evdatsion/cusp-sdk/x/genutil/client/rest"
+	"github.com/libonomy/cusp-sdk/client/context"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/types/rest"
+	"github.com/libonomy/cusp-sdk/x/auth/client/utils"
+	"github.com/libonomy/cusp-sdk/x/auth/types"
+	genutilrest "github.com/libonomy/cusp-sdk/x/genutil/client/rest"
 )
 
 // query accountREST Handler
@@ -38,7 +38,7 @@ func QueryAccountRequestHandlerFn(storeName string, cliCtx context.CLIContext) h
 		account, height, err := accGetter.GetAccountWithHeight(addr)
 		if err != nil {
 			// TODO: Handle more appropriately based on the error type.
-			// Ref: https://github.com/evdatsion/cusp-sdk/issues/4923
+			// Ref: https://github.com/libonomy/cusp-sdk/issues/4923
 			if err := accGetter.EnsureExists(addr); err != nil {
 				cliCtx = cliCtx.WithHeight(height)
 				rest.PostProcessResponse(w, cliCtx, types.BaseAccount{})

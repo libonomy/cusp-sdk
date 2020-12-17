@@ -11,10 +11,10 @@ import (
 	"testing"
 	"time"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	"github.com/evdatsion/cusp-sdk/baseapp"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/baseapp"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // AppStateFn returns the app state json bytes, the genesis accounts, and the chain identifier

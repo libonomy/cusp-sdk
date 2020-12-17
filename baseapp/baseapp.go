@@ -14,14 +14,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/tmhash"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	"github.com/libonomy/aphelion-staking/crypto/tmhash"
+	"github.com/libonomy/aphelion-staking/libs/log"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/store"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/store"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // Key to store the consensus params in the main store.
@@ -839,7 +839,7 @@ func (app *BaseApp) cacheTxContext(ctx sdk.Context, txBytes []byte) (
 	sdk.Context, sdk.CacheMultiStore) {
 
 	ms := ctx.MultiStore()
-	// TODO: https://github.com/evdatsion/cusp-sdk/issues/2824
+	// TODO: https://github.com/libonomy/cusp-sdk/issues/2824
 	msCache := ms.CacheMultiStore()
 	if msCache.TracingEnabled() {
 		msCache = msCache.SetTracingContext(
@@ -925,7 +925,7 @@ func (app *BaseApp) runTx(mode runTxMode, txBytes []byte, tx sdk.Tx) (result sdk
 
 		// Cache wrap context before anteHandler call in case it aborts.
 		// This is required for both CheckTx and DeliverTx.
-		// Ref: https://github.com/evdatsion/cusp-sdk/issues/2772
+		// Ref: https://github.com/libonomy/cusp-sdk/issues/2772
 		//
 		// NOTE: Alternatively, we could require that anteHandler ensures that
 		// writes do not happen if aborted/failed.  This may have some

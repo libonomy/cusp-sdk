@@ -11,17 +11,17 @@ import (
 	"github.com/spf13/viper"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
-	tmlite "github.com/evdatsion/aphelion-dpos-bft/lite"
-	tmliteProxy "github.com/evdatsion/aphelion-dpos-bft/lite/proxy"
-	rpcclient "github.com/evdatsion/aphelion-dpos-bft/rpc/client"
+	"github.com/libonomy/aphelion-staking/libs/cli"
+	"github.com/libonomy/aphelion-staking/libs/log"
+	tmlite "github.com/libonomy/aphelion-staking/lite"
+	tmliteProxy "github.com/libonomy/aphelion-staking/lite/proxy"
+	rpcclient "github.com/libonomy/aphelion-staking/rpc/client"
 
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	"github.com/evdatsion/cusp-sdk/client/keys"
-	"github.com/evdatsion/cusp-sdk/codec"
-	cryptokeys "github.com/evdatsion/cusp-sdk/crypto/keys"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/client/keys"
+	"github.com/libonomy/cusp-sdk/codec"
+	cryptokeys "github.com/libonomy/cusp-sdk/crypto/keys"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 var (

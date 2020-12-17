@@ -10,10 +10,10 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
-	cryptoAmino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
+	"github.com/libonomy/aphelion-staking/crypto"
+	cryptoAmino "github.com/libonomy/aphelion-staking/crypto/encoding/amino"
 
-	"github.com/evdatsion/aphelion-dpos-bft/libs/bech32"
+	"github.com/libonomy/aphelion-staking/libs/bech32"
 )
 
 const (

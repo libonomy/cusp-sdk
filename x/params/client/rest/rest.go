@@ -3,14 +3,14 @@ package rest
 import (
 	"net/http"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/types/rest"
-	"github.com/evdatsion/cusp-sdk/x/auth/client/utils"
-	"github.com/evdatsion/cusp-sdk/x/gov"
-	govrest "github.com/evdatsion/cusp-sdk/x/gov/client/rest"
-	"github.com/evdatsion/cusp-sdk/x/params"
-	paramscutils "github.com/evdatsion/cusp-sdk/x/params/client/utils"
+	"github.com/libonomy/cusp-sdk/client/context"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/types/rest"
+	"github.com/libonomy/cusp-sdk/x/auth/client/utils"
+	"github.com/libonomy/cusp-sdk/x/gov"
+	govrest "github.com/libonomy/cusp-sdk/x/gov/client/rest"
+	"github.com/libonomy/cusp-sdk/x/params"
+	paramscutils "github.com/libonomy/cusp-sdk/x/params/client/utils"
 )
 
 // ProposalRESTHandler returns a ProposalRESTHandler that exposes the param

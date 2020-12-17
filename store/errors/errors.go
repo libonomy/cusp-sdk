@@ -1,7 +1,7 @@
 package errors
 
 import (
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // nolint - reexport

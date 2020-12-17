@@ -9,20 +9,20 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
-	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/aphelion-staking/crypto/ed25519"
+	cmn "github.com/libonomy/aphelion-staking/libs/common"
 
-	"github.com/evdatsion/cusp-sdk/x/auth"
-	"github.com/evdatsion/cusp-sdk/x/distribution"
-	distr "github.com/evdatsion/cusp-sdk/x/distribution"
-	"github.com/evdatsion/cusp-sdk/x/gov"
-	"github.com/evdatsion/cusp-sdk/x/mint"
-	"github.com/evdatsion/cusp-sdk/x/slashing"
-	"github.com/evdatsion/cusp-sdk/x/staking"
-	"github.com/evdatsion/cusp-sdk/x/supply"
+	"github.com/libonomy/cusp-sdk/x/auth"
+	"github.com/libonomy/cusp-sdk/x/distribution"
+	distr "github.com/libonomy/cusp-sdk/x/distribution"
+	"github.com/libonomy/cusp-sdk/x/gov"
+	"github.com/libonomy/cusp-sdk/x/mint"
+	"github.com/libonomy/cusp-sdk/x/slashing"
+	"github.com/libonomy/cusp-sdk/x/staking"
+	"github.com/libonomy/cusp-sdk/x/supply"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 var (

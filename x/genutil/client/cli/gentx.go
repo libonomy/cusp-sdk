@@ -13,23 +13,23 @@ import (
 	flag "github.com/spf13/pflag"
 	"github.com/spf13/viper"
 
-	cfg "github.com/evdatsion/aphelion-dpos-bft/config"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/common"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	cfg "github.com/libonomy/aphelion-staking/config"
+	"github.com/libonomy/aphelion-staking/crypto"
+	"github.com/libonomy/aphelion-staking/libs/common"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 
-	"github.com/evdatsion/cusp-sdk/client"
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/codec"
-	kbkeys "github.com/evdatsion/cusp-sdk/crypto/keys"
-	"github.com/evdatsion/cusp-sdk/server"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/types/module"
-	"github.com/evdatsion/cusp-sdk/x/auth/client/utils"
+	"github.com/libonomy/cusp-sdk/client"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/codec"
+	kbkeys "github.com/libonomy/cusp-sdk/crypto/keys"
+	"github.com/libonomy/cusp-sdk/server"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/types/module"
+	"github.com/libonomy/cusp-sdk/x/auth/client/utils"
 
-	"github.com/evdatsion/cusp-sdk/x/auth"
-	"github.com/evdatsion/cusp-sdk/x/genutil"
-	"github.com/evdatsion/cusp-sdk/x/genutil/types"
+	"github.com/libonomy/cusp-sdk/x/auth"
+	"github.com/libonomy/cusp-sdk/x/genutil"
+	"github.com/libonomy/cusp-sdk/x/genutil/types"
 )
 
 // StakingMsgBuildingHelpers helpers for message building gen-tx command

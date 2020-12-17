@@ -11,17 +11,17 @@ import (
 	"github.com/rakyll/statik/fs"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
-	rpcserver "github.com/evdatsion/aphelion-dpos-bft/rpc/lib/server"
+	"github.com/libonomy/aphelion-staking/libs/log"
+	rpcserver "github.com/libonomy/aphelion-staking/rpc/lib/server"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	"github.com/evdatsion/cusp-sdk/codec"
-	keybase "github.com/evdatsion/cusp-sdk/crypto/keys"
-	"github.com/evdatsion/cusp-sdk/server"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/codec"
+	keybase "github.com/libonomy/cusp-sdk/crypto/keys"
+	"github.com/libonomy/cusp-sdk/server"
 
 	// unnamed import of statik for swagger UI support
-	_ "github.com/evdatsion/cusp-sdk/client/lcd/statik"
+	_ "github.com/libonomy/cusp-sdk/client/lcd/statik"
 )
 
 // RestServer represents the Light Client Rest server

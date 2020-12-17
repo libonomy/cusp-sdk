@@ -5,7 +5,7 @@ import (
 	"bytes"
 	"fmt"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // An sdk.Tx which is its own sdk.Msg.

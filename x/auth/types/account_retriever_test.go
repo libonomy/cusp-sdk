@@ -7,7 +7,7 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/cusp-sdk/tests/mocks"
+	"github.com/libonomy/cusp-sdk/tests/mocks"
 )
 
 var dummyError = errors.New("dummy")

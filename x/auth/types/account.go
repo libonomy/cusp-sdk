@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	"github.com/libonomy/aphelion-staking/crypto"
 	yaml "gopkg.in/yaml.v2"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/auth/exported"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/auth/exported"
 )
 
 //-----------------------------------------------------------------------------

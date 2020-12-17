@@ -4,17 +4,17 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	"github.com/libonomy/aphelion-staking/libs/log"
 
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/store"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/params"
-	"github.com/evdatsion/cusp-sdk/x/params/subspace"
-	"github.com/evdatsion/cusp-sdk/x/params/types"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/store"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/params"
+	"github.com/libonomy/cusp-sdk/x/params/subspace"
+	"github.com/libonomy/cusp-sdk/x/params/types"
 )
 
 type testInput struct {

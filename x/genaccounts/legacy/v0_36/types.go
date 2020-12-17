@@ -3,7 +3,7 @@
 package v0_36
 
 import (
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 const (

@@ -7,7 +7,7 @@ import (
 
 	dbm "github.com/evdatsion/tm-db"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 func TestStore(t *testing.T) {

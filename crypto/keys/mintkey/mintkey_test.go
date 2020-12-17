@@ -4,11 +4,11 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	cryptoAmino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
+	cryptoAmino "github.com/libonomy/aphelion-staking/crypto/encoding/amino"
+	"github.com/libonomy/aphelion-staking/crypto/secp256k1"
 
-	"github.com/evdatsion/cusp-sdk/crypto/keys"
-	"github.com/evdatsion/cusp-sdk/crypto/keys/mintkey"
+	"github.com/libonomy/cusp-sdk/crypto/keys"
+	"github.com/libonomy/cusp-sdk/crypto/keys/mintkey"
 )
 
 func TestArmorUnarmorPrivKey(t *testing.T) {

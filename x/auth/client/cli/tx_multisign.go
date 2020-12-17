@@ -9,17 +9,17 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/multisig"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
+	"github.com/libonomy/aphelion-staking/crypto/multisig"
+	"github.com/libonomy/aphelion-staking/libs/cli"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	"github.com/evdatsion/cusp-sdk/client/keys"
-	"github.com/evdatsion/cusp-sdk/codec"
-	crkeys "github.com/evdatsion/cusp-sdk/crypto/keys"
-	"github.com/evdatsion/cusp-sdk/version"
-	"github.com/evdatsion/cusp-sdk/x/auth/client/utils"
-	"github.com/evdatsion/cusp-sdk/x/auth/types"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/client/keys"
+	"github.com/libonomy/cusp-sdk/codec"
+	crkeys "github.com/libonomy/cusp-sdk/crypto/keys"
+	"github.com/libonomy/cusp-sdk/version"
+	"github.com/libonomy/cusp-sdk/x/auth/client/utils"
+	"github.com/libonomy/cusp-sdk/x/auth/types"
 )
 
 // GetSignCommand returns the sign command

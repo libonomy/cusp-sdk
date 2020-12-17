@@ -3,10 +3,10 @@ package slashing
 import (
 	"fmt"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // slashing begin block functionality

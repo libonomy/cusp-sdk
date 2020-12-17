@@ -3,9 +3,9 @@ package bank
 import (
 	"fmt"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/bank/internal/keeper"
-	"github.com/evdatsion/cusp-sdk/x/bank/internal/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/bank/internal/keeper"
+	"github.com/libonomy/cusp-sdk/x/bank/internal/types"
 )
 
 // NewHandler returns a handler for "bank" type messages.

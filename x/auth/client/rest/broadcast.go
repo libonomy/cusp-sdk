@@ -4,9 +4,9 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/types/rest"
-	"github.com/evdatsion/cusp-sdk/x/auth/types"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/types/rest"
+	"github.com/libonomy/cusp-sdk/x/auth/types"
 )
 
 // BroadcastReq defines a tx broadcasting request.

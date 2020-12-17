@@ -5,14 +5,14 @@ import (
 	"path/filepath"
 	"time"
 
-	cfg "github.com/evdatsion/aphelion-dpos-bft/config"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/common"
-	"github.com/evdatsion/aphelion-dpos-bft/p2p"
-	"github.com/evdatsion/aphelion-dpos-bft/privval"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	cfg "github.com/libonomy/aphelion-staking/config"
+	"github.com/libonomy/aphelion-staking/crypto"
+	"github.com/libonomy/aphelion-staking/libs/common"
+	"github.com/libonomy/aphelion-staking/p2p"
+	"github.com/libonomy/aphelion-staking/privval"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 
-	"github.com/evdatsion/cusp-sdk/server"
+	"github.com/libonomy/cusp-sdk/server"
 )
 
 // ExportGenesisFile creates and writes the genesis configuration to disk. An

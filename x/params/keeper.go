@@ -3,12 +3,12 @@ package params
 import (
 	"fmt"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/params/subspace"
-	"github.com/evdatsion/cusp-sdk/x/params/types"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/params/subspace"
+	"github.com/libonomy/cusp-sdk/x/params/types"
 
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	"github.com/libonomy/aphelion-staking/libs/log"
 )
 
 // Keeper of the global paramstore

@@ -6,9 +6,9 @@ import (
 
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cusp-sdk/store/dbadapter"
-	"github.com/evdatsion/cusp-sdk/store/gaskv"
-	"github.com/evdatsion/cusp-sdk/store/types"
+	"github.com/libonomy/cusp-sdk/store/dbadapter"
+	"github.com/libonomy/cusp-sdk/store/gaskv"
+	"github.com/libonomy/cusp-sdk/store/types"
 
 	"github.com/stretchr/testify/require"
 )

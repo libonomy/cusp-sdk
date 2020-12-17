@@ -2,17 +2,17 @@
 package auth
 
 import (
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	"github.com/libonomy/aphelion-staking/crypto"
+	"github.com/libonomy/aphelion-staking/libs/log"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/store"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/auth/types"
-	"github.com/evdatsion/cusp-sdk/x/params/subspace"
-	"github.com/evdatsion/cusp-sdk/x/supply/exported"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/store"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/auth/types"
+	"github.com/libonomy/cusp-sdk/x/params/subspace"
+	"github.com/libonomy/cusp-sdk/x/supply/exported"
 )
 
 type testInput struct {

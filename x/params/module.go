@@ -6,10 +6,10 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/spf13/cobra"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/types/module"
-	"github.com/evdatsion/cusp-sdk/x/params/types"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/types/module"
+	"github.com/libonomy/cusp-sdk/x/params/types"
 )
 
 var (

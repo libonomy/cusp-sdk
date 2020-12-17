@@ -6,10 +6,10 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/evdatsion/cusp-sdk/baseapp"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/gov"
-	"github.com/evdatsion/cusp-sdk/x/simulation"
+	"github.com/libonomy/cusp-sdk/baseapp"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/gov"
+	"github.com/libonomy/cusp-sdk/x/simulation"
 )
 
 // ContentSimulator defines a function type alias for generating random proposal

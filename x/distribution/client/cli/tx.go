@@ -8,17 +8,17 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/evdatsion/cusp-sdk/client"
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/version"
-	"github.com/evdatsion/cusp-sdk/x/auth"
-	"github.com/evdatsion/cusp-sdk/x/auth/client/utils"
-	"github.com/evdatsion/cusp-sdk/x/gov"
+	"github.com/libonomy/cusp-sdk/client"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/version"
+	"github.com/libonomy/cusp-sdk/x/auth"
+	"github.com/libonomy/cusp-sdk/x/auth/client/utils"
+	"github.com/libonomy/cusp-sdk/x/gov"
 
-	"github.com/evdatsion/cusp-sdk/x/distribution/client/common"
-	"github.com/evdatsion/cusp-sdk/x/distribution/types"
+	"github.com/libonomy/cusp-sdk/x/distribution/client/common"
+	"github.com/libonomy/cusp-sdk/x/distribution/types"
 )
 
 var (

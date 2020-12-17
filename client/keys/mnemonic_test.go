@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/evdatsion/cusp-sdk/tests"
+	"github.com/libonomy/cusp-sdk/tests"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

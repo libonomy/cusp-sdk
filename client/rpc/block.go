@@ -9,12 +9,12 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/types/rest"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/types/rest"
 
-	tmliteProxy "github.com/evdatsion/aphelion-dpos-bft/lite/proxy"
+	tmliteProxy "github.com/libonomy/aphelion-staking/lite/proxy"
 )
 
 //BlockCommand returns the verified block data for a given heights

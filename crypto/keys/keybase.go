@@ -9,17 +9,17 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/evdatsion/cusp-sdk/crypto"
-	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
-	"github.com/evdatsion/cusp-sdk/crypto/keys/keyerror"
-	"github.com/evdatsion/cusp-sdk/crypto/keys/mintkey"
-	"github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/crypto"
+	"github.com/libonomy/cusp-sdk/crypto/keys/hd"
+	"github.com/libonomy/cusp-sdk/crypto/keys/keyerror"
+	"github.com/libonomy/cusp-sdk/crypto/keys/mintkey"
+	"github.com/libonomy/cusp-sdk/types"
 
 	bip39 "github.com/evdatsion/go-bip39"
 
-	tmcrypto "github.com/evdatsion/aphelion-dpos-bft/crypto"
-	cryptoAmino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
+	tmcrypto "github.com/libonomy/aphelion-staking/crypto"
+	cryptoAmino "github.com/libonomy/aphelion-staking/crypto/encoding/amino"
+	"github.com/libonomy/aphelion-staking/crypto/secp256k1"
 	dbm "github.com/evdatsion/tm-db"
 )
 

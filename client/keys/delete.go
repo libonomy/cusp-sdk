@@ -6,8 +6,8 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/evdatsion/cusp-sdk/client/input"
-	"github.com/evdatsion/cusp-sdk/crypto/keys"
+	"github.com/libonomy/cusp-sdk/client/input"
+	"github.com/libonomy/cusp-sdk/crypto/keys"
 
 	"github.com/spf13/cobra"
 )

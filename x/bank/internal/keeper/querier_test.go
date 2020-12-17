@@ -6,11 +6,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	authtypes "github.com/evdatsion/cusp-sdk/x/auth/types"
-	"github.com/evdatsion/cusp-sdk/x/bank/internal/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	authtypes "github.com/libonomy/cusp-sdk/x/auth/types"
+	"github.com/libonomy/cusp-sdk/x/bank/internal/types"
 )
 
 func TestBalances(t *testing.T) {

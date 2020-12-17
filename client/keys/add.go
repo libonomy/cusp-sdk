@@ -7,19 +7,19 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	"github.com/evdatsion/cusp-sdk/client/input"
-	"github.com/evdatsion/cusp-sdk/crypto/keys"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/client/input"
+	"github.com/libonomy/cusp-sdk/crypto/keys"
+	sdk "github.com/libonomy/cusp-sdk/types"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
 	"github.com/evdatsion/go-bip39"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/multisig"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
+	"github.com/libonomy/aphelion-staking/crypto"
+	"github.com/libonomy/aphelion-staking/crypto/multisig"
+	"github.com/libonomy/aphelion-staking/libs/cli"
 )
 
 const (

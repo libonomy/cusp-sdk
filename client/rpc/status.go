@@ -7,15 +7,15 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	ctypes "github.com/evdatsion/aphelion-dpos-bft/rpc/core/types"
+	ctypes "github.com/libonomy/aphelion-staking/rpc/core/types"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/types/rest"
-	"github.com/evdatsion/cusp-sdk/version"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/types/rest"
+	"github.com/libonomy/cusp-sdk/version"
 
-	"github.com/evdatsion/aphelion-dpos-bft/p2p"
+	"github.com/libonomy/aphelion-staking/p2p"
 )
 
 // StatusCommand returns the command to return the status of the network.

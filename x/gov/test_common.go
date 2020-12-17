@@ -9,19 +9,19 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
+	"github.com/libonomy/aphelion-staking/crypto/ed25519"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	"github.com/libonomy/aphelion-staking/crypto"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/auth"
-	"github.com/evdatsion/cusp-sdk/x/bank"
-	"github.com/evdatsion/cusp-sdk/x/gov/types"
-	"github.com/evdatsion/cusp-sdk/x/mock"
-	"github.com/evdatsion/cusp-sdk/x/staking"
-	"github.com/evdatsion/cusp-sdk/x/supply"
-	supplyexported "github.com/evdatsion/cusp-sdk/x/supply/exported"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/auth"
+	"github.com/libonomy/cusp-sdk/x/bank"
+	"github.com/libonomy/cusp-sdk/x/gov/types"
+	"github.com/libonomy/cusp-sdk/x/mock"
+	"github.com/libonomy/cusp-sdk/x/staking"
+	"github.com/libonomy/cusp-sdk/x/supply"
+	supplyexported "github.com/libonomy/cusp-sdk/x/supply/exported"
 )
 
 var (

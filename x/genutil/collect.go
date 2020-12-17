@@ -12,15 +12,15 @@ import (
 	"sort"
 	"strings"
 
-	cfg "github.com/evdatsion/aphelion-dpos-bft/config"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	cfg "github.com/libonomy/aphelion-staking/config"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	authexported "github.com/evdatsion/cusp-sdk/x/auth/exported"
-	authtypes "github.com/evdatsion/cusp-sdk/x/auth/types"
-	"github.com/evdatsion/cusp-sdk/x/genutil/types"
-	stakingtypes "github.com/evdatsion/cusp-sdk/x/staking/types"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	authexported "github.com/libonomy/cusp-sdk/x/auth/exported"
+	authtypes "github.com/libonomy/cusp-sdk/x/auth/types"
+	"github.com/libonomy/cusp-sdk/x/genutil/types"
+	stakingtypes "github.com/libonomy/cusp-sdk/x/staking/types"
 )
 
 // GenAppStateFromConfig gets the genesis app state from the config

@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 	"github.com/stretchr/testify/require"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/ed25519"
+	"github.com/libonomy/aphelion-staking/crypto/ed25519"
 )
 
 var addr = sdk.AccAddress(ed25519.GenPrivKey().PubKey().Address())

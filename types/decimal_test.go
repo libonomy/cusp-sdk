@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/codec"
 )
 
 // create a decimal from a decimal string (ex. "1234.5678")

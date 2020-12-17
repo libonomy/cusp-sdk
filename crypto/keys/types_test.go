@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
+	"github.com/libonomy/aphelion-staking/crypto/secp256k1"
 
-	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
-	"github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/crypto/keys/hd"
+	"github.com/libonomy/cusp-sdk/types"
 )
 
 func Test_writeReadLedgerInfo(t *testing.T) {

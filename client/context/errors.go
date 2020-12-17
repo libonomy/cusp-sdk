@@ -3,7 +3,7 @@ package context
 import (
 	"fmt"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // ErrInvalidAccount returns a standardized error reflecting that a given

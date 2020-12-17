@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/evdatsion/cusp-sdk/store/cachekv"
-	"github.com/evdatsion/cusp-sdk/store/tracekv"
-	"github.com/evdatsion/cusp-sdk/store/types"
+	"github.com/libonomy/cusp-sdk/store/cachekv"
+	"github.com/libonomy/cusp-sdk/store/tracekv"
+	"github.com/libonomy/cusp-sdk/store/types"
 )
 
 var _ types.KVStore = Store{}
@@ -80,7 +80,7 @@ func (s Store) Delete(key []byte) {
 }
 
 // Implements KVStore
-// Check https://github.com/evdatsion/aphelion-dpos-bft/blob/master/libs/db/prefix_db.go#L106
+// Check https://github.com/libonomy/aphelion-staking/blob/master/libs/db/prefix_db.go#L106
 func (s Store) Iterator(start, end []byte) types.Iterator {
 	newstart := cloneAppend(s.prefix, start)
 
@@ -97,7 +97,7 @@ func (s Store) Iterator(start, end []byte) types.Iterator {
 }
 
 // Implements KVStore
-// Check https://github.com/evdatsion/aphelion-dpos-bft/blob/master/libs/db/prefix_db.go#L129
+// Check https://github.com/libonomy/aphelion-staking/blob/master/libs/db/prefix_db.go#L129
 func (s Store) ReverseIterator(start, end []byte) types.Iterator {
 	newstart := cloneAppend(s.prefix, start)
 
@@ -176,7 +176,7 @@ func (iter *prefixIterator) Close() {
 	iter.iter.Close()
 }
 
-// copied from github.com/evdatsion/aphelion-dpos-bft/libs/db/prefix_db.go
+// copied from github.com/libonomy/aphelion-staking/libs/db/prefix_db.go
 func stripPrefix(key []byte, prefix []byte) []byte {
 	if len(key) < len(prefix) || !bytes.Equal(key[:len(prefix)], prefix) {
 		panic("should not happen")

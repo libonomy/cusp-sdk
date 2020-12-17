@@ -6,14 +6,14 @@ import (
 
 	"github.com/tendermint/crypto/bcrypt"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/armor"
-	cryptoAmino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/xsalsa20symmetric"
+	"github.com/libonomy/aphelion-staking/crypto"
+	"github.com/libonomy/aphelion-staking/crypto/armor"
+	cryptoAmino "github.com/libonomy/aphelion-staking/crypto/encoding/amino"
+	"github.com/libonomy/aphelion-staking/crypto/xsalsa20symmetric"
 
-	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
+	cmn "github.com/libonomy/aphelion-staking/libs/common"
 
-	"github.com/evdatsion/cusp-sdk/crypto/keys/keyerror"
+	"github.com/libonomy/cusp-sdk/crypto/keys/keyerror"
 )
 
 const (

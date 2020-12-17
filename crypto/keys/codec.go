@@ -1,10 +1,10 @@
 package keys
 
 import (
-	cryptoAmino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
+	cryptoAmino "github.com/libonomy/aphelion-staking/crypto/encoding/amino"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/crypto/keys/hd"
 )
 
 var cdc *codec.Codec

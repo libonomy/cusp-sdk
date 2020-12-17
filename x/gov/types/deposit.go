@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // Deposit

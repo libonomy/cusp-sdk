@@ -5,10 +5,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/mint/internal/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/mint/internal/types"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 )
 
 func TestNewQuerier(t *testing.T) {

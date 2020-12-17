@@ -3,9 +3,9 @@ package common
 import (
 	"fmt"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/distribution/types"
+	"github.com/libonomy/cusp-sdk/client/context"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/distribution/types"
 )
 
 // QueryParams actually queries distribution params.

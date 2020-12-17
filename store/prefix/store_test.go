@@ -4,11 +4,11 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"github.com/evdatsion/cusp-sdk/store/dbadapter"
-	"github.com/evdatsion/cusp-sdk/store/gaskv"
-	"github.com/evdatsion/cusp-sdk/store/iavl"
-	"github.com/evdatsion/cusp-sdk/store/types"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/store/dbadapter"
+	"github.com/libonomy/cusp-sdk/store/gaskv"
+	"github.com/libonomy/cusp-sdk/store/iavl"
+	"github.com/libonomy/cusp-sdk/store/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 
 	"github.com/stretchr/testify/require"
 
@@ -234,7 +234,7 @@ func TestPrefixStoreReverseIteratorEdgeCase(t *testing.T) {
 	iter.Close()
 }
 
-// Tests below are ported from https://github.com/evdatsion/aphelion-dpos-bft/blob/master/libs/db/prefix_db_test.go
+// Tests below are ported from https://github.com/libonomy/aphelion-staking/blob/master/libs/db/prefix_db_test.go
 
 func mockStoreWithStuff() types.KVStore {
 	db := dbm.NewMemDB()

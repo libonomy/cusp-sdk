@@ -5,16 +5,16 @@ import (
 	"io"
 	"sync"
 
-	"github.com/evdatsion/cusp-sdk/store/cachekv"
-	serrors "github.com/evdatsion/cusp-sdk/store/errors"
-	"github.com/evdatsion/cusp-sdk/store/tracekv"
-	"github.com/evdatsion/cusp-sdk/store/types"
+	"github.com/libonomy/cusp-sdk/store/cachekv"
+	serrors "github.com/libonomy/cusp-sdk/store/errors"
+	"github.com/libonomy/cusp-sdk/store/tracekv"
+	"github.com/libonomy/cusp-sdk/store/types"
 
 	"github.com/pkg/errors"
 	"github.com/evdatsion/iavl"
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/merkle"
-	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	"github.com/libonomy/aphelion-staking/crypto/merkle"
+	cmn "github.com/libonomy/aphelion-staking/libs/common"
 	dbm "github.com/evdatsion/tm-db"
 )
 
@@ -58,7 +58,7 @@ type Store struct {
 	numRecent int64
 
 	// This is the distance between state-sync waypoint states to be stored.
-	// See https://github.com/evdatsion/aphelion-dpos-bft/issues/828
+	// See https://github.com/libonomy/aphelion-staking/issues/828
 	// A value of 1 means store every state.
 	// A value of 0 means store no waypoints. (node cannot assist in state-sync)
 	// By default this value should be set the same across all nodes,

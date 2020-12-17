@@ -6,8 +6,8 @@ import (
 	"fmt"
 
 	"github.com/evdatsion/go-amino"
-	cryptoamino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	cryptoamino "github.com/libonomy/aphelion-staking/crypto/encoding/amino"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 )
 
 // amino codec to marshal/unmarshal

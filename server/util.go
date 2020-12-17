@@ -14,17 +14,17 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/aphelion/commands"
-	cfg "github.com/evdatsion/aphelion-dpos-bft/config"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
-	tmflags "github.com/evdatsion/aphelion-dpos-bft/libs/cli/flags"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
-	pvm "github.com/evdatsion/aphelion-dpos-bft/privval"
+	tcmd "github.com/libonomy/aphelion-staking/cmd/aphelion/commands"
+	cfg "github.com/libonomy/aphelion-staking/config"
+	"github.com/libonomy/aphelion-staking/libs/cli"
+	tmflags "github.com/libonomy/aphelion-staking/libs/cli/flags"
+	"github.com/libonomy/aphelion-staking/libs/log"
+	pvm "github.com/libonomy/aphelion-staking/privval"
 
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/server/config"
-	"github.com/evdatsion/cusp-sdk/version"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/server/config"
+	"github.com/libonomy/cusp-sdk/version"
 )
 
 // server context

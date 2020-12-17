@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/codec"
 )
 
 func TestNewQuerier(t *testing.T) {

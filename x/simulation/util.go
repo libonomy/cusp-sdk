@@ -6,10 +6,10 @@ import (
 	"math/rand"
 	"testing"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	"github.com/evdatsion/cusp-sdk/baseapp"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/baseapp"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // assertAll asserts the all invariants against application state

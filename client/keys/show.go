@@ -7,14 +7,14 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	tmcrypto "github.com/evdatsion/aphelion-dpos-bft/crypto"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/multisig"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
+	tmcrypto "github.com/libonomy/aphelion-staking/crypto"
+	"github.com/libonomy/aphelion-staking/crypto/multisig"
+	"github.com/libonomy/aphelion-staking/libs/cli"
 
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	"github.com/evdatsion/cusp-sdk/crypto"
-	"github.com/evdatsion/cusp-sdk/crypto/keys"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/crypto"
+	"github.com/libonomy/cusp-sdk/crypto/keys"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 const (

@@ -3,12 +3,12 @@ package staking
 import (
 	"fmt"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/staking/exported"
-	"github.com/evdatsion/cusp-sdk/x/staking/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/staking/exported"
+	"github.com/libonomy/cusp-sdk/x/staking/types"
 )
 
 // InitGenesis sets the pool and parameters for the provided keeper.  For each
@@ -96,7 +96,7 @@ func InitGenesis(ctx sdk.Context, keeper Keeper, accountKeeper types.AccountKeep
 		panic(fmt.Sprintf("%s module account has not been set", types.BondedPoolName))
 	}
 
-	// TODO remove with genesis 2-phases refactor https://github.com/evdatsion/cusp-sdk/issues/2862
+	// TODO remove with genesis 2-phases refactor https://github.com/libonomy/cusp-sdk/issues/2862
 	// add coins if not provided on genesis
 	if bondedPool.GetCoins().IsZero() {
 		if err := bondedPool.SetCoins(bondedCoins); err != nil {

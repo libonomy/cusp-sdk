@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/params"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/params"
 )
 
 // type declaration for parameters

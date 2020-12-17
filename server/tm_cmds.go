@@ -9,14 +9,14 @@ import (
 	"github.com/spf13/viper"
 	"gopkg.in/yaml.v2"
 
-	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/aphelion/commands"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
-	"github.com/evdatsion/aphelion-dpos-bft/p2p"
-	pvm "github.com/evdatsion/aphelion-dpos-bft/privval"
-	tversion "github.com/evdatsion/aphelion-dpos-bft/version"
+	tcmd "github.com/libonomy/aphelion-staking/cmd/aphelion/commands"
+	"github.com/libonomy/aphelion-staking/libs/cli"
+	"github.com/libonomy/aphelion-staking/p2p"
+	pvm "github.com/libonomy/aphelion-staking/privval"
+	tversion "github.com/libonomy/aphelion-staking/version"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // ShowNodeIDCmd - ported from Aphelion, dump node ID to stdout

@@ -6,13 +6,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/distribution/types"
-	"github.com/evdatsion/cusp-sdk/x/staking"
-	"github.com/evdatsion/cusp-sdk/x/supply"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/distribution/types"
+	"github.com/libonomy/cusp-sdk/x/staking"
+	"github.com/libonomy/cusp-sdk/x/supply"
 )
 
 const custom = "custom"

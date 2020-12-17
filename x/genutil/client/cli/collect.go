@@ -6,14 +6,14 @@ import (
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	"github.com/libonomy/aphelion-staking/libs/cli"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 
-	"github.com/evdatsion/cusp-sdk/client"
-	"github.com/evdatsion/cusp-sdk/codec"
-	"github.com/evdatsion/cusp-sdk/server"
-	"github.com/evdatsion/cusp-sdk/x/genutil"
-	"github.com/evdatsion/cusp-sdk/x/genutil/types"
+	"github.com/libonomy/cusp-sdk/client"
+	"github.com/libonomy/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/server"
+	"github.com/libonomy/cusp-sdk/x/genutil"
+	"github.com/libonomy/cusp-sdk/x/genutil/types"
 )
 
 const flagGenTxDir = "gentx-dir"

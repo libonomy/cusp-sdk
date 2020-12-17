@@ -11,7 +11,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/evdatsion/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/client/flags"
 )
 
 const (

@@ -1,7 +1,7 @@
 package types
 
 import (
-	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/codec"
 )
 
 // generic sealed codec to be used throughout this module

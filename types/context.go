@@ -5,11 +5,11 @@ import (
 	"time"
 
 	"github.com/gogo/protobuf/proto"
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	"github.com/libonomy/aphelion-staking/libs/log"
 
-	"github.com/evdatsion/cusp-sdk/store/gaskv"
-	stypes "github.com/evdatsion/cusp-sdk/store/types"
+	"github.com/libonomy/cusp-sdk/store/gaskv"
+	stypes "github.com/libonomy/cusp-sdk/store/types"
 )
 
 /*

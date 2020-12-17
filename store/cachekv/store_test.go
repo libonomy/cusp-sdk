@@ -5,12 +5,12 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
+	cmn "github.com/libonomy/aphelion-staking/libs/common"
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cusp-sdk/store/cachekv"
-	"github.com/evdatsion/cusp-sdk/store/dbadapter"
-	"github.com/evdatsion/cusp-sdk/store/types"
+	"github.com/libonomy/cusp-sdk/store/cachekv"
+	"github.com/libonomy/cusp-sdk/store/dbadapter"
+	"github.com/libonomy/cusp-sdk/store/types"
 )
 
 func newCacheKVStore() types.CacheKVStore {

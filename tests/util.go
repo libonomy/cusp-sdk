@@ -11,11 +11,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	tmclient "github.com/evdatsion/aphelion-dpos-bft/rpc/client"
-	ctypes "github.com/evdatsion/aphelion-dpos-bft/rpc/core/types"
-	rpcclient "github.com/evdatsion/aphelion-dpos-bft/rpc/lib/client"
+	tmclient "github.com/libonomy/aphelion-staking/rpc/client"
+	ctypes "github.com/libonomy/aphelion-staking/rpc/core/types"
+	rpcclient "github.com/libonomy/aphelion-staking/rpc/lib/client"
 
-	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/codec"
 )
 
 // Wait for the next aphelion block from the Aphelion RPC

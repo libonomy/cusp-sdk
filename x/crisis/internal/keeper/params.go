@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/crisis/internal/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/crisis/internal/types"
 )
 
 // GetConstantFee get's the constant fee from the paramSpace

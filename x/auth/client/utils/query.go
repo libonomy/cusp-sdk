@@ -6,12 +6,12 @@ import (
 	"strings"
 	"time"
 
-	ctypes "github.com/evdatsion/aphelion-dpos-bft/rpc/core/types"
+	ctypes "github.com/libonomy/aphelion-staking/rpc/core/types"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/auth/types"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/auth/types"
 )
 
 // QueryTxsByEvents performs a search for transactions for a given set of events

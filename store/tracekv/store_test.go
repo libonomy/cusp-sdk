@@ -10,10 +10,10 @@ import (
 
 	dbm "github.com/evdatsion/tm-db"
 
-	"github.com/evdatsion/cusp-sdk/store/dbadapter"
-	"github.com/evdatsion/cusp-sdk/store/prefix"
-	"github.com/evdatsion/cusp-sdk/store/tracekv"
-	"github.com/evdatsion/cusp-sdk/store/types"
+	"github.com/libonomy/cusp-sdk/store/dbadapter"
+	"github.com/libonomy/cusp-sdk/store/prefix"
+	"github.com/libonomy/cusp-sdk/store/tracekv"
+	"github.com/libonomy/cusp-sdk/store/types"
 )
 
 func bz(s string) []byte { return []byte(s) }

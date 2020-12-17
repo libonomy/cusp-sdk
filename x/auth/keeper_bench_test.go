@@ -3,7 +3,7 @@ package auth
 import (
 	"testing"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 func BenchmarkAccountMapperGetAccountFound(b *testing.B) {

@@ -3,7 +3,7 @@ package cli
 import (
 	flag "github.com/spf13/pflag"
 
-	"github.com/evdatsion/cusp-sdk/x/staking/types"
+	"github.com/libonomy/cusp-sdk/x/staking/types"
 )
 
 // nolint

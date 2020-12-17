@@ -5,10 +5,10 @@ package v0_36
 import (
 	"time"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	v034staking "github.com/evdatsion/cusp-sdk/x/staking/legacy/v0_34"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	v034staking "github.com/libonomy/cusp-sdk/x/staking/legacy/v0_34"
+	"github.com/libonomy/aphelion-staking/crypto"
 )
 
 const (

@@ -1,8 +1,8 @@
 package types
 
 import (
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/supply/exported"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/supply/exported"
 )
 
 // SupplyKeeper defines the expected supply Keeper (noalias)

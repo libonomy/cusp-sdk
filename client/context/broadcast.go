@@ -3,8 +3,8 @@ package context
 import (
 	"fmt"
 
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // BroadcastTx broadcasts a transactions either synchronously or asynchronously

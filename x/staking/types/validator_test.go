@@ -6,11 +6,11 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 	"gopkg.in/yaml.v2"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 func TestValidatorTestEquivalent(t *testing.T) {

@@ -3,9 +3,9 @@ package keeper
 import (
 	"fmt"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/distribution/types"
-	"github.com/evdatsion/cusp-sdk/x/staking/exported"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/distribution/types"
+	"github.com/libonomy/cusp-sdk/x/staking/exported"
 )
 
 // register all distribution invariants

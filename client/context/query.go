@@ -6,16 +6,16 @@ import (
 
 	"github.com/pkg/errors"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/merkle"
-	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
-	tmliteErr "github.com/evdatsion/aphelion-dpos-bft/lite/errors"
-	tmliteProxy "github.com/evdatsion/aphelion-dpos-bft/lite/proxy"
-	rpcclient "github.com/evdatsion/aphelion-dpos-bft/rpc/client"
-	tmtypes "github.com/evdatsion/aphelion-dpos-bft/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	"github.com/libonomy/aphelion-staking/crypto/merkle"
+	cmn "github.com/libonomy/aphelion-staking/libs/common"
+	tmliteErr "github.com/libonomy/aphelion-staking/lite/errors"
+	tmliteProxy "github.com/libonomy/aphelion-staking/lite/proxy"
+	rpcclient "github.com/libonomy/aphelion-staking/rpc/client"
+	tmtypes "github.com/libonomy/aphelion-staking/types"
 
-	"github.com/evdatsion/cusp-sdk/store/rootmulti"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/store/rootmulti"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // GetNode returns an RPC client. If the context's client is not defined, an

@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/evdatsion/cusp-sdk/baseapp"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/simulation"
-	"github.com/evdatsion/cusp-sdk/x/slashing"
+	"github.com/libonomy/cusp-sdk/baseapp"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/simulation"
+	"github.com/libonomy/cusp-sdk/x/slashing"
 )
 
 // SimulateMsgUnjail generates a MsgUnjail with random values

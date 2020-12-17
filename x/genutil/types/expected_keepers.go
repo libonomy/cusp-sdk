@@ -3,11 +3,11 @@ package types
 import (
 	"encoding/json"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	authexported "github.com/evdatsion/cusp-sdk/x/auth/exported"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	authexported "github.com/libonomy/cusp-sdk/x/auth/exported"
 )
 
 // StakingKeeper defines the expected staking keeper (noalias)

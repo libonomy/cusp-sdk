@@ -8,11 +8,11 @@ import (
 	"github.com/pkg/errors"
 
 	tmbtcec "github.com/tendermint/btcd/btcec"
-	tmcrypto "github.com/evdatsion/aphelion-dpos-bft/crypto"
-	tmsecp256k1 "github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
+	tmcrypto "github.com/libonomy/aphelion-staking/crypto"
+	tmsecp256k1 "github.com/libonomy/aphelion-staking/crypto/secp256k1"
 
-	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/crypto/keys/hd"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 var (

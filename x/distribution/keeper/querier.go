@@ -4,12 +4,12 @@ import (
 	"encoding/json"
 	"fmt"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/distribution/types"
-	"github.com/evdatsion/cusp-sdk/x/staking/exported"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/distribution/types"
+	"github.com/libonomy/cusp-sdk/x/staking/exported"
 )
 
 func NewQuerier(k Keeper) sdk.Querier {

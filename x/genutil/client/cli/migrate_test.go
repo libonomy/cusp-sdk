@@ -8,13 +8,13 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
-	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/aphelion/commands"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/cli"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	tcmd "github.com/libonomy/aphelion-staking/cmd/aphelion/commands"
+	"github.com/libonomy/aphelion-staking/libs/cli"
+	"github.com/libonomy/aphelion-staking/libs/log"
 
-	"github.com/evdatsion/cusp-sdk/client"
-	"github.com/evdatsion/cusp-sdk/server"
-	"github.com/evdatsion/cusp-sdk/tests"
+	"github.com/libonomy/cusp-sdk/client"
+	"github.com/libonomy/cusp-sdk/server"
+	"github.com/libonomy/cusp-sdk/tests"
 )
 
 func setupCmd(genesisTime string, chainId string) *cobra.Command {

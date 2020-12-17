@@ -3,11 +3,11 @@ package keys
 import (
 	"testing"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 	"github.com/stretchr/testify/require"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/multisig"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
+	"github.com/libonomy/aphelion-staking/crypto"
+	"github.com/libonomy/aphelion-staking/crypto/multisig"
+	"github.com/libonomy/aphelion-staking/crypto/secp256k1"
 )
 
 func TestBech32KeysOutput(t *testing.T) {

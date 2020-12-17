@@ -1,8 +1,8 @@
 package exported
 
 import (
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/aphelion-staking/crypto"
 )
 
 // DelegationI delegation bond for a delegated proof of stake system

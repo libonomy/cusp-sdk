@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/aphelion-staking/crypto"
 	"gopkg.in/yaml.v2"
 
 	"github.com/stretchr/testify/require"

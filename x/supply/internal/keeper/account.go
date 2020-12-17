@@ -1,9 +1,9 @@
 package keeper
 
 import (
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/supply/exported"
-	"github.com/evdatsion/cusp-sdk/x/supply/internal/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/supply/exported"
+	"github.com/libonomy/cusp-sdk/x/supply/internal/types"
 )
 
 // GetModuleAddress returns an address based on the module name

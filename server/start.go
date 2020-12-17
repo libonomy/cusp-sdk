@@ -9,13 +9,13 @@ import (
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/evdatsion/aphelion-dpos-bft/abci/server"
-	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/aphelion/commands"
-	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
-	"github.com/evdatsion/aphelion-dpos-bft/node"
-	"github.com/evdatsion/aphelion-dpos-bft/p2p"
-	pvm "github.com/evdatsion/aphelion-dpos-bft/privval"
-	"github.com/evdatsion/aphelion-dpos-bft/proxy"
+	"github.com/libonomy/aphelion-staking/abci/server"
+	tcmd "github.com/libonomy/aphelion-staking/cmd/aphelion/commands"
+	cmn "github.com/libonomy/aphelion-staking/libs/common"
+	"github.com/libonomy/aphelion-staking/node"
+	"github.com/libonomy/aphelion-staking/p2p"
+	pvm "github.com/libonomy/aphelion-staking/privval"
+	"github.com/libonomy/aphelion-staking/proxy"
 )
 
 // Aphelion full-node start flags

@@ -1,9 +1,9 @@
 package exported
 
 import (
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
 
-	"github.com/evdatsion/cusp-sdk/x/auth/exported"
+	"github.com/libonomy/cusp-sdk/x/auth/exported"
 )
 
 // ModuleAccountI defines an account interface for modules that hold tokens in an escrow

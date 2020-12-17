@@ -3,7 +3,7 @@ package rest
 import (
 	"github.com/gorilla/mux"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/client/context"
 )
 
 // RegisterRoutes registers the auth module REST routes.

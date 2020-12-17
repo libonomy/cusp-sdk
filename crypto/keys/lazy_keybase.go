@@ -3,11 +3,11 @@ package keys
 import (
 	"fmt"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
-	cmn "github.com/evdatsion/aphelion-dpos-bft/libs/common"
+	"github.com/libonomy/aphelion-staking/crypto"
+	cmn "github.com/libonomy/aphelion-staking/libs/common"
 
-	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/crypto/keys/hd"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 var _ Keybase = lazyKeybase{}

@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/staking/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/staking/types"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

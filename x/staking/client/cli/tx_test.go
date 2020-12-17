@@ -5,13 +5,13 @@ import (
 
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
-	tcmd "github.com/evdatsion/aphelion-dpos-bft/cmd/aphelion/commands"
-	cfg "github.com/evdatsion/aphelion-dpos-bft/config"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	tcmd "github.com/libonomy/aphelion-staking/cmd/aphelion/commands"
+	cfg "github.com/libonomy/aphelion-staking/config"
+	"github.com/libonomy/aphelion-staking/crypto"
+	"github.com/libonomy/aphelion-staking/libs/log"
 
-	"github.com/evdatsion/cusp-sdk/server"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/server"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 func TestPrepareFlagsForTxCreateValidator(t *testing.T) {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	govtypes "github.com/evdatsion/cusp-sdk/x/gov/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	govtypes "github.com/libonomy/cusp-sdk/x/gov/types"
 )
 
 const (

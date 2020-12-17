@@ -1,6 +1,6 @@
 package types
 
-import "github.com/evdatsion/cusp-sdk/codec"
+import "github.com/libonomy/cusp-sdk/codec"
 
 // Register the sdk message type
 func RegisterCodec(cdc *codec.Codec) {

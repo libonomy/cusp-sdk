@@ -3,11 +3,11 @@ package mock
 import (
 	"testing"
 
-	"github.com/evdatsion/aphelion-dpos-bft/types"
+	"github.com/libonomy/aphelion-staking/types"
 
 	"github.com/stretchr/testify/require"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 )
 
 // TestInitApp makes sure we can initialize this thing without an error

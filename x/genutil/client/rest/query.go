@@ -3,10 +3,10 @@ package rest
 import (
 	"net/http"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/types/rest"
-	"github.com/evdatsion/cusp-sdk/x/genutil/types"
+	"github.com/libonomy/cusp-sdk/client/context"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/types/rest"
+	"github.com/libonomy/cusp-sdk/x/genutil/types"
 )
 
 // QueryGenesisTxs writes the genesis transactions to the response if no error

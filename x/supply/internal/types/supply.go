@@ -5,8 +5,8 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/supply/exported"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/supply/exported"
 )
 
 // Implements Delegation interface

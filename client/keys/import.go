@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"io/ioutil"
 
-	"github.com/evdatsion/cusp-sdk/client/input"
+	"github.com/libonomy/cusp-sdk/client/input"
 	"github.com/spf13/cobra"
 )
 

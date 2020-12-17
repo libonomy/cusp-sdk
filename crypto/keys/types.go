@@ -3,11 +3,11 @@ package keys
 import (
 	"fmt"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto/multisig"
+	"github.com/libonomy/aphelion-staking/crypto"
+	"github.com/libonomy/aphelion-staking/crypto/multisig"
 
-	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
-	"github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/crypto/keys/hd"
+	"github.com/libonomy/cusp-sdk/types"
 )
 
 // Keybase exposes operations on a generic keystore
@@ -31,7 +31,7 @@ type Keybase interface {
 	// Derive computes a BIP39 seed from th mnemonic and bip39Passwd.
 	// Derive private key from the seed using the BIP44 params.
 	// Encrypt the key to disk using encryptPasswd.
-	// See https://github.com/evdatsion/cusp-sdk/issues/2095
+	// See https://github.com/libonomy/cusp-sdk/issues/2095
 	Derive(name, mnemonic, bip39Passwd, encryptPasswd string, params hd.BIP44Params) (Info, error)
 
 	// CreateLedger creates, stores, and returns a new Ledger key reference

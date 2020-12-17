@@ -5,8 +5,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
-	"github.com/evdatsion/aphelion-dpos-bft/libs/log"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
+	"github.com/libonomy/aphelion-staking/libs/log"
 )
 
 // SetupApp returns an application as well as a clean-up function

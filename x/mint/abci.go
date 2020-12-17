@@ -1,8 +1,8 @@
 package mint
 
 import (
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/mint/internal/types"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/mint/internal/types"
 )
 
 // BeginBlocker mints new tokens for the previous block.

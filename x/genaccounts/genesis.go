@@ -1,10 +1,10 @@
 package genaccounts
 
 import (
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	authexported "github.com/evdatsion/cusp-sdk/x/auth/exported"
-	"github.com/evdatsion/cusp-sdk/x/genaccounts/internal/types"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	authexported "github.com/libonomy/cusp-sdk/x/auth/exported"
+	"github.com/libonomy/cusp-sdk/x/genaccounts/internal/types"
 )
 
 // InitGenesis initializes accounts and deliver genesis transactions

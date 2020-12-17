@@ -6,7 +6,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/stretchr/testify/require"
 
-	"github.com/evdatsion/cusp-sdk/client"
+	"github.com/libonomy/cusp-sdk/client"
 )
 
 func TestValidateCmd(t *testing.T) {

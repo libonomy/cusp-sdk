@@ -7,10 +7,10 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/evdatsion/cusp-sdk/client/flags"
-	"github.com/evdatsion/cusp-sdk/client/keys"
-	crkeys "github.com/evdatsion/cusp-sdk/crypto/keys"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/client/flags"
+	"github.com/libonomy/cusp-sdk/client/keys"
+	crkeys "github.com/libonomy/cusp-sdk/crypto/keys"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // TxBuilder implements a transaction context created in SDK modules.

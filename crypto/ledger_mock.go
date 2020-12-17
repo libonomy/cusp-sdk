@@ -9,14 +9,14 @@ import (
 	"github.com/pkg/errors"
 
 	secp256k1 "github.com/tendermint/btcd/btcec"
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
-	tmsecp256k1 "github.com/evdatsion/aphelion-dpos-bft/crypto/secp256k1"
+	"github.com/libonomy/aphelion-staking/crypto"
+	tmsecp256k1 "github.com/libonomy/aphelion-staking/crypto/secp256k1"
 
 	bip39 "github.com/evdatsion/go-bip39"
 
-	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
-	"github.com/evdatsion/cusp-sdk/tests"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/crypto/keys/hd"
+	"github.com/libonomy/cusp-sdk/tests"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 // If ledger support (build tag) has been enabled, which implies a CGO dependency,

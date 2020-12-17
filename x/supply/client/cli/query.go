@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/evdatsion/cusp-sdk/client"
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/version"
-	"github.com/evdatsion/cusp-sdk/x/supply/internal/types"
+	"github.com/libonomy/cusp-sdk/client"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/version"
+	"github.com/libonomy/cusp-sdk/x/supply/internal/types"
 	"github.com/spf13/cobra"
 )
 

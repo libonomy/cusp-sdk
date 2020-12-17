@@ -6,15 +6,15 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/spf13/cobra"
-	abci "github.com/evdatsion/aphelion-dpos-bft/abci/types"
+	abci "github.com/libonomy/aphelion-staking/abci/types"
 
-	"github.com/evdatsion/cusp-sdk/client/context"
-	"github.com/evdatsion/cusp-sdk/codec"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/types/module"
-	"github.com/evdatsion/cusp-sdk/x/auth/client/cli"
-	"github.com/evdatsion/cusp-sdk/x/auth/client/rest"
-	"github.com/evdatsion/cusp-sdk/x/auth/types"
+	"github.com/libonomy/cusp-sdk/client/context"
+	"github.com/libonomy/cusp-sdk/codec"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/types/module"
+	"github.com/libonomy/cusp-sdk/x/auth/client/cli"
+	"github.com/libonomy/cusp-sdk/x/auth/client/rest"
+	"github.com/libonomy/cusp-sdk/x/auth/types"
 )
 
 var (

@@ -6,12 +6,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	tmcrypto "github.com/evdatsion/aphelion-dpos-bft/crypto"
-	cryptoAmino "github.com/evdatsion/aphelion-dpos-bft/crypto/encoding/amino"
+	tmcrypto "github.com/libonomy/aphelion-staking/crypto"
+	cryptoAmino "github.com/libonomy/aphelion-staking/crypto/encoding/amino"
 
-	"github.com/evdatsion/cusp-sdk/crypto/keys/hd"
-	"github.com/evdatsion/cusp-sdk/tests"
-	sdk "github.com/evdatsion/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/crypto/keys/hd"
+	"github.com/libonomy/cusp-sdk/tests"
+	sdk "github.com/libonomy/cusp-sdk/types"
 )
 
 func TestLedgerErrorHandling(t *testing.T) {

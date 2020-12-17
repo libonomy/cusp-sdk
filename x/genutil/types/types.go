@@ -3,7 +3,7 @@ package types
 import (
 	"encoding/json"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	"github.com/libonomy/aphelion-staking/crypto"
 )
 
 // DONTCOVER

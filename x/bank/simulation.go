@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/evdatsion/aphelion-dpos-bft/crypto"
+	"github.com/libonomy/aphelion-staking/crypto"
 
-	"github.com/evdatsion/cusp-sdk/baseapp"
-	sdk "github.com/evdatsion/cusp-sdk/types"
-	"github.com/evdatsion/cusp-sdk/x/bank/internal/keeper"
-	"github.com/evdatsion/cusp-sdk/x/bank/internal/types"
-	"github.com/evdatsion/cusp-sdk/x/mock"
-	"github.com/evdatsion/cusp-sdk/x/simulation"
+	"github.com/libonomy/cusp-sdk/baseapp"
+	sdk "github.com/libonomy/cusp-sdk/types"
+	"github.com/libonomy/cusp-sdk/x/bank/internal/keeper"
+	"github.com/libonomy/cusp-sdk/x/bank/internal/types"
+	"github.com/libonomy/cusp-sdk/x/mock"
+	"github.com/libonomy/cusp-sdk/x/simulation"
 )
 
 // SendTx tests and runs a single msg send where both

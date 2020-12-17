@@ -3,7 +3,7 @@ package types
 import (
 	"testing"
 
-	"github.com/evdatsion/cusp-sdk/codec"
+	"github.com/libonomy/cusp-sdk/codec"
 	"github.com/stretchr/testify/require"
 )
 
