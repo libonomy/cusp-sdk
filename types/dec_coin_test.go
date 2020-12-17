@@ -282,7 +282,7 @@ func TestParseDecCoins(t *testing.T) {
 		{"4libocoin", nil, true},
 		{"5.5libocoin,4libocoin", nil, true},
 		{"0.0libocoin", nil, true},
-		{"0.004STAKE", nil, true},
+		{"0.004LIBOCOIN", nil, true},
 		{
 			"0.004libocoin",
 			DecCoins{NewDecCoinFromDec("libocoin", NewDecWithPrec(4000000000000000, Precision))},

@@ -14,7 +14,7 @@ tags:
   - name: Bank
     description: Create and broadcast transactions
   - name: Staking
-    description: Stake module APIs
+    description: Libocoin module APIs
   - name: Governance
     description: Governance module APIs
   - name: Slashing
