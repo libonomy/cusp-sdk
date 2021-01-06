@@ -34,7 +34,7 @@ const (
 	// Bech32PrefixAccAddr defines the Bech32 prefix of an account's address
 	Bech32MainPrefix = "libonomy"
 
-	// Libocoin in https://github.com/satoshilabs/slips/blob/master/slip-0044.md
+	// LBY in https://github.com/satoshilabs/slips/blob/master/slip-0044.md
 	CoinType = 118
 
 	// BIP44Prefix is the parts of the BIP44 HD path that are fixed by

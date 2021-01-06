@@ -12,7 +12,7 @@ import (
 var (
 	coinsPos         = sdk.NewCoins(sdk.NewInt64Coin(sdk.DefaultBondDenom, 1000))
 	coinsZero        = sdk.NewCoins()
-	coinsPosNotLibocoins = sdk.NewCoins(sdk.NewInt64Coin("foo", 10000))
+	coinsPosNotLBYs = sdk.NewCoins(sdk.NewInt64Coin("foo", 10000))
 	coinsMulti       = sdk.NewCoins(sdk.NewInt64Coin(sdk.DefaultBondDenom, 1000), sdk.NewInt64Coin("foo", 10000))
 	addrs            = []sdk.AccAddress{
 		sdk.AccAddress("test1"),
@@ -64,7 +64,7 @@ func TestMsgDepositGetSignBytes(t *testing.T) {
 	msg := NewMsgDeposit(addr, 0, coinsPos)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"cusp-sdk/MsgDeposit","value":{"amount":[{"amount":"1000","denom":"libocoin"}],"depositor":"libonomy1v9jxgu33kfsgr5","proposal_id":"0"}}`
+	expected := `{"type":"cusp-sdk/MsgDeposit","value":{"amount":[{"amount":"1000","denom":"lby"}],"depositor":"libonomy1v9jxgu33kfsgr5","proposal_id":"0"}}`
 	require.Equal(t, expected, string(res))
 }
 

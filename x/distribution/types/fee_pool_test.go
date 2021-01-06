@@ -13,7 +13,7 @@ func TestValidateGenesis(t *testing.T) {
 	fp := InitialFeePool()
 	require.Nil(t, fp.ValidateGenesis())
 
-	fp2 := FeePool{CommunityPool: sdk.DecCoins{{"libocoin", sdk.NewDec(-1)}}}
+	fp2 := FeePool{CommunityPool: sdk.DecCoins{{"lby", sdk.NewDec(-1)}}}
 	require.NotNil(t, fp2.ValidateGenesis())
 
 }

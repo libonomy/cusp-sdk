@@ -19,7 +19,7 @@ var basic034Gov = []byte(`
             "proposal_id": "1",
             "amount": [
               {
-                "denom": "ulibocoin",
+                "denom": "ulby",
                 "amount": "512000000"
               }
             ]
@@ -57,7 +57,7 @@ var basic034Gov = []byte(`
           "deposit_end_time": "2019-05-17T21:08:25.443199036Z",
           "total_deposit": [
             {
-              "denom": "ulibocoin",
+              "denom": "ulby",
               "amount": "512000000"
             }
           ],
@@ -68,7 +68,7 @@ var basic034Gov = []byte(`
       "deposit_params": {
         "min_deposit": [
           {
-            "denom": "ulibocoin",
+            "denom": "ulby",
             "amount": "512000000"
           }
         ],

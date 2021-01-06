@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	testDenom1 = "libocoin"
+	testDenom1 = "lby"
 	testDenom2 = "muon"
 )
 
@@ -35,7 +35,7 @@ func TestIsEqualCoin(t *testing.T) {
 	}{
 		{NewInt64Coin(testDenom1, 1), NewInt64Coin(testDenom1, 1), true, false},
 		{NewInt64Coin(testDenom1, 1), NewInt64Coin(testDenom2, 1), false, true},
-		{NewInt64Coin("libocoin", 1), NewInt64Coin("libocoin", 10), false, false},
+		{NewInt64Coin("lby", 1), NewInt64Coin("lby", 10), false, false},
 	}
 
 	for tcIndex, tc := range cases {
@@ -56,7 +56,7 @@ func TestCoinIsValid(t *testing.T) {
 		{Coin{testDenom1, NewInt(-1)}, false},
 		{Coin{testDenom1, NewInt(0)}, true},
 		{Coin{testDenom1, NewInt(1)}, true},
-		{Coin{"Libocoin", NewInt(1)}, false},
+		{Coin{"LBY", NewInt(1)}, false},
 		{Coin{"a", NewInt(1)}, false},
 		{Coin{"a very long coin denom", NewInt(1)}, false},
 		{Coin{"libOc0in", NewInt(1)}, false},
@@ -569,7 +569,7 @@ func TestCoinsIsAllGTE(t *testing.T) {
 }
 
 func TestNewCoins(t *testing.T) {
-	tenlibocoin := NewInt64Coin("libocoin", 10)
+	tenlby := NewInt64Coin("lby", 10)
 	tenbtc := NewInt64Coin("btc", 10)
 	zeroeth := NewInt64Coin("eth", 0)
 	tests := []struct {
@@ -579,10 +579,10 @@ func TestNewCoins(t *testing.T) {
 		wantPanic bool
 	}{
 		{"empty args", []Coin{}, Coins{}, false},
-		{"one coin", []Coin{tenlibocoin}, Coins{tenlibocoin}, false},
-		{"sort after create", []Coin{tenbtc, tenlibocoin}, Coins{tenlibocoin, tenbtc}, false},
-		{"sort and remove zeroes", []Coin{zeroeth, tenbtc, tenlibocoin}, Coins{tenlibocoin, tenbtc}, false},
-		{"panic on dups", []Coin{tenlibocoin, tenlibocoin}, Coins{}, true},
+		{"one coin", []Coin{tenlby}, Coins{tenlby}, false},
+		{"sort after create", []Coin{tenbtc, tenlby}, Coins{tenlby, tenbtc}, false},
+		{"sort and remove zeroes", []Coin{zeroeth, tenbtc, tenlby}, Coins{tenlby, tenbtc}, false},
+		{"panic on dups", []Coin{tenlby, tenlby}, Coins{}, true},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -597,22 +597,22 @@ func TestNewCoins(t *testing.T) {
 }
 
 func TestCoinsIsAnyGT(t *testing.T) {
-	twoLibocoin := NewInt64Coin("libocoin", 2)
-	fiveLibocoin := NewInt64Coin("libocoin", 5)
+	twoLBY := NewInt64Coin("lby", 2)
+	fiveLBY := NewInt64Coin("lby", 5)
 	threeEth := NewInt64Coin("eth", 3)
 	sixEth := NewInt64Coin("eth", 6)
 	twoBtc := NewInt64Coin("btc", 2)
 
 	require.False(t, Coins{}.IsAnyGT(Coins{}))
 
-	require.False(t, Coins{fiveLibocoin}.IsAnyGT(Coins{}))
-	require.False(t, Coins{}.IsAnyGT(Coins{fiveLibocoin}))
-	require.True(t, Coins{fiveLibocoin}.IsAnyGT(Coins{twoLibocoin}))
-	require.False(t, Coins{twoLibocoin}.IsAnyGT(Coins{fiveLibocoin}))
+	require.False(t, Coins{fiveLBY}.IsAnyGT(Coins{}))
+	require.False(t, Coins{}.IsAnyGT(Coins{fiveLBY}))
+	require.True(t, Coins{fiveLBY}.IsAnyGT(Coins{twoLBY}))
+	require.False(t, Coins{twoLBY}.IsAnyGT(Coins{fiveLBY}))
 
-	require.True(t, Coins{twoLibocoin, sixEth}.IsAnyGT(Coins{twoBtc, fiveLibocoin, threeEth}))
-	require.False(t, Coins{twoBtc, twoLibocoin, threeEth}.IsAnyGT(Coins{fiveLibocoin, sixEth}))
-	require.False(t, Coins{twoLibocoin, sixEth}.IsAnyGT(Coins{twoBtc, fiveLibocoin}))
+	require.True(t, Coins{twoLBY, sixEth}.IsAnyGT(Coins{twoBtc, fiveLBY, threeEth}))
+	require.False(t, Coins{twoBtc, twoLBY, threeEth}.IsAnyGT(Coins{fiveLBY, sixEth}))
+	require.False(t, Coins{twoLBY, sixEth}.IsAnyGT(Coins{twoBtc, fiveLBY}))
 }
 
 func TestFindDup(t *testing.T) {

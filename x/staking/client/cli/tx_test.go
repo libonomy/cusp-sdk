@@ -72,7 +72,7 @@ func TestPrepareFlagsForTxCreateValidator(t *testing.T) {
 	}
 
 	// Override default params
-	params := extraParams{"5libocoin", "1.0", "1.0", "1.0", "1.0"}
+	params := extraParams{"5lby", "1.0", "1.0", "1.0", "1.0"}
 	viper.Set(FlagAmount, params.amount)
 	viper.Set(FlagCommissionRate, params.commissionRate)
 	viper.Set(FlagCommissionMaxRate, params.commissionMaxRate)

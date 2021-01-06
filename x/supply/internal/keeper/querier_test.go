@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/stretchr/testify/require"
 	abci "github.com/libonomy/aphelion-staking/abci/types"
+	"github.com/stretchr/testify/require"
 
 	sdk "github.com/libonomy/cusp-sdk/types"
 	"github.com/libonomy/cusp-sdk/x/supply/internal/types"
@@ -16,8 +16,8 @@ func TestNewQuerier(t *testing.T) {
 
 	supplyCoins := sdk.NewCoins(
 		sdk.NewCoin(sdk.DefaultBondDenom, sdk.NewInt(100)),
-		sdk.NewCoin("photon", sdk.NewInt(50)),
-		sdk.NewCoin("libocoin", sdk.NewInt(2000)),
+		sdk.NewCoin("psix", sdk.NewInt(50)),
+		sdk.NewCoin("lby", sdk.NewInt(2000)),
 		sdk.NewCoin("btc", sdk.NewInt(21000000)),
 	)
 
@@ -60,8 +60,8 @@ func TestQuerySupply(t *testing.T) {
 
 	supplyCoins := sdk.NewCoins(
 		sdk.NewCoin(sdk.DefaultBondDenom, sdk.NewInt(100)),
-		sdk.NewCoin("photon", sdk.NewInt(50)),
-		sdk.NewCoin("libocoin", sdk.NewInt(2000)),
+		sdk.NewCoin("psix", sdk.NewInt(50)),
+		sdk.NewCoin("lby", sdk.NewInt(2000)),
 		sdk.NewCoin("btc", sdk.NewInt(21000000)),
 	)
 

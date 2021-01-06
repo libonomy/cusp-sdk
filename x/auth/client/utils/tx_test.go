@@ -97,7 +97,7 @@ func TestReadStdTxFromFile(t *testing.T) {
 	sdk.RegisterCodec(cdc)
 
 	// Build a test transaction
-	fee := authtypes.NewStdFee(50000, sdk.Coins{sdk.NewInt64Coin("libocoin", 150)})
+	fee := authtypes.NewStdFee(50000, sdk.Coins{sdk.NewInt64Coin("lby", 150)})
 	stdTx := authtypes.NewStdTx([]sdk.Msg{}, fee, []authtypes.StdSignature{}, "foomemo")
 
 	// Write it to the file

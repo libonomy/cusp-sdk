@@ -212,17 +212,17 @@ Where proposal.json contains:
 
 {
   "title": "Community Pool Spend",
-  "description": "Pay me some Libocoins!",
+  "description": "Pay me some LBYs!",
   "recipient": "libonomy1s5afhd6gxevu37mkqcvvsj8qeylhn0rz46zdlq",
   "amount": [
     {
-      "denom": "libocoin",
+      "denom": "lby",
       "amount": "10000"
     }
   ],
   "deposit": [
     {
-      "denom": "libocoin",
+      "denom": "lby",
       "amount": "10000"
     }
   ]

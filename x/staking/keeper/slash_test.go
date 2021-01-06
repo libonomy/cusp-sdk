@@ -89,7 +89,7 @@ func TestSlashUnbondingDelegation(t *testing.T) {
 	slashAmount = keeper.slashUnbondingDelegation(ctx, ubd, 0, fraction)
 	require.Equal(t, int64(0), slashAmount.Int64())
 
-	// test valid slash, before expiration timestamp and to which libocoin contributed
+	// test valid slash, before expiration timestamp and to which lby contributed
 	oldUnbondedPool := keeper.GetNotBondedPool(ctx)
 	ctx = ctx.WithBlockHeader(abci.Header{Time: time.Unix(0, 0)})
 	keeper.SetUnbondingDelegation(ctx, ubd)
@@ -132,7 +132,7 @@ func TestSlashRedelegation(t *testing.T) {
 	del := types.NewDelegation(addrDels[0], addrVals[1], sdk.NewDec(10))
 	keeper.SetDelegation(ctx, del)
 
-	// started redelegating prior to the current height, libocoin didn't contribute to infraction
+	// started redelegating prior to the current height, lby didn't contribute to infraction
 	validator, found := keeper.GetValidator(ctx, addrVals[1])
 	require.True(t, found)
 	slashAmount := keeper.slashRedelegation(ctx, validator, rd, 1, fraction)
@@ -146,7 +146,7 @@ func TestSlashRedelegation(t *testing.T) {
 	slashAmount = keeper.slashRedelegation(ctx, validator, rd, 0, fraction)
 	require.Equal(t, int64(0), slashAmount.Int64())
 
-	// test valid slash, before expiration timestamp and to which libocoin contributed
+	// test valid slash, before expiration timestamp and to which lby contributed
 	ctx = ctx.WithBlockHeader(abci.Header{Time: time.Unix(0, 0)})
 	keeper.SetRedelegation(ctx, rd)
 	validator, found = keeper.GetValidator(ctx, addrVals[1])
@@ -278,8 +278,8 @@ func TestSlashWithUnbondingDelegation(t *testing.T) {
 	// read updated validator
 	validator, found = keeper.GetValidatorByConsAddr(ctx, consAddr)
 	require.True(t, found)
-	// power decreased by 3 - 6 libocoin originally bonded at the time of infraction
-	// was still bonded at the time of discovery and was slashed by half, 4 libocoin
+	// power decreased by 3 - 6 lby originally bonded at the time of infraction
+	// was still bonded at the time of discovery and was slashed by half, 4 lby
 	// bonded at the time of discovery hadn't been bonded at the time of infraction
 	// and wasn't slashed
 	require.Equal(t, int64(7), validator.GetConsensusPower())
@@ -304,8 +304,8 @@ func TestSlashWithUnbondingDelegation(t *testing.T) {
 	require.Equal(t, int64(4), validator.GetConsensusPower())
 
 	// slash validator again
-	// all originally bonded libocoin has been slashed, so this will have no effect
-	// on the unbonding delegation, but it will slash libocoin bonded since the infraction
+	// all originally bonded lby has been slashed, so this will have no effect
+	// on the unbonding delegation, but it will slash lby bonded since the infraction
 	// this may not be the desirable behaviour, ref https://github.com/libonomy/cusp-sdk/issues/1440
 	ctx = ctx.WithBlockHeight(13)
 	keeper.Slash(ctx, consAddr, 9, 10, fraction)
@@ -326,8 +326,8 @@ func TestSlashWithUnbondingDelegation(t *testing.T) {
 	require.Equal(t, int64(1), validator.GetConsensusPower())
 
 	// slash validator again
-	// all originally bonded libocoin has been slashed, so this will have no effect
-	// on the unbonding delegation, but it will slash libocoin bonded since the infraction
+	// all originally bonded lby has been slashed, so this will have no effect
+	// on the unbonding delegation, but it will slash lby bonded since the infraction
 	// this may not be the desirable behaviour, ref https://github.com/libonomy/cusp-sdk/issues/1440
 	ctx = ctx.WithBlockHeight(13)
 	keeper.Slash(ctx, consAddr, 9, 10, fraction)
@@ -344,7 +344,7 @@ func TestSlashWithUnbondingDelegation(t *testing.T) {
 	// apply TM updates
 	keeper.ApplyAndReturnValidatorSetUpdates(ctx)
 	// read updated validator
-	// power decreased by 1 again, validator is out of libocoin
+	// power decreased by 1 again, validator is out of lby
 	// validator should be in unbonding period
 	validator, _ = keeper.GetValidatorByConsAddr(ctx, consAddr)
 	require.Equal(t, validator.GetStatus(), sdk.Unbonding)
@@ -400,8 +400,8 @@ func TestSlashWithRedelegation(t *testing.T) {
 	// read updated validator
 	validator, found = keeper.GetValidatorByConsAddr(ctx, consAddr)
 	require.True(t, found)
-	// power decreased by 2 - 4 libocoin originally bonded at the time of infraction
-	// was still bonded at the time of discovery and was slashed by half, 4 libocoin
+	// power decreased by 2 - 4 lby originally bonded at the time of infraction
+	// was still bonded at the time of discovery and was slashed by half, 4 lby
 	// bonded at the time of discovery hadn't been bonded at the time of infraction
 	// and wasn't slashed
 	require.Equal(t, int64(8), validator.GetConsensusPower())
@@ -460,7 +460,7 @@ func TestSlashWithRedelegation(t *testing.T) {
 	require.Equal(t, validator.GetStatus(), sdk.Unbonding)
 
 	// slash the validator again, by 100%
-	// no libocoin remains to be slashed
+	// no lby remains to be slashed
 	ctx = ctx.WithBlockHeight(12)
 	// validator still in unbonding period
 	validator, _ = keeper.GetValidatorByConsAddr(ctx, consAddr)
@@ -547,6 +547,6 @@ func TestSlashBoth(t *testing.T) {
 	// read updated validator
 	validator, found = keeper.GetValidatorByConsAddr(ctx, sdk.GetConsAddress(PKs[0]))
 	require.True(t, found)
-	// power not decreased, all libocoin was bonded since
+	// power not decreased, all lby was bonded since
 	require.Equal(t, int64(10), validator.GetConsensusPower())
 }

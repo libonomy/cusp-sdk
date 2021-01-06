@@ -279,20 +279,20 @@ func TestParseDecCoins(t *testing.T) {
 		expectedErr    bool
 	}{
 		{"", nil, false},
-		{"4libocoin", nil, true},
-		{"5.5libocoin,4libocoin", nil, true},
-		{"0.0libocoin", nil, true},
-		{"0.004LIBOCOIN", nil, true},
+		{"4lby", nil, true},
+		{"5.5lby,4lby", nil, true},
+		{"0.0lby", nil, true},
+		{"0.004LBY", nil, true},
 		{
-			"0.004libocoin",
-			DecCoins{NewDecCoinFromDec("libocoin", NewDecWithPrec(4000000000000000, Precision))},
+			"0.004lby",
+			DecCoins{NewDecCoinFromDec("lby", NewDecWithPrec(4000000000000000, Precision))},
 			false,
 		},
 		{
-			"5.04libocoin,0.004libocoin",
+			"5.04lby,0.004lby",
 			DecCoins{
-				NewDecCoinFromDec("libocoin", NewDecWithPrec(5040000000000000000, Precision)),
-				NewDecCoinFromDec("libocoin", NewDecWithPrec(4000000000000000, Precision)),
+				NewDecCoinFromDec("lby", NewDecWithPrec(5040000000000000000, Precision)),
+				NewDecCoinFromDec("lby", NewDecWithPrec(4000000000000000, Precision)),
 			},
 			false,
 		},
@@ -317,10 +317,10 @@ func TestDecCoinsString(t *testing.T) {
 		{DecCoins{}, ""},
 		{
 			DecCoins{
-				NewDecCoinFromDec("libocoin", NewDecWithPrec(5040000000000000000, Precision)),
-				NewDecCoinFromDec("libocoin", NewDecWithPrec(4000000000000000, Precision)),
+				NewDecCoinFromDec("lby", NewDecWithPrec(5040000000000000000, Precision)),
+				NewDecCoinFromDec("lby", NewDecWithPrec(4000000000000000, Precision)),
 			},
-			"5.040000000000000000libocoin,0.004000000000000000libocoin",
+			"5.040000000000000000lby,0.004000000000000000lby",
 		},
 	}
 
@@ -337,16 +337,16 @@ func TestDecCoinsIntersect(t *testing.T) {
 		expectedResult string
 	}{
 		{"", "", ""},
-		{"1.0libocoin", "", ""},
-		{"1.0libocoin", "1.0libocoin", "1.0libocoin"},
-		{"", "1.0libocoin", ""},
-		{"1.0libocoin", "", ""},
-		{"2.0libocoin,1.0trope", "1.9libocoin", "1.9libocoin"},
-		{"2.0libocoin,1.0trope", "2.1libocoin", "2.0libocoin"},
-		{"2.0libocoin,1.0trope", "0.9trope", "0.9trope"},
-		{"2.0libocoin,1.0trope", "1.9libocoin,0.9trope", "1.9libocoin,0.9trope"},
-		{"2.0libocoin,1.0trope", "1.9libocoin,0.9trope,20.0other", "1.9libocoin,0.9trope"},
-		{"2.0libocoin,1.0trope", "1.0other", ""},
+		{"1.0lby", "", ""},
+		{"1.0lby", "1.0lby", "1.0lby"},
+		{"", "1.0lby", ""},
+		{"1.0lby", "", ""},
+		{"2.0lby,1.0trope", "1.9lby", "1.9lby"},
+		{"2.0lby,1.0trope", "2.1lby", "2.0lby"},
+		{"2.0lby,1.0trope", "0.9trope", "0.9trope"},
+		{"2.0lby,1.0trope", "1.9lby,0.9trope", "1.9lby,0.9trope"},
+		{"2.0lby,1.0trope", "1.9lby,0.9trope,20.0other", "1.9lby,0.9trope"},
+		{"2.0lby,1.0trope", "1.0other", ""},
 	}
 
 	for i, tc := range testCases {

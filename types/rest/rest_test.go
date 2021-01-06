@@ -25,9 +25,9 @@ type mockResponseWriter struct{}
 
 func TestBaseReqValidateBasic(t *testing.T) {
 	fromAddr := "libonomy1cq0sxam6x4l0sv9yz3a2vlqhdhvt2k6jtgcse0"
-	tenstakes, err := types.ParseCoins("10libocoin")
+	tenstakes, err := types.ParseCoins("10lby")
 	require.NoError(t, err)
-	onestake, err := types.ParseDecCoins("1.0libocoin")
+	onestake, err := types.ParseDecCoins("1.0lby")
 	require.NoError(t, err)
 
 	req1 := NewBaseReq(
@@ -172,7 +172,7 @@ func TestProcessPostResponse(t *testing.T) {
 	privKey := secp256k1.GenPrivKey()
 	pubKey := privKey.PubKey()
 	addr := types.AccAddress(pubKey.Address())
-	coins := types.NewCoins(types.NewCoin("libocoin", types.NewInt(100)), types.NewCoin("tree", types.NewInt(125)))
+	coins := types.NewCoins(types.NewCoin("lby", types.NewInt(100)), types.NewCoin("tree", types.NewInt(125)))
 	accNumber := uint64(104)
 	sequence := uint64(32)
 

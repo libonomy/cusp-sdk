@@ -12,7 +12,7 @@ import (
 )
 
 var (
-	stakeDenom = "libocoin"
+	stakeDenom = "lby"
 	feeDenom   = "fee"
 )
 
@@ -53,7 +53,7 @@ func TestBaseAccountCoins(t *testing.T) {
 	_, _, addr := KeyTestPubAddr()
 	acc := NewBaseAccountWithAddress(addr)
 
-	someCoins := sdk.Coins{sdk.NewInt64Coin("libocoin", 123), sdk.NewInt64Coin("eth", 246)}
+	someCoins := sdk.Coins{sdk.NewInt64Coin("lby", 123), sdk.NewInt64Coin("eth", 246)}
 
 	err := acc.SetCoins(someCoins)
 	require.Nil(t, err)
@@ -75,7 +75,7 @@ func TestBaseAccountMarshal(t *testing.T) {
 	_, pub, addr := KeyTestPubAddr()
 	acc := NewBaseAccountWithAddress(addr)
 
-	someCoins := sdk.Coins{sdk.NewInt64Coin("libocoin", 123), sdk.NewInt64Coin("eth", 246)}
+	someCoins := sdk.Coins{sdk.NewInt64Coin("lby", 123), sdk.NewInt64Coin("eth", 246)}
 	seq := uint64(7)
 
 	// set everything on the account

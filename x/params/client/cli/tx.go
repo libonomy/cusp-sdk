@@ -54,7 +54,7 @@ Where proposal.json contains:
   ],
   "deposit": [
     {
-      "denom": "libocoin",
+      "denom": "lby",
       "amount": "10000"
     }
   ]

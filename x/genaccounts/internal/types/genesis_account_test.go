@@ -33,22 +33,22 @@ func TestGenesisAccountValidate(t *testing.T) {
 		},
 		{
 			"invalid vesting amount",
-			NewGenesisAccountRaw(addr, sdk.NewCoins(sdk.NewInt64Coin("libocoin", 50)),
-				sdk.NewCoins(sdk.NewInt64Coin("libocoin", 100)), 0, 0, "", ""),
+			NewGenesisAccountRaw(addr, sdk.NewCoins(sdk.NewInt64Coin("lby", 50)),
+				sdk.NewCoins(sdk.NewInt64Coin("lby", 100)), 0, 0, "", ""),
 			errors.New("vesting amount cannot be greater than total amount"),
 		},
 		{
 			"invalid vesting amount with multi coins",
 			NewGenesisAccountRaw(addr,
-				sdk.NewCoins(sdk.NewInt64Coin("ulibocoin", 50), sdk.NewInt64Coin("eth", 50)),
-				sdk.NewCoins(sdk.NewInt64Coin("ulibocoin", 100), sdk.NewInt64Coin("eth", 20)),
+				sdk.NewCoins(sdk.NewInt64Coin("ulby", 50), sdk.NewInt64Coin("eth", 50)),
+				sdk.NewCoins(sdk.NewInt64Coin("ulby", 100), sdk.NewInt64Coin("eth", 20)),
 				0, 0, "", ""),
 			errors.New("vesting amount cannot be greater than total amount"),
 		},
 		{
 			"invalid vesting times",
-			NewGenesisAccountRaw(addr, sdk.NewCoins(sdk.NewInt64Coin("libocoin", 50)),
-				sdk.NewCoins(sdk.NewInt64Coin("libocoin", 50)), 1654668078, 1554668078, "", ""),
+			NewGenesisAccountRaw(addr, sdk.NewCoins(sdk.NewInt64Coin("lby", 50)),
+				sdk.NewCoins(sdk.NewInt64Coin("lby", 50)), 1654668078, 1554668078, "", ""),
 			errors.New("vesting start-time cannot be before end-time"),
 		},
 		{
