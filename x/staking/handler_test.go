@@ -1187,7 +1187,7 @@ func TestBondUnbondRedelegateSlashTwice(t *testing.T) {
 	got = handleMsgCreateValidator(ctx, msgCreateValidator, keeper)
 	require.True(t, got.IsOK(), "expected no error on runMsgCreateValidator")
 
-	// delegate 10 lby
+	// delegate 10 flby
 	msgDelegate := NewTestMsgDelegate(del, valA, valTokens)
 	got = handleMsgDelegate(ctx, msgDelegate, keeper)
 	require.True(t, got.IsOK(), "expected no error on runMsgDelegate")
@@ -1199,13 +1199,13 @@ func TestBondUnbondRedelegateSlashTwice(t *testing.T) {
 	// a block passes
 	ctx = ctx.WithBlockHeight(1)
 
-	// begin unbonding 4 lby
+	// begin unbonding 4 flby
 	unbondAmt := sdk.NewCoin(sdk.DefaultBondDenom, sdk.TokensFromConsensusPower(4))
 	msgUndelegate := NewMsgUndelegate(del, valA, unbondAmt)
 	got = handleMsgUndelegate(ctx, msgUndelegate, keeper)
 	require.True(t, got.IsOK(), "expected no error on runMsgUndelegate")
 
-	// begin redelegate 6 lby
+	// begin redelegate 6 flby
 	redAmt := sdk.NewCoin(sdk.DefaultBondDenom, sdk.TokensFromConsensusPower(6))
 	msgBeginRedelegate := NewMsgBeginRedelegate(del, valA, valB, redAmt)
 	got = handleMsgBeginRedelegate(ctx, msgBeginRedelegate, keeper)

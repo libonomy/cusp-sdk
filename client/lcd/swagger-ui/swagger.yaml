@@ -1877,7 +1877,7 @@ paths:
         description: Coin denomination
         required: true
         type: string
-        x-example: ulby
+        x-example: flby
     get:
       summary: Total supply of a single coin denomination
       tags:
@@ -1985,7 +1985,7 @@ definitions:
     properties:
       denom:
         type: string
-        example: lby
+        example: flby
       amount:
         type: string
         example: "50"

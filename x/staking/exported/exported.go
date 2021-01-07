@@ -5,7 +5,7 @@ import (
 	"github.com/libonomy/aphelion-staking/crypto"
 )
 
-// DelegationI delegation bond for a delegated proof of lby system
+// DelegationI delegation bond for a delegated proof of flby system
 type DelegationI interface {
 	GetDelegatorAddr() sdk.AccAddress // delegator sdk.AccAddress for the bond
 	GetValidatorAddr() sdk.ValAddress // validator operator address

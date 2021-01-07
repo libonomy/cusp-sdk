@@ -12,7 +12,7 @@ import (
 func TestMsgSendRoute(t *testing.T) {
 	addr1 := sdk.AccAddress([]byte("from"))
 	addr2 := sdk.AccAddress([]byte("to"))
-	coins := sdk.NewCoins(sdk.NewInt64Coin("lby", 10))
+	coins := sdk.NewCoins(sdk.NewInt64Coin("flby", 10))
 	var msg = NewMsgSend(addr1, addr2, coins)
 
 	require.Equal(t, msg.Route(), RouterKey)
@@ -22,10 +22,10 @@ func TestMsgSendRoute(t *testing.T) {
 func TestMsgSendValidation(t *testing.T) {
 	addr1 := sdk.AccAddress([]byte("from"))
 	addr2 := sdk.AccAddress([]byte("to"))
-	lby123 := sdk.NewCoins(sdk.NewInt64Coin("lby", 123))
-	lby0 := sdk.NewCoins(sdk.NewInt64Coin("lby", 0))
-	lby123eth123 := sdk.NewCoins(sdk.NewInt64Coin("lby", 123), sdk.NewInt64Coin("eth", 123))
-	lby123eth0 := sdk.Coins{sdk.NewInt64Coin("lby", 123), sdk.NewInt64Coin("eth", 0)}
+	lby123 := sdk.NewCoins(sdk.NewInt64Coin("flby", 123))
+	lby0 := sdk.NewCoins(sdk.NewInt64Coin("flby", 0))
+	lby123eth123 := sdk.NewCoins(sdk.NewInt64Coin("flby", 123), sdk.NewInt64Coin("eth", 123))
+	lby123eth0 := sdk.Coins{sdk.NewInt64Coin("flby", 123), sdk.NewInt64Coin("eth", 0)}
 
 	var emptyAddr sdk.AccAddress
 
@@ -54,11 +54,11 @@ func TestMsgSendValidation(t *testing.T) {
 func TestMsgSendGetSignBytes(t *testing.T) {
 	addr1 := sdk.AccAddress([]byte("input"))
 	addr2 := sdk.AccAddress([]byte("output"))
-	coins := sdk.NewCoins(sdk.NewInt64Coin("lby", 10))
+	coins := sdk.NewCoins(sdk.NewInt64Coin("flby", 10))
 	var msg = NewMsgSend(addr1, addr2, coins)
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"cusp-sdk/MsgSend","value":{"amount":[{"amount":"10","denom":"lby"}],"from_address":"libonomy1d9h8qat57ljhcm","to_address":"libonomy1da6hgur4wsmpnjyg"}}`
+	expected := `{"type":"cusp-sdk/MsgSend","value":{"amount":[{"amount":"10","denom":"flby"}],"from_address":"libonomy1d9h8qat57ljhcm","to_address":"libonomy1da6hgur4wsmpnjyg"}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -73,7 +73,7 @@ func TestMsgMultiSendRoute(t *testing.T) {
 	// Construct a MsgSend
 	addr1 := sdk.AccAddress([]byte("input"))
 	addr2 := sdk.AccAddress([]byte("output"))
-	coins := sdk.NewCoins(sdk.NewInt64Coin("lby", 10))
+	coins := sdk.NewCoins(sdk.NewInt64Coin("flby", 10))
 	var msg = MsgMultiSend{
 		Inputs:  []Input{NewInput(addr1, coins)},
 		Outputs: []Output{NewOutput(addr2, coins)},
@@ -87,14 +87,14 @@ func TestMsgMultiSendRoute(t *testing.T) {
 func TestInputValidation(t *testing.T) {
 	addr1 := sdk.AccAddress([]byte{1, 2})
 	addr2 := sdk.AccAddress([]byte{7, 8})
-	someCoins := sdk.NewCoins(sdk.NewInt64Coin("lby", 123))
-	multiCoins := sdk.NewCoins(sdk.NewInt64Coin("lby", 123), sdk.NewInt64Coin("eth", 20))
+	someCoins := sdk.NewCoins(sdk.NewInt64Coin("flby", 123))
+	multiCoins := sdk.NewCoins(sdk.NewInt64Coin("flby", 123), sdk.NewInt64Coin("eth", 20))
 
 	var emptyAddr sdk.AccAddress
 	emptyCoins := sdk.NewCoins()
 	emptyCoins2 := sdk.NewCoins(sdk.NewInt64Coin("eth", 0))
-	someEmptyCoins := sdk.Coins{sdk.NewInt64Coin("eth", 10), sdk.NewInt64Coin("lby", 0)}
-	unsortedCoins := sdk.Coins{sdk.NewInt64Coin("eth", 1), sdk.NewInt64Coin("lby", 1)}
+	someEmptyCoins := sdk.Coins{sdk.NewInt64Coin("eth", 10), sdk.NewInt64Coin("flby", 0)}
+	unsortedCoins := sdk.Coins{sdk.NewInt64Coin("eth", 1), sdk.NewInt64Coin("flby", 1)}
 
 	cases := []struct {
 		valid bool
@@ -125,14 +125,14 @@ func TestInputValidation(t *testing.T) {
 func TestOutputValidation(t *testing.T) {
 	addr1 := sdk.AccAddress([]byte{1, 2})
 	addr2 := sdk.AccAddress([]byte{7, 8})
-	someCoins := sdk.NewCoins(sdk.NewInt64Coin("lby", 123))
-	multiCoins := sdk.NewCoins(sdk.NewInt64Coin("lby", 123), sdk.NewInt64Coin("eth", 20))
+	someCoins := sdk.NewCoins(sdk.NewInt64Coin("flby", 123))
+	multiCoins := sdk.NewCoins(sdk.NewInt64Coin("flby", 123), sdk.NewInt64Coin("eth", 20))
 
 	var emptyAddr sdk.AccAddress
 	emptyCoins := sdk.NewCoins()
 	emptyCoins2 := sdk.NewCoins(sdk.NewInt64Coin("eth", 0))
-	someEmptyCoins := sdk.Coins{sdk.NewInt64Coin("eth", 10), sdk.NewInt64Coin("lby", 0)}
-	unsortedCoins := sdk.Coins{sdk.NewInt64Coin("eth", 1), sdk.NewInt64Coin("lby", 1)}
+	someEmptyCoins := sdk.Coins{sdk.NewInt64Coin("eth", 10), sdk.NewInt64Coin("flby", 0)}
+	unsortedCoins := sdk.Coins{sdk.NewInt64Coin("eth", 1), sdk.NewInt64Coin("flby", 1)}
 
 	cases := []struct {
 		valid bool
@@ -163,10 +163,10 @@ func TestOutputValidation(t *testing.T) {
 func TestMsgMultiSendValidation(t *testing.T) {
 	addr1 := sdk.AccAddress([]byte{1, 2})
 	addr2 := sdk.AccAddress([]byte{7, 8})
-	lby123 := sdk.NewCoins(sdk.NewInt64Coin("lby", 123))
-	lby124 := sdk.NewCoins(sdk.NewInt64Coin("lby", 124))
+	lby123 := sdk.NewCoins(sdk.NewInt64Coin("flby", 123))
+	lby124 := sdk.NewCoins(sdk.NewInt64Coin("flby", 124))
 	eth123 := sdk.NewCoins(sdk.NewInt64Coin("eth", 123))
-	lby123eth123 := sdk.NewCoins(sdk.NewInt64Coin("lby", 123), sdk.NewInt64Coin("eth", 123))
+	lby123eth123 := sdk.NewCoins(sdk.NewInt64Coin("flby", 123), sdk.NewInt64Coin("eth", 123))
 
 	input1 := NewInput(addr1, lby123)
 	input2 := NewInput(addr1, eth123)
@@ -217,14 +217,14 @@ func TestMsgMultiSendValidation(t *testing.T) {
 func TestMsgMultiSendGetSignBytes(t *testing.T) {
 	addr1 := sdk.AccAddress([]byte("input"))
 	addr2 := sdk.AccAddress([]byte("output"))
-	coins := sdk.NewCoins(sdk.NewInt64Coin("lby", 10))
+	coins := sdk.NewCoins(sdk.NewInt64Coin("flby", 10))
 	var msg = MsgMultiSend{
 		Inputs:  []Input{NewInput(addr1, coins)},
 		Outputs: []Output{NewOutput(addr2, coins)},
 	}
 	res := msg.GetSignBytes()
 
-	expected := `{"type":"cusp-sdk/MsgMultiSend","value":{"inputs":[{"address":"libonomy1d9h8qat57ljhcm","coins":[{"amount":"10","denom":"lby"}]}],"outputs":[{"address":"libonomy1da6hgur4wsmpnjyg","coins":[{"amount":"10","denom":"lby"}]}]}}`
+	expected := `{"type":"cusp-sdk/MsgMultiSend","value":{"inputs":[{"address":"libonomy1d9h8qat57ljhcm","coins":[{"amount":"10","denom":"flby"}]}],"outputs":[{"address":"libonomy1da6hgur4wsmpnjyg","coins":[{"amount":"10","denom":"flby"}]}]}}`
 	require.Equal(t, expected, string(res))
 }
 
@@ -250,7 +250,7 @@ func TestMsgSendSigners(t *testing.T) {
 		{7, 8, 9},
 	}
 
-	someCoins := sdk.NewCoins(sdk.NewInt64Coin("lby", 123))
+	someCoins := sdk.NewCoins(sdk.NewInt64Coin("flby", 123))
 	inputs := make([]Input, len(signers))
 	for i, signer := range signers {
 		inputs[i] = NewInput(signer, someCoins)

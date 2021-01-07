@@ -20,24 +20,24 @@ func (k Keeper) initializeDelegation(ctx sdk.Context, val sdk.ValAddress, del sd
 	validator := k.stakingKeeper.Validator(ctx, val)
 	delegation := k.stakingKeeper.Delegation(ctx, del, val)
 
-	// calculate delegation lby in tokens
+	// calculate delegation flby in tokens
 	// we don't store directly, so multiply delegation shares * (tokens per share)
 	// note: necessary to truncate so we don't allow withdrawing more rewards than owed
-	lby := validator.TokensFromSharesTruncated(delegation.GetShares())
-	k.SetDelegatorStartingInfo(ctx, val, del, types.NewDelegatorStartingInfo(previousPeriod, lby, uint64(ctx.BlockHeight())))
+	flby := validator.TokensFromSharesTruncated(delegation.GetShares())
+	k.SetDelegatorStartingInfo(ctx, val, del, types.NewDelegatorStartingInfo(previousPeriod, flby, uint64(ctx.BlockHeight())))
 }
 
 // calculate the rewards accrued by a delegation between two periods
 func (k Keeper) calculateDelegationRewardsBetween(ctx sdk.Context, val exported.ValidatorI,
-	startingPeriod, endingPeriod uint64, lby sdk.Dec) (rewards sdk.DecCoins) {
+	startingPeriod, endingPeriod uint64, flby sdk.Dec) (rewards sdk.DecCoins) {
 	// sanity check
 	if startingPeriod > endingPeriod {
 		panic("startingPeriod cannot be greater than endingPeriod")
 	}
 
 	// sanity check
-	if lby.LT(sdk.ZeroDec()) {
-		panic("lby should not be negative")
+	if flby.LT(sdk.ZeroDec()) {
+		panic("flby should not be negative")
 	}
 
 	// return staking * (ending - starting)
@@ -48,7 +48,7 @@ func (k Keeper) calculateDelegationRewardsBetween(ctx sdk.Context, val exported.
 		panic("negative rewards should not be possible")
 	}
 	// note: necessary to truncate so we don't allow withdrawing more rewards than owed
-	rewards = difference.MulDecTruncate(lby)
+	rewards = difference.MulDecTruncate(flby)
 	return
 }
 
@@ -63,7 +63,7 @@ func (k Keeper) calculateDelegationRewards(ctx sdk.Context, val exported.Validat
 	}
 
 	startingPeriod := startingInfo.PreviousPeriod
-	lby := startingInfo.Stake
+	flby := startingInfo.Stake
 
 	// Iterate through slashes and withdraw with calculated staking for
 	// distribution periods. These period offsets are dependent on *when* slashes
@@ -74,18 +74,18 @@ func (k Keeper) calculateDelegationRewards(ctx sdk.Context, val exported.Validat
 	// redelegation source validator) earlier in the same BeginBlock.
 	startingHeight := startingInfo.Height
 	// Slashes this block happened after reward allocation, but we have to account
-	// for them for the lby sanity check below.
+	// for them for the flby sanity check below.
 	endingHeight := uint64(ctx.BlockHeight())
 	if endingHeight > startingHeight {
 		k.IterateValidatorSlashEventsBetween(ctx, del.GetValidatorAddr(), startingHeight, endingHeight,
 			func(height uint64, event types.ValidatorSlashEvent) (stop bool) {
 				endingPeriod := event.ValidatorPeriod
 				if endingPeriod > startingPeriod {
-					rewards = rewards.Add(k.calculateDelegationRewardsBetween(ctx, val, startingPeriod, endingPeriod, lby))
+					rewards = rewards.Add(k.calculateDelegationRewardsBetween(ctx, val, startingPeriod, endingPeriod, flby))
 
 					// Note: It is necessary to truncate so we don't allow withdrawing
 					// more rewards than owed.
-					lby = lby.MulTruncate(sdk.OneDec().Sub(event.Fraction))
+					flby = flby.MulTruncate(sdk.OneDec().Sub(event.Fraction))
 					startingPeriod = endingPeriod
 				}
 				return false
@@ -93,46 +93,46 @@ func (k Keeper) calculateDelegationRewards(ctx sdk.Context, val exported.Validat
 		)
 	}
 
-	// A total lby sanity check; Recalculated final lby should be less than or
-	// equal to current lby here. We cannot use Equals because lby is truncated
+	// A total flby sanity check; Recalculated final flby should be less than or
+	// equal to current flby here. We cannot use Equals because flby is truncated
 	// when multiplied by slash fractions (see above). We could only use equals if
 	// we had arbitrary-precision rationals.
 	currentStake := val.TokensFromShares(del.GetShares())
 
-	if lby.GT(currentStake) {
+	if flby.GT(currentStake) {
 		// Account for rounding inconsistencies between:
 		//
 		//     currentStake: calculated as in staking with a single computation
-		//     lby:        calculated as an accumulation of lby
+		//     flby:        calculated as an accumulation of flby
 		//                   calculations across validator's distribution periods
 		//
 		// These inconsistencies are due to differing order of operations which
 		// will inevitably have different accumulated rounding and may lead to
-		// the smallest decimal place being one greater in lby than
+		// the smallest decimal place being one greater in flby than
 		// currentStake. When we calculated slashing by period, even if we
 		// round down for each slash fraction, it's possible due to how much is
 		// being rounded that we slash less when slashing by period instead of
 		// for when we slash without periods. In other words, the single slash,
 		// and the slashing by period could both be rounding down but the
-		// slashing by period is simply rounding down less, thus making lby >
+		// slashing by period is simply rounding down less, thus making flby >
 		// currentStake
 		//
 		// A small amount of this error is tolerated and corrected for,
 		// however any greater amount should be considered a breach in expected
 		// behaviour.
 		marginOfErr := sdk.SmallestDec().MulInt64(3)
-		if lby.LTE(currentStake.Add(marginOfErr)) {
-			lby = currentStake
+		if flby.LTE(currentStake.Add(marginOfErr)) {
+			flby = currentStake
 		} else {
-			panic(fmt.Sprintf("calculated final lby for delegator %s greater than current lby"+
-				"\n\tfinal lby:\t%s"+
-				"\n\tcurrent lby:\t%s",
-				del.GetDelegatorAddr(), lby, currentStake))
+			panic(fmt.Sprintf("calculated final flby for delegator %s greater than current flby"+
+				"\n\tfinal flby:\t%s"+
+				"\n\tcurrent flby:\t%s",
+				del.GetDelegatorAddr(), flby, currentStake))
 		}
 	}
 
 	// calculate rewards for final period
-	rewards = rewards.Add(k.calculateDelegationRewardsBetween(ctx, val, startingPeriod, endingPeriod, lby))
+	rewards = rewards.Add(k.calculateDelegationRewardsBetween(ctx, val, startingPeriod, endingPeriod, flby))
 	return rewards
 }
 

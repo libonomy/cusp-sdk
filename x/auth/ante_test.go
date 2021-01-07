@@ -308,19 +308,19 @@ func TestAnteHandlerFees(t *testing.T) {
 	tx = types.NewTestTx(ctx, msgs, privs, accnums, seqs, fee)
 	checkInvalidTx(t, anteHandler, ctx, tx, false, sdk.CodeInsufficientFunds)
 
-	acc1.SetCoins(sdk.NewCoins(sdk.NewInt64Coin("lby", 149)))
+	acc1.SetCoins(sdk.NewCoins(sdk.NewInt64Coin("flby", 149)))
 	input.ak.SetAccount(ctx, acc1)
 	checkInvalidTx(t, anteHandler, ctx, tx, false, sdk.CodeInsufficientFunds)
 
 	require.True(t, input.sk.GetModuleAccount(ctx, types.FeeCollectorName).GetCoins().Empty())
-	require.True(sdk.IntEq(t, input.ak.GetAccount(ctx, addr1).GetCoins().AmountOf("lby"), sdk.NewInt(149)))
+	require.True(sdk.IntEq(t, input.ak.GetAccount(ctx, addr1).GetCoins().AmountOf("flby"), sdk.NewInt(149)))
 
-	acc1.SetCoins(sdk.NewCoins(sdk.NewInt64Coin("lby", 150)))
+	acc1.SetCoins(sdk.NewCoins(sdk.NewInt64Coin("flby", 150)))
 	input.ak.SetAccount(ctx, acc1)
 	checkValidTx(t, anteHandler, ctx, tx, false)
 
-	require.True(sdk.IntEq(t, input.sk.GetModuleAccount(ctx, types.FeeCollectorName).GetCoins().AmountOf("lby"), sdk.NewInt(150)))
-	require.True(sdk.IntEq(t, input.ak.GetAccount(ctx, addr1).GetCoins().AmountOf("lby"), sdk.NewInt(0)))
+	require.True(sdk.IntEq(t, input.sk.GetModuleAccount(ctx, types.FeeCollectorName).GetCoins().AmountOf("flby"), sdk.NewInt(150)))
+	require.True(sdk.IntEq(t, input.ak.GetAccount(ctx, addr1).GetCoins().AmountOf("flby"), sdk.NewInt(0)))
 }
 
 // Test logic around memo gas consumption.
@@ -342,24 +342,24 @@ func TestAnteHandlerMemoGas(t *testing.T) {
 	var tx sdk.Tx
 	msg := types.NewTestMsg(addr1)
 	privs, accnums, seqs := []crypto.PrivKey{priv1}, []uint64{0}, []uint64{0}
-	fee := NewStdFee(0, sdk.NewCoins(sdk.NewInt64Coin("lby", 0)))
+	fee := NewStdFee(0, sdk.NewCoins(sdk.NewInt64Coin("flby", 0)))
 
 	// tx does not have enough gas
 	tx = types.NewTestTx(ctx, []sdk.Msg{msg}, privs, accnums, seqs, fee)
 	checkInvalidTx(t, anteHandler, ctx, tx, false, sdk.CodeOutOfGas)
 
 	// tx with memo doesn't have enough gas
-	fee = NewStdFee(801, sdk.NewCoins(sdk.NewInt64Coin("lby", 0)))
+	fee = NewStdFee(801, sdk.NewCoins(sdk.NewInt64Coin("flby", 0)))
 	tx = types.NewTestTxWithMemo(ctx, []sdk.Msg{msg}, privs, accnums, seqs, fee, "abcininasidniandsinasindiansdiansdinaisndiasndiadninsd")
 	checkInvalidTx(t, anteHandler, ctx, tx, false, sdk.CodeOutOfGas)
 
 	// memo too large
-	fee = NewStdFee(9000, sdk.NewCoins(sdk.NewInt64Coin("lby", 0)))
+	fee = NewStdFee(9000, sdk.NewCoins(sdk.NewInt64Coin("flby", 0)))
 	tx = types.NewTestTxWithMemo(ctx, []sdk.Msg{msg}, privs, accnums, seqs, fee, strings.Repeat("01234567890", 500))
 	checkInvalidTx(t, anteHandler, ctx, tx, false, sdk.CodeMemoTooLarge)
 
 	// tx with memo has enough gas
-	fee = NewStdFee(9000, sdk.NewCoins(sdk.NewInt64Coin("lby", 0)))
+	fee = NewStdFee(9000, sdk.NewCoins(sdk.NewInt64Coin("flby", 0)))
 	tx = types.NewTestTxWithMemo(ctx, []sdk.Msg{msg}, privs, accnums, seqs, fee, strings.Repeat("0123456789", 10))
 	checkValidTx(t, anteHandler, ctx, tx, false)
 }
@@ -730,7 +730,7 @@ func TestEnsureSufficientMempoolFees(t *testing.T) {
 	ctx := input.ctx.WithMinGasPrices(
 		sdk.DecCoins{
 			sdk.NewDecCoinFromDec("psix", sdk.NewDecWithPrec(50000000000000, sdk.Precision)), // 0.0001psix
-			sdk.NewDecCoinFromDec("lby", sdk.NewDecWithPrec(10000000000000, sdk.Precision)),   // 0.000001lby
+			sdk.NewDecCoinFromDec("flby", sdk.NewDecWithPrec(10000000000000, sdk.Precision)),   // 0.000001lby
 		},
 	)
 
@@ -740,15 +740,15 @@ func TestEnsureSufficientMempoolFees(t *testing.T) {
 	}{
 		{NewStdFee(200000, sdk.Coins{}), false},
 		{NewStdFee(200000, sdk.NewCoins(sdk.NewInt64Coin("psix", 5))), false},
-		{NewStdFee(200000, sdk.NewCoins(sdk.NewInt64Coin("lby", 1))), false},
-		{NewStdFee(200000, sdk.NewCoins(sdk.NewInt64Coin("lby", 2))), true},
+		{NewStdFee(200000, sdk.NewCoins(sdk.NewInt64Coin("flby", 1))), false},
+		{NewStdFee(200000, sdk.NewCoins(sdk.NewInt64Coin("flby", 2))), true},
 		{NewStdFee(200000, sdk.NewCoins(sdk.NewInt64Coin("psix", 10))), true},
 		{
 			NewStdFee(
 				200000,
 				sdk.NewCoins(
 					sdk.NewInt64Coin("psix", 10),
-					sdk.NewInt64Coin("lby", 2),
+					sdk.NewInt64Coin("flby", 2),
 				),
 			),
 			true,
@@ -757,9 +757,9 @@ func TestEnsureSufficientMempoolFees(t *testing.T) {
 			NewStdFee(
 				200000,
 				sdk.NewCoins(
-					sdk.NewInt64Coin("lby", 5),
+					sdk.NewInt64Coin("flby", 5),
 					sdk.NewInt64Coin("psix", 10),
-					sdk.NewInt64Coin("lby", 2),
+					sdk.NewInt64Coin("flby", 2),
 				),
 			),
 			true,
@@ -794,7 +794,7 @@ func TestCustomSignatureVerificationGasConsumer(t *testing.T) {
 	// verify that an secp256k1 account gets rejected
 	priv1, _, addr1 := types.KeyTestPubAddr()
 	acc1 := input.ak.NewAccountWithAddress(ctx, addr1)
-	_ = acc1.SetCoins(sdk.NewCoins(sdk.NewInt64Coin("lby", 150)))
+	_ = acc1.SetCoins(sdk.NewCoins(sdk.NewInt64Coin("flby", 150)))
 	input.ak.SetAccount(ctx, acc1)
 
 	var tx sdk.Tx
@@ -810,7 +810,7 @@ func TestCustomSignatureVerificationGasConsumer(t *testing.T) {
 	pub2 := priv2.PubKey()
 	addr2 := sdk.AccAddress(pub2.Address())
 	acc2 := input.ak.NewAccountWithAddress(ctx, addr2)
-	require.NoError(t, acc2.SetCoins(sdk.NewCoins(sdk.NewInt64Coin("lby", 150))))
+	require.NoError(t, acc2.SetCoins(sdk.NewCoins(sdk.NewInt64Coin("flby", 150))))
 	require.NoError(t, acc2.SetAccountNumber(1))
 	input.ak.SetAccount(ctx, acc2)
 	msg = types.NewTestMsg(addr2)

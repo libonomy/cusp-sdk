@@ -285,14 +285,14 @@ func TestParseDecCoins(t *testing.T) {
 		{"0.004LBY", nil, true},
 		{
 			"0.004lby",
-			DecCoins{NewDecCoinFromDec("lby", NewDecWithPrec(4000000000000000, Precision))},
+			DecCoins{NewDecCoinFromDec("flby", NewDecWithPrec(4000000000000000, Precision))},
 			false,
 		},
 		{
 			"5.04lby,0.004lby",
 			DecCoins{
-				NewDecCoinFromDec("lby", NewDecWithPrec(5040000000000000000, Precision)),
-				NewDecCoinFromDec("lby", NewDecWithPrec(4000000000000000, Precision)),
+				NewDecCoinFromDec("flby", NewDecWithPrec(5040000000000000000, Precision)),
+				NewDecCoinFromDec("flby", NewDecWithPrec(4000000000000000, Precision)),
 			},
 			false,
 		},
@@ -317,8 +317,8 @@ func TestDecCoinsString(t *testing.T) {
 		{DecCoins{}, ""},
 		{
 			DecCoins{
-				NewDecCoinFromDec("lby", NewDecWithPrec(5040000000000000000, Precision)),
-				NewDecCoinFromDec("lby", NewDecWithPrec(4000000000000000, Precision)),
+				NewDecCoinFromDec("flby", NewDecWithPrec(5040000000000000000, Precision)),
+				NewDecCoinFromDec("flby", NewDecWithPrec(4000000000000000, Precision)),
 			},
 			"5.040000000000000000lby,0.004000000000000000lby",
 		},

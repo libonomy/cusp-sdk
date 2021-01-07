@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	testDenom1 = "lby"
+	testDenom1 = "flby"
 	testDenom2 = "muon"
 )
 
@@ -35,7 +35,7 @@ func TestIsEqualCoin(t *testing.T) {
 	}{
 		{NewInt64Coin(testDenom1, 1), NewInt64Coin(testDenom1, 1), true, false},
 		{NewInt64Coin(testDenom1, 1), NewInt64Coin(testDenom2, 1), false, true},
-		{NewInt64Coin("lby", 1), NewInt64Coin("lby", 10), false, false},
+		{NewInt64Coin("flby", 1), NewInt64Coin("flby", 10), false, false},
 	}
 
 	for tcIndex, tc := range cases {
@@ -569,7 +569,7 @@ func TestCoinsIsAllGTE(t *testing.T) {
 }
 
 func TestNewCoins(t *testing.T) {
-	tenlby := NewInt64Coin("lby", 10)
+	tenlby := NewInt64Coin("flby", 10)
 	tenbtc := NewInt64Coin("btc", 10)
 	zeroeth := NewInt64Coin("eth", 0)
 	tests := []struct {
@@ -597,8 +597,8 @@ func TestNewCoins(t *testing.T) {
 }
 
 func TestCoinsIsAnyGT(t *testing.T) {
-	twoLBY := NewInt64Coin("lby", 2)
-	fiveLBY := NewInt64Coin("lby", 5)
+	twoLBY := NewInt64Coin("flby", 2)
+	fiveLBY := NewInt64Coin("flby", 5)
 	threeEth := NewInt64Coin("eth", 3)
 	sixEth := NewInt64Coin("eth", 6)
 	twoBtc := NewInt64Coin("btc", 2)

@@ -7,19 +7,19 @@ import (
 )
 
 var (
-	lby  = "lby"  // 1 (base denom unit)
+	flby  = "flby"  // 1 (base denom unit)
 	mlby = "mlby" // 10^-3 (milli)
-	ulby = "ulby" // 10^-6 (micro)
+	flby = "flby" // 10^-6 (micro)
 	nlby = "nlby" // 10^-9 (nano)
 )
 
 func TestRegisterDenom(t *testing.T) {
 	lbyUnit := OneDec() // 1 (base denom unit)
 
-	require.NoError(t, RegisterDenom(lby, lbyUnit))
-	require.Error(t, RegisterDenom(lby, lbyUnit))
+	require.NoError(t, RegisterDenom(flby, lbyUnit))
+	require.Error(t, RegisterDenom(flby, lbyUnit))
 
-	res, ok := GetDenomUnit(lby)
+	res, ok := GetDenomUnit(flby)
 	require.True(t, ok)
 	require.Equal(t, lbyUnit, res)
 
@@ -33,13 +33,13 @@ func TestRegisterDenom(t *testing.T) {
 
 func TestConvertCoins(t *testing.T) {
 	lbyUnit := OneDec() // 1 (base denom unit)
-	require.NoError(t, RegisterDenom(lby, lbyUnit))
+	require.NoError(t, RegisterDenom(flby, lbyUnit))
 
 	mlbyUnit := NewDecWithPrec(1, 3) // 10^-3 (milli)
 	require.NoError(t, RegisterDenom(mlby, mlbyUnit))
 
-	ulbyUnit := NewDecWithPrec(1, 6) // 10^-6 (micro)
-	require.NoError(t, RegisterDenom(ulby, ulbyUnit))
+	flbyUnit := NewDecWithPrec(1, 6) // 10^-6 (micro)
+	require.NoError(t, RegisterDenom(flby, flbyUnit))
 
 	nlbyUnit := NewDecWithPrec(1, 9) // 10^-9 (nano)
 	require.NoError(t, RegisterDenom(nlby, nlbyUnit))
@@ -50,20 +50,20 @@ func TestConvertCoins(t *testing.T) {
 		result Coin
 		expErr bool
 	}{
-		{NewCoin("foo", ZeroInt()), lby, Coin{}, true},
-		{NewCoin(lby, ZeroInt()), "foo", Coin{}, true},
-		{NewCoin(lby, ZeroInt()), "FOO", Coin{}, true},
+		{NewCoin("foo", ZeroInt()), flby, Coin{}, true},
+		{NewCoin(flby, ZeroInt()), "foo", Coin{}, true},
+		{NewCoin(flby, ZeroInt()), "FOO", Coin{}, true},
 
-		{NewCoin(lby, NewInt(5)), mlby, NewCoin(mlby, NewInt(5000)), false},       // lby => mlby
-		{NewCoin(lby, NewInt(5)), ulby, NewCoin(ulby, NewInt(5000000)), false},    // lby => ulby
-		{NewCoin(lby, NewInt(5)), nlby, NewCoin(nlby, NewInt(5000000000)), false}, // lby => nlby
+		{NewCoin(flby, NewInt(5)), mlby, NewCoin(mlby, NewInt(5000)), false},       // flby => mlby
+		{NewCoin(flby, NewInt(5)), flby, NewCoin(flby, NewInt(5000000)), false},    // flby => flby
+		{NewCoin(flby, NewInt(5)), nlby, NewCoin(nlby, NewInt(5000000000)), false}, // flby => nlby
 
-		{NewCoin(ulby, NewInt(5000000)), mlby, NewCoin(mlby, NewInt(5000)), false},       // ulby => mlby
-		{NewCoin(ulby, NewInt(5000000)), nlby, NewCoin(nlby, NewInt(5000000000)), false}, // ulby => nlby
-		{NewCoin(ulby, NewInt(5000000)), lby, NewCoin(lby, NewInt(5)), false},            // ulby => lby
+		{NewCoin(flby, NewInt(5000000)), mlby, NewCoin(mlby, NewInt(5000)), false},       // flby => mlby
+		{NewCoin(flby, NewInt(5000000)), nlby, NewCoin(nlby, NewInt(5000000000)), false}, // flby => nlby
+		{NewCoin(flby, NewInt(5000000)), flby, NewCoin(flby, NewInt(5)), false},            // flby => flby
 
 		{NewCoin(mlby, NewInt(5000)), nlby, NewCoin(nlby, NewInt(5000000000)), false}, // mlby => nlby
-		{NewCoin(mlby, NewInt(5000)), ulby, NewCoin(ulby, NewInt(5000000)), false},    // mlby => ulby
+		{NewCoin(mlby, NewInt(5000)), flby, NewCoin(flby, NewInt(5000000)), false},    // mlby => flby
 	}
 
 	for i, tc := range testCases {

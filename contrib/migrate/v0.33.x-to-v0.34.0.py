@@ -11,8 +11,8 @@ def process_raw_genesis(genesis, parsed_args):
 
     genesis['app_state']['crisis'] = {
         'constant_fee': {
-            'amount': '1333000000',  # ~$5,000 worth of ulby
-            'denom': 'ulby',
+            'amount': '1333000000',  # ~$5,000 worth of flby
+            'denom': 'flby',
         },
     }
 

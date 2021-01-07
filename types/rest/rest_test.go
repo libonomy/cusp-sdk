@@ -172,7 +172,7 @@ func TestProcessPostResponse(t *testing.T) {
 	privKey := secp256k1.GenPrivKey()
 	pubKey := privKey.PubKey()
 	addr := types.AccAddress(pubKey.Address())
-	coins := types.NewCoins(types.NewCoin("lby", types.NewInt(100)), types.NewCoin("tree", types.NewInt(125)))
+	coins := types.NewCoins(types.NewCoin("flby", types.NewInt(100)), types.NewCoin("tree", types.NewInt(125)))
 	accNumber := uint64(104)
 	sequence := uint64(32)
 
